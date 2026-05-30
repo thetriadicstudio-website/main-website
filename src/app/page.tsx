@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="studio-canvas">
-      {/* VELVETY SKIN: Restores your original luxurious grain layer filter */}
+      {/* Suede Texture Layer */}
       <div className="suede-grain-overlay"></div>
 
       <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`}>
@@ -35,42 +35,44 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        {/* FLOATING STAGE: Your original overlapping grid space */}
-        <main className="portfolio-stage" style={{ marginBottom: '160px' }}>
-          {activeProject && (
-            <button className="back-btn" onClick={() => setActiveProject(null)}>
-              ← Back to Portfolio
-            </button>
-          )}
-          {projects.map((project) => {
-            const isTarget = activeProject?.id === project.id;
-            return (
-              <div
-                key={project.id}
-                className={`card project-card ${project.className} ${isTarget ? 'is-expanded' : ''}`}
-                onClick={() => !activeProject && setActiveProject(project)}
-              >
-                <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
-                <div className="card-overlay"></div>
-                {/* GLASS FILTERS: Restores specular reflection trims and frost layers */}
-                <div className="glass-base-plate"></div>
-                <div className="glass-specular-rim"></div>
-                <div className="card-content">
-                  <span className="num">{project.id}</span>
-                  <hr className="title-divider" />
-                  <h3>{project.title}</h3>
-                  <span className="category">{project.category}</span>
+        {/* RESTORED STAGE CONTAINER: Houses the absolute tiles naturally */}
+        <div className="portfolio-wrapper">
+          <div className="portfolio-stage">
+            {activeProject && (
+              <button className="back-btn" onClick={() => setActiveProject(null)}>
+                ← Back to Portfolio
+              </button>
+            )}
+            {projects.map((project) => {
+              const isTarget = activeProject?.id === project.id;
+              return (
+                <div
+                  key={project.id}
+                  className={`card project-card ${project.className} ${isTarget ? 'is-expanded' : ''}`}
+                  onClick={() => !activeProject && setActiveProject(project)}
+                >
+                  <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
+                  <div className="card-overlay"></div>
+                  <div className="glass-base-plate"></div>
+                  <div className="glass-specular-rim"></div>
+                  <div className="card-content">
+                    <span className="num">{project.id}</span>
+                    <hr className="title-divider" />
+                    <h3>{project.title}</h3>
+                    <span className="category">{project.category}</span>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </main>
+              );
+            })}
+          </div>
+        </div>
 
-        {/* MOCKUP CONTAINER WITH ATTACHED EXPLICIT OVERRIDE PROTECTION */}
-        <footer className="card footer-card">
+        {/* RE-ALIGNED EDITORIAL FOOTER */}
+        {/* Note: display style dynamically shifts to hide when a tile goes fullscreen */}
+        <footer className="card footer-card" style={{ display: activeProject ? 'none' : 'block' }}>
           <div className="footer-grid">
             
-            {/* ROW 1: ABOUT */}
+            {/* ABOUT ROW */}
             <div className="footer-row">
               <span className="footer-nav-item">ABOUT</span>
               <p className="footer-text">
@@ -78,22 +80,24 @@ export default function Home() {
               </p>
             </div>
 
-            {/* ROW 2: BLUEPRINT */}
+            {/* BLUEPRINT ROW */}
             <div className="footer-row">
               <span className="footer-nav-item">BLUEPRINT</span>
-              <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
-                <div className="blueprint-info">
-                  <div className="blueprint-icon">📐</div>
-                  <div>
-                    <h4>Blueprint</h4>
-                    <span>Our design philosophy</span>
+              <div style={{ width: '100%' }}>
+                <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
+                  <div className="blueprint-info">
+                    <div className="blueprint-icon">📐</div>
+                    <div>
+                      <h4>Blueprint</h4>
+                      <span>Our design philosophy</span>
+                    </div>
                   </div>
-                </div>
-                <span className="arrow">→</span>
-              </a>
+                  <span className="arrow">→</span>
+                </a>
+              </div>
             </div>
 
-            {/* ROW 3: CONNECT */}
+            {/* CONNECT ROW */}
             <div className="footer-row">
               <span className="footer-nav-item">CONNECT</span>
               <div className="social-pills">
@@ -105,7 +109,6 @@ export default function Home() {
 
           </div>
 
-          {/* CREDITS ROW */}
           <div className="footer-bottom">
             <span>THE TRIADIC STUDIO | Bold Spaces. Guided by Feeling. REJECT THE ORDINARY. | thetriadicstudio@gmail.com</span>
             <span>Selective collaborations only.</span>
