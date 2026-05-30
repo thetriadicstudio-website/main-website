@@ -24,23 +24,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', paddingBottom: '80px' }}>
+    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative' }}>
+      {/* RESTORED: Your original luxury suede grain texture overlay layer */}
       <div className="suede-grain-overlay" style={{ pointerEvents: 'none' }}></div>
 
       <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ flex: '1 0 auto', position: 'relative', zIndex: 1 }}>
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
-          <p className="subtitle" style={{ fontSize: '0.8rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#c4ae9a', marginTop: '24px' }}>
-            Portfolio - 3D Visualizations
-          </p>
-          <p className="tagline" style={{ marginTop: '40px', color: '#a39b94', fontSize: '1.2rem', fontStyle: 'italic', lineHeight: '1.6' }}>
-            You’re not late.<br />You’re exactly on time.
-          </p>
+          <p className="subtitle">Portfolio - 3D Visualizations</p>
+          <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 2, pointerEvents: 'none', height: '1350px', marginBottom: '120px' }}>
+        {/* RESTORED: The original overlapping card grid canvas with native mouse behaviors */}
+        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 2, height: '1350px', marginBottom: '160px' }}>
           {activeProject && (
-            <button className="back-btn" onClick={() => setActiveProject(null)} style={{ marginBottom: '20px', cursor: 'pointer', pointerEvents: 'auto' }}>
+            <button className="back-btn" onClick={() => setActiveProject(null)} style={{ cursor: 'pointer' }}>
               ← Back to Portfolio
             </button>
           )}
@@ -51,18 +49,15 @@ export default function Home() {
                 key={project.id}
                 className={`card project-card ${project.className} ${isTarget ? 'is-expanded' : ''}`}
                 onClick={() => !activeProject && setActiveProject(project)}
-                style={{ pointerEvents: 'auto' }}
               >
-                <div className="card-bg" style={{ 
-                  backgroundImage: `url(${project.img})`,
-                  backgroundSize: isTarget ? 'contain' : 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center'
-                }}></div>
+                <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
                 <div className="card-overlay"></div>
-                <div className="card-content" style={{ zIndex: 3 }}>
+                {/* RESTORED: High-end glass layers providing reflections and specularity */}
+                <div className="glass-base-plate"></div>
+                <div className="glass-specular-rim"></div>
+                <div className="card-content">
                   <span className="num">{project.id}</span>
-                  <hr className="title-divider" style={{ width: '24px', border: 'none', borderTop: '1px solid #c4ae9a', margin: '10px 0' }} />
+                  <hr className="title-divider" />
                   <h3>{project.title}</h3>
                   <span className="category">{project.category}</span>
                 </div>
@@ -72,79 +67,63 @@ export default function Home() {
         </main>
       </div>
 
-      {/* MOCKUP FOOTER */}
-      <footer style={{ 
+      {/* FIXED FOOTER STRUCTURAL LAYOUT MOCKUP FROM YOUR IMAGE */}
+      <footer className="card footer-card" style={{ 
         width: '100%', 
         maxWidth: '1200px', 
-        margin: '0 auto', 
-        padding: '40px 30px', 
+        margin: '0 auto 80px auto', 
+        padding: '50px 40px', 
         boxSizing: 'border-box', 
-        background: 'rgba(27, 24, 22, 0.6)', 
-        backdropFilter: 'blur(10px)',
+        background: 'transparent', 
         border: '1px solid rgba(245, 242, 235, 0.12)', 
         borderRadius: '24px',
         position: 'relative', 
-        zIndex: 9999, 
+        zIndex: 99999, /* High layer ensures links work perfectly */
         pointerEvents: 'auto' 
       }} onClick={(e) => e.stopPropagation()}>
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
           
-          {/* ABOUT */}
-          <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center', borderBottom: '1px solid rgba(245, 242, 235, 0.08)', paddingBottom: '30px' }}>
-            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.7rem', letterSpacing: '2px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center' }}>ABOUT</span>
-            <p style={{ color: '#a39b94', fontSize: '1.05rem', lineHeight: '1.7', margin: 0, paddingLeft: '20px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
+          {/* ROW 1: ABOUT */}
+          <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'start', borderBottom: '1px solid rgba(245, 242, 235, 0.08)', paddingBottom: '40px' }}>
+            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center', alignSelf: 'center' }}>ABOUT</span>
+            <p className="footer-text" style={{ margin: 0, paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
               The Triadic Studio is an architectural and interior design practice focused on creating timeless spaces that honor material, context, and experience. We believe in the balance of form, function, and feeling—where every detail is intentional and nothing is excess.
             </p>
           </div>
 
-          {/* BLUEPRINT */}
-          <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center', borderBottom: '1px solid rgba(245, 242, 235, 0.08)', paddingBottom: '30px' }}>
-            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.7rem', letterSpacing: '2px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center' }}>BLUEPRINT</span>
-            <div style={{ paddingLeft: '20px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
-              <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'space-between',
-                textDecoration: 'none', 
-                background: 'rgba(255, 255, 255, 0.02)', 
-                border: '1px solid rgba(245, 242, 235, 0.08)', 
-                padding: '20px 30px', 
-                borderRadius: '40px', 
-                maxWidth: '500px'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                  <div style={{ width: '44px', height: '44px', borderRadius: '50%', border: '1px solid rgba(245, 242, 235, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c4ae9a', fontSize: '1.2rem' }}>A</div>
+          {/* ROW 2: BLUEPRINT */}
+          <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'center', borderBottom: '1px solid rgba(245, 242, 235, 0.08)', paddingBottom: '40px' }}>
+            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center' }}>BLUEPRINT</span>
+            <div style={{ paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
+              <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
+                <div className="blueprint-info">
+                  <div className="blueprint-icon">⚙️</div>
                   <div>
-                    <h4 style={{ margin: 0, color: '#f5f2eb', fontSize: '1.05rem', fontWeight: 400 }}>Blueprint</h4>
-                    <span style={{ color: '#a39b94', fontSize: '0.85rem' }}>Our design philosophy</span>
+                    <h4>Blueprint</h4>
+                    <span>Our design philosophy</span>
                   </div>
                 </div>
-                <span style={{ color: '#c4ae9a', fontSize: '1.2rem' }}>→</span>
+                <span className="arrow">→</span>
               </a>
             </div>
           </div>
 
-          {/* CONNECT */}
-          <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.7rem', letterSpacing: '2px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center' }}>CONNECT</span>
-            <div style={{ paddingLeft: '20px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#f5f2eb', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(245, 242, 235, 0.08)', padding: '12px 28px', borderRadius: '40px', fontSize: '0.95rem' }}>
-                Instagram
-              </a>
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ color: '#f5f2eb', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(245, 242, 235, 0.08)', padding: '12px 28px', borderRadius: '40px', fontSize: '0.95rem' }}>
-                Behance
-              </a>
-              <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ color: '#f5f2eb', textDecoration: 'none', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(245, 242, 235, 0.08)', padding: '12px 28px', borderRadius: '40px', fontSize: '0.95rem' }}>
-                Pinterest
-              </a>
+          {/* ROW 3: CONNECT */}
+          <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'center' }}>
+            <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600, textAlign: 'center' }}>CONNECT</span>
+            <div className="social-pills" style={{ paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+              <a href="https://pin.it" target="_blank" rel="noopener noreferrer">Pinterest</a>
             </div>
           </div>
 
         </div>
 
-        <div style={{ marginTop: '50px', paddingTop: '30px', borderTop: '1px solid rgba(245, 242, 235, 0.04)', textAlign: 'center', color: '#7a726c', fontSize: '0.7rem', letterSpacing: '0.5px' }}>
-          THE TRIADIC STUDIO | Bold Spaces. Guided by Feeling. REJECT THE ORDINARY. | thetriadicstudio@gmail.com | Selective collaborations only.
+        <div className="footer-bottom" style={{ marginTop: '50px' }}>
+          <span>THE TRIADIC STUDIO | Bold Spaces. Guided by Feeling. REJECT THE ORDINARY. | thetriadicstudio@gmail.com</span>
+          <span>Selective collaborations only.</span>
         </div>
       </footer>
     </div>
