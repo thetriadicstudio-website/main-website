@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="studio-canvas">
-      {/* VELVETY LAYER: Tactile texture filter overlay */}
+      {/* VELVETY VELOUR OVERLAY: Native tactile plaster filter texture */}
       <div className="suede-grain-overlay"></div>
 
       <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`}>
@@ -35,6 +35,7 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
+        {/* STAGE CANVAS CONTAINER: Holds the asymmetric layout structure natively */}
         <div className="portfolio-wrapper">
           <div className="portfolio-stage">
             {activeProject && (
@@ -52,7 +53,7 @@ export default function Home() {
                 >
                   <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
                   <div className="card-overlay"></div>
-                  {/* GLASS FILTERS: Luminous specular reflections and soft champagne borders */}
+                  {/* GLASS FILTERS: Frosted glass layers with subtle drop shadows */}
                   <div className="glass-base-plate"></div>
                   <div className="glass-specular-rim"></div>
                   <div className="card-content">
@@ -67,10 +68,11 @@ export default function Home() {
           </div>
         </div>
 
+        {/* RE-ALIGNED EDITORIAL FOOTER ROWS */}
         <footer className="card footer-card" style={{ display: activeProject ? 'none' : 'block' }}>
           <div className="footer-grid">
             
-            {/* ABOUT ROW */}
+            {/* ROW 1: ABOUT */}
             <div className="footer-row">
               <span className="footer-nav-item">ABOUT</span>
               <p className="footer-text">
@@ -78,14 +80,14 @@ export default function Home() {
               </p>
             </div>
 
-            {/* BLUEPRINT ROW - ICON CLEANED AWAY PERMANENTLY */}
+            {/* ROW 2: BLUEPRINT - ALL INCONGRUOUS TRIANGLE ICONS CLEANED AWAY */}
             <div className="footer-row">
               <span className="footer-nav-item">BLUEPRINT</span>
               <div style={{ width: '100%' }}>
                 <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
                   <div className="blueprint-info">
                     <div>
-                      <h4 style={{ margin: 0 }}>Blueprint</h4>
+                      <h4>Blueprint</h4>
                       <span>Our design philosophy</span>
                     </div>
                   </div>
@@ -94,7 +96,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CONNECT ROW */}
+            {/* ROW 3: CONNECT */}
             <div className="footer-row">
               <span className="footer-nav-item">CONNECT</span>
               <div className="social-pills">
