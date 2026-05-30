@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="studio-canvas">
-      {/* Suede Texture Layer */}
+      {/* VELVETY LAYER: Tactile texture filter overlay */}
       <div className="suede-grain-overlay"></div>
 
       <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`}>
@@ -35,7 +35,6 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        {/* RESTORED STAGE CONTAINER: Houses the absolute tiles naturally */}
         <div className="portfolio-wrapper">
           <div className="portfolio-stage">
             {activeProject && (
@@ -53,6 +52,7 @@ export default function Home() {
                 >
                   <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
                   <div className="card-overlay"></div>
+                  {/* GLASS FILTERS: Luminous specular reflections and soft champagne borders */}
                   <div className="glass-base-plate"></div>
                   <div className="glass-specular-rim"></div>
                   <div className="card-content">
@@ -67,8 +67,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* RE-ALIGNED EDITORIAL FOOTER */}
-        {/* Note: display style dynamically shifts to hide when a tile goes fullscreen */}
         <footer className="card footer-card" style={{ display: activeProject ? 'none' : 'block' }}>
           <div className="footer-grid">
             
@@ -80,15 +78,14 @@ export default function Home() {
               </p>
             </div>
 
-            {/* BLUEPRINT ROW */}
+            {/* BLUEPRINT ROW - ICON CLEANED AWAY PERMANENTLY */}
             <div className="footer-row">
               <span className="footer-nav-item">BLUEPRINT</span>
               <div style={{ width: '100%' }}>
                 <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
                   <div className="blueprint-info">
-                    <div className="blueprint-icon">📐</div>
                     <div>
-                      <h4>Blueprint</h4>
+                      <h4 style={{ margin: 0 }}>Blueprint</h4>
                       <span>Our design philosophy</span>
                     </div>
                   </div>
