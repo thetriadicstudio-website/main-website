@@ -68,7 +68,7 @@ export default function Home() {
           })}
         </main>
 
-        <footer className="card footer-card" style={{ position: 'relative', zIndex: 100 }}>
+        <footer className="card footer-card" style={{ position: 'relative', zIndex: 99999, isolation: 'isolate' }}>
           <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left', marginBottom: '30px' }}>
             <div className="footer-section">
               <h4>ABOUT</h4>
@@ -76,14 +76,14 @@ export default function Home() {
             </div>
             <div className="footer-section">
               <h4>BLUEPRINT</h4>
-              <a href="https://a806f2bc-1ded-46e5-95c1-53a2e46d6522-00-1dcryh4t4adb5.kirk.replit.dev/" target="_blank" rel="noopener noreferrer">View Application</a>
+              <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'auto', position: 'relative', zIndex: 100000 }}>View Application</a>
             </div>
             <div className="footer-section">
               <h4>CONNECT</h4>
               <div className="social-links" style={{ display: 'flex', flexDirection: 'column' }}>
-                <a href="https://www.instagram.com/thetriadicstudio" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.behance.net/thetriadicstudio" target="_blank" rel="noopener noreferrer">Behance</a>
-                <a href="https://pin.it/30VBzFfGn" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'auto', position: 'relative', zIndex: 100000, marginBottom: '5px' }}>Instagram</a>
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'auto', position: 'relative', zIndex: 100000, marginBottom: '5px' }}>Behance</a>
+                <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ pointerEvents: 'auto', position: 'relative', zIndex: 100000 }}>Pinterest</a>
               </div>
             </div>
           </div>
