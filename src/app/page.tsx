@@ -24,19 +24,19 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative' }}>
-      {/* LUXURY SKIN LAYER: Your original velvety texture filter */}
+    <div className="studio-canvas">
+      {/* VELVETY SKIN: Restores your original luxurious grain layer filter */}
       <div className="suede-grain-overlay"></div>
 
-      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ flex: '1 0 auto', position: 'relative', zIndex: 1, width: '100%' }}>
+      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`}>
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
           <p className="subtitle">Portfolio - 3D Visualizations</p>
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        {/* FLOATING CANVAS: Preserves your native absolute-positioned glassy layout height */}
-        <main className="portfolio-stage" style={{ marginBottom: '140px', position: 'relative', zIndex: 2 }}>
+        {/* FLOATING STAGE: Your original overlapping grid space */}
+        <main className="portfolio-stage" style={{ marginBottom: '160px' }}>
           {activeProject && (
             <button className="back-btn" onClick={() => setActiveProject(null)}>
               ← Back to Portfolio
@@ -52,7 +52,7 @@ export default function Home() {
               >
                 <div className="card-bg" style={{ backgroundImage: `url(${project.img})` }}></div>
                 <div className="card-overlay"></div>
-                {/* GLASS LAYERS: Restores specular reflection accents and plate filters */}
+                {/* GLASS FILTERS: Restores specular reflection trims and frost layers */}
                 <div className="glass-base-plate"></div>
                 <div className="glass-specular-rim"></div>
                 <div className="card-content">
@@ -66,62 +66,37 @@ export default function Home() {
           })}
         </main>
 
-        {/* EDITORIAL MOCKUP FOOTER: Styled using isolated inline flex properties */}
-        <footer style={{ 
-          width: '100%', 
-          maxWidth: '1200px', 
-          margin: '60px auto 100px auto', 
-          padding: '40px 30px', 
-          boxSizing: 'border-box', 
-          background: 'rgba(27, 24, 22, 0.4)', 
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-          border: '1px solid rgba(245, 242, 235, 0.12)', 
-          borderRadius: '24px',
-          position: 'relative', 
-          zIndex: 99999, /* High layer context to block click leaking */
-          pointerEvents: 'auto'
-        }} onClick={(e) => e.stopPropagation()}>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+        {/* MOCKUP CONTAINER WITH ATTACHED EXPLICIT OVERRIDE PROTECTION */}
+        <footer className="card footer-card">
+          <div className="footer-grid">
             
-            {/* ROW 1: ABOUT SECTION */}
-            <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'start' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600 }}>ABOUT</span>
-              </div>
-              <div style={{ paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
-                <p style={{ margin: 0, fontSize: '1.1rem', lineHeight: '1.7', color: '#a39b94' }}>
-                  The Triadic Studio is an architectural and interior design practice focused on creating timeless spaces that honor material, context, and experience. We believe in the balance of form, function, and feeling—where every detail is intentional and nothing is excess.
-                </p>
-              </div>
+            {/* ROW 1: ABOUT */}
+            <div className="footer-row">
+              <span className="footer-nav-item">ABOUT</span>
+              <p className="footer-text">
+                The Triadic Studio is an architectural and interior design practice focused on creating timeless spaces that honor material, context, and experience. We believe in the balance of form, function, and feeling—where every detail is intentional and nothing is excess.
+              </p>
             </div>
 
-            {/* ROW 2: BLUEPRINT SECTION */}
-            <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600 }}>BLUEPRINT</span>
-              </div>
-              <div style={{ paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
-                <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
-                  <div className="blueprint-info">
-                    <div className="blueprint-icon" style={{ opacity: 0.8 }}>📐</div>
-                    <div>
-                      <h4>Blueprint</h4>
-                      <span>Our design philosophy</span>
-                    </div>
+            {/* ROW 2: BLUEPRINT */}
+            <div className="footer-row">
+              <span className="footer-nav-item">BLUEPRINT</span>
+              <a className="blueprint-card" href="https://replit.dev" target="_blank" rel="noopener noreferrer">
+                <div className="blueprint-info">
+                  <div className="blueprint-icon">📐</div>
+                  <div>
+                    <h4>Blueprint</h4>
+                    <span>Our design philosophy</span>
                   </div>
-                  <span className="arrow">→</span>
-                </a>
-              </div>
+                </div>
+                <span className="arrow">→</span>
+              </a>
             </div>
 
-            {/* ROW 3: CONNECT SECTION */}
-            <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', alignItems: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <span style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '0.75rem', letterSpacing: '3px', color: '#c4ae9a', fontWeight: 600 }}>CONNECT</span>
-              </div>
-              <div className="social-pills" style={{ paddingLeft: '40px', borderLeft: '1px solid rgba(245, 242, 235, 0.08)' }}>
+            {/* ROW 3: CONNECT */}
+            <div className="footer-row">
+              <span className="footer-nav-item">CONNECT</span>
+              <div className="social-pills">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
                 <a href="https://pin.it" target="_blank" rel="noopener noreferrer">Pinterest</a>
@@ -130,8 +105,8 @@ export default function Home() {
 
           </div>
 
-          {/* BOTTOM METADATA BAR */}
-          <div className="footer-bottom" style={{ marginTop: '40px' }}>
+          {/* CREDITS ROW */}
+          <div className="footer-bottom">
             <span>THE TRIADIC STUDIO | Bold Spaces. Guided by Feeling. REJECT THE ORDINARY. | thetriadicstudio@gmail.com</span>
             <span>Selective collaborations only.</span>
           </div>
