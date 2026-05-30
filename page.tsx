@@ -24,10 +24,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', paddingBottom: '160px' }}>
+    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative' }}>
       <div className="suede-grain-overlay" style={{ pointerEvents: 'none' }}></div>
 
-      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ flex: '1 0 auto', position: 'relative', zIndex: 1 }}>
+      {/* Main Website Wrapper with isolated pointer layers */}
+      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ flex: '1 0 auto', position: 'relative', zIndex: 1, paddingBottom: '200px' }}>
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
           <p className="subtitle" style={{ fontSize: '1rem', color: '#888', marginTop: '10px' }}>
@@ -36,7 +37,8 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        <main className="portfolio-canvas-grid">
+        {/* Added strict max height boundaries to stop cards leaking down */}
+        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 2, maxHeight: 'calc(100vh - 250px)', overflow: 'visible' }}>
           {activeProject && (
             <button className="back-btn" onClick={() => setActiveProject(null)} style={{ marginBottom: '20px', cursor: 'pointer' }}>
               ← Back to Portfolio
@@ -49,6 +51,7 @@ export default function Home() {
                 key={project.id}
                 className={`card project-card ${project.className} ${isTarget ? 'is-expanded' : ''}`}
                 onClick={() => !activeProject && setActiveProject(project)}
+                style={{ position: 'relative' }}
               >
                 <div className="card-bg" style={{ 
                   backgroundImage: `url(${project.img})`,
@@ -69,7 +72,8 @@ export default function Home() {
         </main>
       </div>
 
-      <footer className="card footer-card" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2147483647, width: '100vw', backgroundColor: '#161616', padding: '25px 40px', boxSizing: 'border-box', borderTop: '2px solid rgba(255,255,255,0.15)' }} onClick={(e) => e.stopPropagation()}>
+      {/* FIXED POSITION BASE FOOTER - HIGHEST LEVEL CLICK INTERCEPTOR */}
+      <footer className="card footer-card" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 2147483647, width: '100vw', backgroundColor: '#161616', padding: '30px 40px', boxSizing: 'border-box', borderTop: '2px solid rgba(255,255,255,0.15)', pointerEvents: 'auto' }} onClick={(e) => e.stopPropagation()}>
         <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left' }}>
           <div className="footer-section">
             <h4 style={{ color: '#fff', marginBottom: '8px', fontSize: '0.9rem', letterSpacing: '1px' }}>ABOUT</h4>
@@ -81,7 +85,7 @@ export default function Home() {
           </div>
           <div className="footer-section">
             <h4 style={{ color: '#fff', marginBottom: '8px', fontSize: '0.9rem', letterSpacing: '1px' }}>CONNECT</h4>
-            <div className="social-links" style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <div className="social-links" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontSize: '0.85rem', display: 'inline-block', position: 'relative', zIndex: 2147483647 }} onClick={(e) => e.stopPropagation()}>Instagram ↗</a>
               <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontSize: '0.85rem', display: 'inline-block', position: 'relative', zIndex: 2147483647 }} onClick={(e) => e.stopPropagation()}>Behance ↗</a>
               <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none', fontSize: '0.85rem', display: 'inline-block', position: 'relative', zIndex: 2147483647 }} onClick={(e) => e.stopPropagation()}>Pinterest ↗</a>
