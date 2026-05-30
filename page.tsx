@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState } from 'react';
 
 interface Project {
@@ -24,11 +26,13 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas">
+    <div className="studio-canvas" style={{ display: 'block', minHeight: '100vh', position: 'relative' }}>
       <div className="suede-grain-overlay" style={{ pointerEvents: 'none' }}></div>
 
-      {/* Main Container Wrapper */}
-      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`}>
+      {/* Main Layout Container */}
+      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ position: 'relative', zIndex: 1 }}>
+        
+        {/* Phase 1: Your Atmospheric Entry (Current Site) */}
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
           <p className="subtitle">
@@ -37,9 +41,9 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        {/* Asymmetric Image Grid */}
-        <main className="portfolio-wrapper">
-          <div className="portfolio-stage" style={{ pointerEvents: 'none' }}>
+        {/* Floating Asymmetric Image Grid */}
+        <main className="portfolio-wrapper" style={{ pointerEvents: 'none' }}>
+          <div className="portfolio-stage">
             {activeProject && (
               <button className="back-btn" onClick={() => setActiveProject(null)} style={{ pointerEvents: 'auto' }}>
                 ← Back to Portfolio
@@ -73,11 +77,11 @@ export default function Home() {
           </div>
         </main>
 
-        {/* INTEGRATED EDITORIAL CONTENT FOOTER */}
-        <footer className="footer-card">
+        {/* THE NEW EDITORIAL HYBRID LAYOUT (Mockup 1 + Current Site Merged) */}
+        <footer className="footer-card" style={{ display: 'block', position: 'relative', width: '100%', zIndex: 10, pointerEvents: 'auto' }}>
           <div className="footer-grid">
             
-            {/* ABOUT SECTION */}
+            {/* ABOUT PHILOSOPHY */}
             <div className="footer-row">
               <div className="footer-nav-item">About</div>
               <p className="footer-text">
@@ -88,12 +92,31 @@ export default function Home() {
               </p>
             </div>
 
-            {/* EXPERIENCES / SERVICES SECTION */}
+            {/* NEW SECTION FROM MOCKUP 1: "What I Do" Three-Column Pillars */}
+            <div className="footer-row" style={{ marginTop: '40px', marginBottom: '40px' }}>
+              <div className="footer-nav-item">What I Do</div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '32px', width: '100%', maxWidth: '800px' }}>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: '#c4ae9a', fontFamily: 'monospace' }}>01 / SPATIAL STYLING</span>
+                  <p style={{ fontSize: '0.95rem', color: '#d0c7be', lineHeight: '1.6', marginTop: '12px', fontWeight: '300' }}>Creating visual direction for interiors, homes, and experiential spaces.</p>
+                </div>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: '#c4ae9a', fontFamily: 'monospace' }}>02 / VISUAL CONCEPTS (3D)</span>
+                  <p style={{ fontSize: '0.95rem', color: '#d0c7be', lineHeight: '1.6', marginTop: '12px', fontWeight: '300' }}>Translating ideas into atmospheric visualizations and high-fidelity renders.</p>
+                </div>
+                <div>
+                  <span style={{ fontSize: '0.8rem', color: '#c4ae9a', fontFamily: 'monospace' }}>03 / EXPERIENCE DESIGN</span>
+                  <p style={{ fontSize: '0.95rem', color: '#d0c7be', lineHeight: '1.6', marginTop: '12px', fontWeight: '300' }}>Designing how a space feels organically—not only how it looks on a screen.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* INTENTIONAL EXPERIENCES MENU (Philosophy-Driven Services Layout) */}
             <div className="footer-row">
               <div className="footer-nav-item">Experiences</div>
               <div className="experience-list">
                 
-                {/* SERVICE 01 */}
+                {/* STAGE 01 */}
                 <div className="experience-item">
                   <div className="experience-header">
                     <span className="experience-title">01 / The Canvas</span>
@@ -106,7 +129,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* SERVICE 02 */}
+                {/* STAGE 02 */}
                 <div className="experience-item">
                   <div className="experience-header">
                     <span className="experience-title">02 / The Transition</span>
@@ -119,7 +142,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* SERVICE 03 - THE PREMIUM BLUEPRINT */}
+                {/* STAGE 03 - EXCLUSIVE TIED BLUEPRINT */}
                 <div className="experience-item">
                   <div className="experience-header">
                     <span className="experience-title">03 / The Blueprint</span>
@@ -136,7 +159,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CONNECT SECTION */}
+            {/* CONNECT CAPSULES */}
             <div className="footer-row">
               <div className="footer-nav-item">Connect</div>
               <div className="social-pills">
@@ -148,7 +171,7 @@ export default function Home() {
 
           </div>
 
-          {/* METADATA SECTION */}
+          {/* BASE LINE METADATA */}
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} THE TRIADIC STUDIO</span>
             <span>Based in the UK — Available for global collaborations</span>
