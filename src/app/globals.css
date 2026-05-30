@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; background-color: #261f1b !important; }
 
-/* THE LUXURIOUS VELVET SUEDE THEME: Lifted base tones with ambient architectural lighting glows */
+/* THE LUXURIOUS VELVET SUEDE THEME */
 .studio-canvas { 
   min-height: 100vh; 
   padding: 100px 60px; 
@@ -35,7 +35,7 @@ body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font
 .card-content h3 { margin: 0; font-size: 1.4rem; font-weight: 400; color: #f5f2eb; }
 .category { font-size: 0.85rem; color: #a39b94; margin-top: 2px; }
 
-/* PLATFORM GRAPHICAL MATRIX COORDINATES */
+/* DESKTOP MATRIX POSITIONING COORDINATES */
 .layer-01 { width: 440px; height: 500px; top: 0px; left: 0px; z-index: 2; }
 .layer-02 { width: 380px; height: 460px; top: 80px; left: 410px; z-index: 1; }
 .layer-03 { width: 360px; height: 520px; top: 120px; right: 0px; z-index: 3; }
@@ -57,7 +57,7 @@ body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font
 .footer-nav-item { font-size: 0.75rem; letter-spacing: 2px; color: #c4ae9a; font-weight: 600; text-align: left; }
 .footer-text { margin: 0; font-size: 1.15rem; line-height: 1.7; max-width: 720px; color: #a39b94; }
 
-/* SMOKY BRONZE CAPSULE ELEMENTS */
+/* CAPSULES CONFIGURATIONS */
 .blueprint-card { display: flex; justify-content: space-between; align-items: center; text-decoration: none; background: rgba(35, 28, 24, 0.3); padding: 20px 30px; border-radius: 40px; border: 1px solid rgba(245, 242, 235, 0.08); max-width: 500px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .blueprint-card:hover { border-color: rgba(196, 174, 154, 0.3); background: rgba(35, 28, 24, 0.5); }
 .blueprint-info { display: flex; align-items: center; gap: 20px; }
@@ -65,9 +65,56 @@ body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font
 .blueprint-card span { font-size: 0.85rem; color: #a39b94; }
 .blueprint-card .arrow { font-size: 1.3rem; color: #c4ae9a; }
 
-/* EMBEDDED BUTTON BADGES */
+/* EMBEDDED PILLS COMPONENT */
 .social-pills { display: flex; gap: 16px; }
 .social-pills a { text-decoration: none; color: #f5f2eb !important; padding: 12px 28px; border-radius: 40px; background: rgba(35, 28, 24, 0.3); border: 1px solid rgba(245, 242, 235, 0.08); font-size: 0.95rem; transition: all 0.3s ease; display: inline-block; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .social-pills a:hover { background: #c4ae9a; color: #1a1412 !important; }
-
 .footer-bottom { display: flex; justify-content: space-between; font-size: 0.7rem; color: #7a726c; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 40px; }
+
+
+/* ==========================================
+   NEW MOBILE RESPONSIVE ADAPTATION ENGINE 📱
+   ========================================== */
+@media (max-width: 900px) {
+  /* Reduce website padding on phone screens */
+  .studio-canvas { padding: 40px 24px; }
+  
+  /* Shrink huge main header text so it fits screens safely */
+  .header-card h1 { font-size: 4rem; line-height: 0.9; }
+  .header-card { margin-bottom: 40px; }
+  
+  /* Convert layout containers to standard responsive height */
+  .portfolio-stage { 
+    height: auto !important; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 32px; 
+  }
+  
+  /* Strip away absolute layout sizing; stretch cards to 100% full screen width */
+  .project-card { 
+    position: relative !important; 
+    width: 100% !important; 
+    height: 380px !important; 
+    top: auto !important; 
+    left: auto !important; 
+    right: auto !important; 
+  }
+  
+  /* Format footer elements to layout in simple rows */
+  .footer-grid { gap: 32px; margin-bottom: 40px; }
+  .footer-row { grid-template-columns: 1fr; gap: 8px; }
+  .footer-text { padding-left: 0; border-left: none; font-size: 1rem; }
+  .blueprint-card { max-width: 100%; }
+  
+  /* Wrap pills cleanly on thin vertical layouts */
+  .social-pills { flex-wrap: wrap; gap: 10px; }
+  .social-pills a { width: 100%; text-align: center; padding: 12px 0; }
+  
+  /* Convert footer meta lines to clear vertical columns */
+  .footer-bottom { 
+    flex-direction: column; 
+    gap: 12px; 
+    text-align: center; 
+  }
+}
