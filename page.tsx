@@ -24,10 +24,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas" style={{ position: 'relative', zIndex: 1 }}>
+    <div className="studio-canvas" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <div className="suede-grain-overlay" style={{ pointerEvents: 'none' }}></div>
 
-      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', zIndex: 2 }}>
+      {/* Main Website Area */}
+      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ flex: '1 0 auto', position: 'relative', zIndex: 1 }}>
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
           <p className="subtitle" style={{ fontSize: '1rem', color: '#888', marginTop: '10px' }}>
@@ -36,7 +37,7 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 3, flexGrow: 1, marginBottom: '40px' }}>
+        <main className="portfolio-canvas-grid">
           {activeProject && (
             <button className="back-btn" onClick={() => setActiveProject(null)} style={{ marginBottom: '20px', cursor: 'pointer' }}>
               ← Back to Portfolio
@@ -67,28 +68,29 @@ export default function Home() {
             );
           })}
         </main>
+      </div>
 
-        <footer className="card footer-card" style={{ position: 'relative', zIndex: 2147483647, marginTop: 'auto', backgroundColor: '#1a1a1a' }} onClick={(e) => e.stopPropagation()}>
-          <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left', padding: '20px 0' }}>
-            <div className="footer-section">
-              <h4>ABOUT</h4>
-              <p className="about-text">The Triadic Studio is an architectural and interior design practice focused on creating timeless spaces that honor material, context, and experience.</p>
-            </div>
-            <div className="footer-section">
-              <h4>BLUEPRINT</h4>
-              <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block' }} onClick={(e) => e.stopPropagation()}>View Application</a>
-            </div>
-            <div className="footer-section">
-              <h4>CONNECT</h4>
-              <div className="social-links" style={{ display: 'flex', flexDirection: 'column' }}>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block', marginBottom: '5px' }} onClick={(e) => e.stopPropagation()}>Instagram</a>
-                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block', marginBottom: '5px' }} onClick={(e) => e.stopPropagation()}>Behance</a>
-                <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block' }} onClick={(e) => e.stopPropagation()}>Pinterest</a>
-              </div>
+      {/* Completely Isolated Footer at the Absolute Base */}
+      <footer className="card footer-card" style={{ position: 'relative', zIndex: 9999, width: '100%', backgroundColor: '#1a1a1a', padding: '30px 20px', boxSizing: 'border-box', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left' }}>
+          <div className="footer-section">
+            <h4 style={{ color: '#fff', marginBottom: '10px' }}>ABOUT</h4>
+            <p className="about-text" style={{ color: '#aaa', fontSize: '0.9rem', lineHeight: '1.5' }}>The Triadic Studio is an architectural and interior design practice focused on creating timeless spaces that honor material, context, and experience.</p>
+          </div>
+          <div className="footer-section">
+            <h4 style={{ color: '#fff', marginBottom: '10px' }}>BLUEPRINT</h4>
+            <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>View Application</a>
+          </div>
+          <div className="footer-section">
+            <h4 style={{ color: '#fff', marginBottom: '10px' }}>CONNECT</h4>
+            <div className="social-links" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Instagram ↗</a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Behance ↗</a>
+              <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>Pinterest ↗</a>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   );
 }
