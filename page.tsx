@@ -24,10 +24,10 @@ export default function Home() {
   ];
 
   return (
-    <div className="studio-canvas">
-      <div className="suede-grain-overlay"></div>
+    <div className="studio-canvas" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="suede-grain-overlay" style={{ pointerEvents: 'none' }}></div>
 
-      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className={`container-wrapper ${activeProject ? 'fullscreen-mode' : ''}`} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', zIndex: 2 }}>
         <header className="card header-card">
           <h1>The<br />Triadic<br />Studio</h1>
           <p className="subtitle" style={{ fontSize: '1rem', color: '#888', marginTop: '10px' }}>
@@ -36,7 +36,7 @@ export default function Home() {
           <p className="tagline">You’re not late.<br />You’re exactly on time.</p>
         </header>
 
-        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 1, flexGrow: 1, marginBottom: '40px' }}>
+        <main className="portfolio-canvas-grid" style={{ position: 'relative', zIndex: 3, flexGrow: 1, marginBottom: '40px' }}>
           {activeProject && (
             <button className="back-btn" onClick={() => setActiveProject(null)} style={{ marginBottom: '20px', cursor: 'pointer' }}>
               ← Back to Portfolio
@@ -68,7 +68,7 @@ export default function Home() {
           })}
         </main>
 
-        <footer className="card footer-card" style={{ position: 'relative', zIndex: 99999, marginTop: 'auto', backgroundColor: '#1a1a1a' }}>
+        <footer className="card footer-card" style={{ position: 'relative', zIndex: 2147483647, marginTop: 'auto', backgroundColor: '#1a1a1a' }} onClick={(e) => e.stopPropagation()}>
           <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left', padding: '20px 0' }}>
             <div className="footer-section">
               <h4>ABOUT</h4>
@@ -76,14 +76,14 @@ export default function Home() {
             </div>
             <div className="footer-section">
               <h4>BLUEPRINT</h4>
-              <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 100000, display: 'inline-block' }}>View Application</a>
+              <a href="https://replit.dev" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block' }} onClick={(e) => e.stopPropagation()}>View Application</a>
             </div>
             <div className="footer-section">
               <h4>CONNECT</h4>
               <div className="social-links" style={{ display: 'flex', flexDirection: 'column' }}>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 100000, display: 'inline-block', marginBottom: '5px' }}>Instagram</a>
-                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 100000, display: 'inline-block', marginBottom: '5px' }}>Behance</a>
-                <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 100000, display: 'inline-block' }}>Pinterest</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block', marginBottom: '5px' }} onClick={(e) => e.stopPropagation()}>Instagram</a>
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block', marginBottom: '5px' }} onClick={(e) => e.stopPropagation()}>Behance</a>
+                <a href="https://pin.it" target="_blank" rel="noopener noreferrer" style={{ position: 'relative', zIndex: 2147483647, display: 'inline-block' }} onClick={(e) => e.stopPropagation()}>Pinterest</a>
               </div>
             </div>
           </div>
