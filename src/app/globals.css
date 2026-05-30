@@ -1,17 +1,17 @@
 * { box-sizing: border-box; }
 body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; background-color: #1a1715 !important; }
-.studio-canvas { min-height: 100vh; padding: 100px 60px; position: relative; background-image: radial-gradient(circle at 50% 30%, #362d29 0%, transparent 55%), radial-gradient(circle at 50% 40%, #26201d 0%, #151210 100%) !important; background-attachment: fixed !important; background-size: cover !important; }
-.container-wrapper { max-width: 1400px; margin: 0 auto; }
+.studio-canvas { min-height: 100vh; padding: 100px 60px 250px 60px; position: relative; background-image: radial-gradient(circle at 50% 30%, #362d29 0%, transparent 55%), radial-gradient(circle at 50% 40%, #26201d 0%, #151210 100%) !important; background-attachment: fixed !important; background-size: cover !important; display: flex; flex-direction: column; }
+.container-wrapper { max-width: 1400px; margin: 0 auto; width: 100%; flex: 1; }
 .header-card { margin-bottom: 80px; max-width: 600px; }
 .header-card h1 { margin: 0; font-size: 7.5rem; line-height: 0.85; font-weight: 300; color: #f5f2eb; letter-spacing: -0.04em; }
 .subtitle { margin-top: 24px; font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: #c4ae9a; }
 .tagline { margin-top: 40px; color: #a39b94; font-size: 1.1rem; line-height: 1.6; }
 .portfolio-wrapper { display: flex; justify-content: center; margin-bottom: 160px; }
 
-/* FIX 1: Ignore empty overlapping grid box spaces to let footer elements pass clicks */
-.portfolio-stage { position: relative; width: 100%; max-width: 1200px; height: 1350px; pointer-events: none !important; }
+/* FIX 1: Ignore empty layout block spaces to let footer elements pass clicks */
+.portfolio-canvas-grid { position: relative; width: 100%; pointer-events: none !important; margin-bottom: 80px; }
 
-/* FIX 2: Restore proper pointer behaviors strictly on actual cards */
+/* FIX 2: Restore full interactivity to physical visible cards */
 .project-card { position: absolute; overflow: hidden; border-radius: 16px; cursor: pointer; background: #1b1816; box-shadow: 0 45px 100px rgba(0, 0, 0, 0.85); border: 1px solid rgba(245, 242, 235, 0.12); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease; z-index: 2; pointer-events: auto !important; }
 .project-card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 60px 120px rgba(0, 0, 0, 0.95); border-color: rgba(245, 242, 235, 0.35); }
 .card-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.95 !important; transition: transform 0.6s ease; }
@@ -34,21 +34,13 @@ body { margin: 0; color: #ebdcd0; font-family: 'Inter', sans-serif; -webkit-font
 .is-expanded .card-overlay { background: none !important; }
 .back-btn { position: fixed; top: 40px; right: 40px; z-index: 100000; padding: 12px 24px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.2); background: rgba(27, 24, 22, 0.9); color: #ebdcd0; font-size: 0.9rem; cursor: pointer; }
 
-/* FIX 3: Elevate footer container structure above absolute components */
-.footer-card { border-top: 1px solid rgba(245, 242, 235, 0.08); padding-top: 60px; margin-top: 80px; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
-.footer-grid { display: flex; flex-direction: column; gap: 48px; margin-bottom: 80px; }
-.footer-row { display: grid; grid-template-columns: 160px 1fr; align-items: start; }
-.footer-nav-item { font-size: 0.75rem; letter-spacing: 2px; color: #c4ae9a; font-weight: 600; }
-.footer-text { margin: 0; font-size: 1.15rem; line-height: 1.7; max-width: 720px; color: #a39b94; }
-.blueprint-card { display: flex; justify-content: space-between; align-items: center; text-decoration: none; background: rgba(255, 255, 255, 0.02); padding: 20px 30px; border-radius: 40px; border: 1px solid rgba(245, 242, 235, 0.08); max-width: 500px; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
-.blueprint-info { display: flex; align-items: center; gap: 20px; }
-.blueprint-icon { font-size: 1.8rem; color: #c4ae9a; }
-.blueprint-card h4 { margin: 0; font-size: 1.1rem; color: #f5f2eb; font-weight: 400; }
-.blueprint-card span { font-size: 0.85rem; color: #a39b94; }
-.blueprint-card .arrow { font-size: 1.3rem; color: #c4ae9a; }
-.social-pills { display: flex; gap: 16px; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
+/* FIX 3: Push fixed footer structure onto the front browser rendering layer */
+.footer-card { border-top: 1px solid rgba(245, 242, 235, 0.12); padding: 40px 60px; position: fixed !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100vw !important; z-index: 2147483647 !important; background-color: #161413 !important; pointer-events: auto !important; box-shadow: 0 -20px 50px rgba(0,0,0,0.5); }
+.footer-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; max-width: 1400px; margin: 0 auto; }
+.footer-section h4 { font-size: 0.75rem; letter-spacing: 2px; color: #c4ae9a; font-weight: 600; margin: 0 0 16px 0; text-transform: uppercase; }
+.about-text { margin: 0; font-size: 0.95rem; line-height: 1.6; color: #a39b94; }
 
-/* FIX 4: Secure physical click functionality on navigation URLs */
-.social-pills a { text-decoration: none; color: #f5f2eb; padding: 12px 28px; border-radius: 40px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(245, 242, 235, 0.08); font-size: 0.95rem; transition: all 0.3s ease; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
-.social-pills a:hover { background: #c4ae9a; color: #151211; }
-.footer-bottom { display: flex; justify-content: space-between; font-size: 0.7rem; color: #7a726c; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 40px; }
+/* FIX 4: Corrected class names to map style definitions explicitly to page.tsx */
+.social-links { display: flex; gap: 16px; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
+.footer-section a, .social-links a { text-decoration: none; color: #f5f2eb; padding: 10px 24px; border-radius: 40px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(245, 242, 235, 0.12); font-size: 0.9rem; transition: all 0.3s ease; display: inline-block; position: relative !important; z-index: 2147483647 !important; pointer-events: auto !important; }
+.footer-section a:hover, .social-links a:hover { background: #c4ae9a !important; color: #151211 !important; transform: translateY(-2px); }
