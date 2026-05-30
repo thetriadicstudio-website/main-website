@@ -37,85 +37,89 @@ export default function Home() {
 
   return (
     <div style={{
-      backgroundColor: '#E3DCDE',
-      color: '#383230',
-      fontFamily: 'system-ui, -apple-system, sans-serif',
+      backgroundColor: '#E6E1DC',
+      backgroundImage: 'radial-gradient(circle at 50% 20%, #F5F2EF 0%, transparent 65%), radial-gradient(circle at 80% 70%, #DBD5D0 0%, #D1C9C2 100%)',
+      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover',
+      color: '#2C2625',
+      fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       minHeight: '100vh',
-      padding: '120px 40px',
+      padding: '140px 48px',
       boxSizing: 'border-box'
     }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1050px', margin: '0 auto' }}>
         
-        {/* 1. THE HEADER: Who, What, and Your Promise */}
-        <header style={{ marginBottom: '140px', maxWidth: '750px' }}>
-          <h1 style={{ fontSize: '5.5rem', fontWeight: 300, margin: 0, color: '#2B2524', letterSpacing: '-0.04em', lineHeight: 0.95 }}>
+        {/* 1. ARCHITECTURAL HEADER BLOCK */}
+        <header style={{ marginBottom: '160px', maxWidth: '750px' }}>
+          <h1 style={{ fontSize: '6.5rem', fontWeight: 300, margin: 0, color: '#2C2625', letterSpacing: '-0.04em', lineHeight: 0.9 }}>
             The<br />Triadic<br />Studio
           </h1>
-          <p style={{ fontSize: '0.85rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#8F827E', margin: '24px 0 40px 0', fontWeight: 600 }}>
+          <p style={{ fontSize: '0.85rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#7A706D', margin: '28px 0 44px 0', fontWeight: 600 }}>
             Spatial Styling & 3D Visualisations
           </p>
-          <p style={{ fontSize: '1.5rem', lineHeight: 1.5, color: '#4A4240', fontWeight: 300, fontStyle: 'italic', margin: 0 }}>
+          <p style={{ fontSize: '1.6rem', lineHeight: 1.5, color: '#453E3C', fontWeight: 300, fontStyle: 'italic', margin: 0, letterSpacing: '-0.01em' }}>
             "I shape spaces and creations that are felt, not just seen."
           </p>
         </header>
 
-        {/* 2. THE MIDDLE: Three Structured Container Blocks for Future Artwork */}
-        <section style={{ marginBottom: '140px' }}>
-          <h2 style={{ fontSize: '0.8rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#8F827E', marginBottom: '32px', fontWeight: 600 }}>
+        {/* 2. THREE RECTANGULAR VERTICAL TILES MOCKUP ALIGNMENT */}
+        <section style={{ marginBottom: '160px' }}>
+          <h2 style={{ fontSize: '0.8rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#7A706D', marginBottom: '40px', fontWeight: 600 }}>
             Selected Creations Framework
           </h2>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '28px', width: '100%' }}>
             
-            {/* CONTAINER 01 */}
-            <div style={{ width: '100%', height: '500px', border: '1px solid rgba(56, 50, 48, 0.15)', borderRadius: '12px', display: 'flex', background: 'rgba(255, 255, 255, 0.25)', boxShadow: '0 20px 50px rgba(56, 50, 48, 0.04)' }}>
-              <span style={{ margin: 'auto', fontSize: '0.75rem', letterSpacing: '2px', opacity: 0.4, textTransform: 'uppercase' }}>
-                [ Container 01 — Dedicated Space for Future Render ]
+            {/* VERTICAL CONTAINER 01 */}
+            <div style={{ height: '620px', background: 'rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)', border: '1px solid rgba(255, 255, 255, 0.5)', borderRadius: '14px', display: 'flex', position: 'relative', overflow: 'hidden', boxShadow: '0 30px 70px rgba(44, 38, 37, 0.05)' }}>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(143, 184, 181, 0.15) 0%, transparent 100%)' }}></div>
+              <span style={{ margin: 'auto', fontSize: '0.7rem', letterSpacing: '1px', opacity: 0.4, textTransform: 'uppercase', textAlign: 'center', padding: '0 20px', lineHeight: 1.4 }}>
+                [ Slot 01 <br /> Future Render ]
               </span>
             </div>
 
-            {/* CONTAINER 02 */}
-            <div style={{ width: '100%', height: '500px', border: '1px solid rgba(56, 50, 48, 0.15)', borderRadius: '12px', display: 'flex', background: 'rgba(255, 255, 255, 0.25)', boxShadow: '0 20px 50px rgba(56, 50, 48, 0.04)' }}>
-              <span style={{ margin: 'auto', fontSize: '0.75rem', letterSpacing: '2px', opacity: 0.4, textTransform: 'uppercase' }}>
-                [ Container 02 — Dedicated Space for Future Render ]
+            {/* VERTICAL CONTAINER 02 */}
+            <div style={{ height: '620px', background: 'rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)', border: '1px solid rgba(255, 255, 255, 0.5)', borderRadius: '14px', display: 'flex', position: 'relative', overflow: 'hidden', boxShadow: '0 30px 70px rgba(44, 38, 37, 0.05)' }}>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 0%, rgba(143, 184, 181, 0.15) 100%)' }}></div>
+              <span style={{ margin: 'auto', fontSize: '0.7rem', letterSpacing: '1px', opacity: 0.4, textTransform: 'uppercase', textAlign: 'center', padding: '0 20px', lineHeight: 1.4 }}>
+                [ Slot 02 <br /> Future Render ]
               </span>
             </div>
 
-            {/* CONTAINER 03 */}
-            <div style={{ width: '100%', height: '500px', border: '1px solid rgba(56, 50, 48, 0.15)', borderRadius: '12px', display: 'flex', background: 'rgba(255, 255, 255, 0.25)', boxShadow: '0 20px 50px rgba(56, 50, 48, 0.04)' }}>
-              <span style={{ margin: 'auto', fontSize: '0.75rem', letterSpacing: '2px', opacity: 0.4, textTransform: 'uppercase' }}>
-                [ Container 03 — Dedicated Space for Future Render ]
+            {/* VERTICAL CONTAINER 03 */}
+            <div style={{ height: '620px', background: 'rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)', border: '1px solid rgba(255, 255, 255, 0.5)', borderRadius: '14px', display: 'flex', position: 'relative', overflow: 'hidden', boxShadow: '0 30px 70px rgba(44, 38, 37, 0.05)' }}>
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(143, 184, 181, 0.08) 0%, rgba(143, 184, 181, 0.08) 100%)' }}></div>
+              <span style={{ margin: 'auto', fontSize: '0.7rem', letterSpacing: '1px', opacity: 0.4, textTransform: 'uppercase', textAlign: 'center', padding: '0 20px', lineHeight: 1.4 }}>
+                [ Slot 03 <br /> Future Render ]
               </span>
             </div>
 
           </div>
         </section>
-
-        {/* 3. THE BLUEPRINT CORNERSTONE FRAMEWORK COMPONENT */}
-        <section style={{ padding: '60px 0', marginBottom: '140px', borderTop: '1px solid rgba(56, 50, 48, 0.1)' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        {/* 3. BLUEPRINT TECHNICAL SEGMENT */}
+        <section style={{ padding: '80px 0', marginBottom: '140px', borderTop: '1px solid rgba(44, 38, 37, 0.1)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
             <div>
-              <span style={{ fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: '#8F827E', fontWeight: 600 }}>The Cornerstone System</span>
-              <h3 style={{ fontSize: '2rem', fontWeight: 300, color: '#2B2524', margin: '12px 0 16px 0', letterSpacing: '-0.02em' }}>Blueprint Analysis</h3>
-              <p style={{ fontSize: '1.05rem', lineHeight: 1.65, color: '#5C5350', margin: 0, fontWeight: 300, maxWidth: '700px' }}>
-                This dedicated visual canvas is pre-framed to host your isometric interior specification elevations. It provides instant technical credibility to support your design philosophy before clients reach your experience packages.
+              <span style={{ fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: '#7A706D', fontWeight: 600 }}>The Cornerstone System</span>
+              <h3 style={{ fontSize: '2.4rem', fontWeight: 300, color: '#2C2625', margin: '14px 0 20px 0', letterSpacing: '-0.02em' }}>Blueprint Analysis</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#544B48', margin: 0, fontWeight: 300 }}>
+                This structured graphical block maps straight to your specification elevations. It delivers immediate context supporting your composition principles before viewers interact with your studio alignment terms.
               </p>
             </div>
             
-            {/* The Blueprint layout box */}
-            <div style={{ border: '1px dashed rgba(56, 50, 48, 0.3)', borderRadius: '12px', height: '400px', display: 'flex', background: 'rgba(255,255,255,0.15)' }}>
-              <span style={{ margin: 'auto', fontSize: '0.75rem', letterSpacing: '1px', opacity: 0.4 }}>[ Blueprint Specification & Moodboard Frame ]</span>
+            <div style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', border: '1px dashed rgba(44, 38, 37, 0.25)', borderRadius: '12px', height: '380px', display: 'flex' }}>
+              <span style={{ margin: 'auto', fontSize: '0.75rem', letterSpacing: '1px', opacity: 0.4, color: '#2C2625', fontWeight: 500 }}>[ Blueprint Technical Specification Frame ]</span>
             </div>
           </div>
         </section>
 
-        {/* 4. THE FOOTER: Experiences Accordion & Contacts */}
-        <footer style={{ borderTop: '1px solid rgba(56, 50, 48, 0.1)', paddingTop: '80px' }}>
-          <h4 style={{ fontSize: '0.8rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#8F827E', margin: '0 0 40px 0', fontWeight: 600 }}>
+        {/* 4. ALIGNMENT EXPERIENCES ACCORDION */}
+        <footer style={{ borderTop: '1px solid rgba(44, 38, 37, 0.1)', paddingTop: '80px' }}>
+          <h4 style={{ fontSize: '0.8rem', letterSpacing: '3px', textTransform: 'uppercase', color: '#7A706D', margin: '0 0 44px 0', fontWeight: 600 }}>
             Experiences & Alignment
           </h4>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '100px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '120px' }}>
             {experiences.map((exp) => {
               const isOpen = openSection === exp.id;
               return (
@@ -123,25 +127,28 @@ export default function Home() {
                   key={exp.id} 
                   onClick={() => setOpenSection(isOpen ? null : exp.id)}
                   style={{ 
-                    border: '1px solid rgba(56, 50, 48, 0.12)', 
-                    borderRadius: '12px', 
-                    padding: '28px', 
-                    background: 'rgba(255,255,255,0.3)', 
+                    border: '1px solid rgba(255, 255, 255, 0.5)', 
+                    borderRadius: '14px', 
+                    padding: '32px', 
+                    background: isOpen ? 'rgba(255, 255, 255, 0.35)' : 'rgba(255, 255, 255, 0.18)', 
+                    backdropFilter: 'blur(20px)',
+                    WebkitBackdropFilter: 'blur(20px)',
                     cursor: 'pointer',
-                    transition: 'background 0.3s ease'
+                    boxShadow: '0 15px 45px rgba(44, 38, 37, 0.02)',
+                    transition: 'all 0.3s ease'
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '1.3rem', fontWeight: 400, color: '#2B2524' }}>{exp.title}</span>
-                    <span style={{ fontSize: '0.75rem', color: '#8F827E', letterSpacing: '1px' }}>
+                    <span style={{ fontSize: '1.35rem', fontWeight: 400, color: '#2C2625' }}>{exp.title}</span>
+                    <span style={{ fontSize: '0.75rem', color: '#7A706D', letterSpacing: '1px', fontWeight: 500 }}>
                       {isOpen ? 'Close details ↑' : 'Reveal details ↓'}
                     </span>
                   </div>
                   
                   {isOpen && (
-                    <div style={{ marginTop: '20px', paddingTop: '20px', borderTop: '1px solid rgba(56, 50, 48, 0.08)' }}>
-                      <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#4A4240', margin: '0 0 16px 0', fontWeight: 300 }}>{exp.desc}</p>
-                      <span style={{ fontSize: '0.85rem', color: '#8F827E', fontFamily: 'monospace', fontWeight: 600 }}>{exp.price}</span>
+                    <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(44, 38, 37, 0.08)' }}>
+                      <p style={{ fontSize: '1.05rem', lineHeight: 1.65, color: '#453E3C', margin: '0 0 16px 0', fontWeight: 300 }}>{exp.desc}</p>
+                      <span style={{ fontSize: '0.85rem', color: '#7A706D', fontFamily: 'monospace', fontWeight: 600 }}>{exp.price}</span>
                     </div>
                   )}
                 </div>
@@ -149,14 +156,14 @@ export default function Home() {
             })}
           </div>
 
-          {/* NETWORKS CONNECTIONS BAR */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '40px', borderTop: '1px solid rgba(56, 50, 48, 0.05)' }}>
-            <div style={{ display: 'flex', gap: '32px' }}>
-              <a href="mailto:studio@thetriadicstudio.com" style={{ color: '#383230', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px' }}>Email</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#383230', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px' }}>Instagram</a>
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ color: '#383230', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px' }}>Behance</a>
+          {/* NETWORKS baseline */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '44px', borderTop: '1px solid rgba(44, 38, 37, 0.08)' }}>
+            <div style={{ display: 'flex', gap: '36px' }}>
+              <a href="mailto:studio@thetriadicstudio.com" style={{ color: '#2C2625', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 500 }}>Email</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#2C2625', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 500 }}>Instagram</a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" style={{ color: '#2C2625', textDecoration: 'none', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 500 }}>Behance</a>
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#8F827E', letterSpacing: '1px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#7A706D', letterSpacing: '1px', fontWeight: 500 }}>
               © {new Date().getFullYear()} THE TRIADIC STUDIO • YORKSHIRE, UK
             </div>
           </div>
