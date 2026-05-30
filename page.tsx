@@ -68,7 +68,7 @@ export default function Home() {
           })}
         </main>
 
-        <footer className="card footer-card">
+        <footer className="card footer-card" style={{ position: 'relative', zIndex: 100 }}>
           <div className="footer-layout" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', textAlign: 'left', marginBottom: '30px' }}>
             <div className="footer-section">
               <h4>ABOUT</h4>
