@@ -2,10 +2,76 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #E3DCDE !important;
+  min-height: 100vh;
+
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  color: #f3ece7;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(238, 231, 226, 0.12) 0%,
+      rgba(238, 231, 226, 0.04) 25%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255,255,255,0.04) 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #93867d 0%,
+      #867870 25%,
+      #786b64 60%,
+      #6d615a 100%
+    );
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Velvet atmosphere */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.008) 0px,
+      rgba(255,255,255,0.008) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
+}
+
+/* Soft vignette */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 40%,
+      rgba(0,0,0,0.18) 100%
+    );
 }
