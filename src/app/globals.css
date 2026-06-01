@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -12,28 +14,37 @@
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+/* FIXED: Completely killed the default Next.js white gradient layout template. 
+   Forced a solid dark luxury backdrop foundation with your background image */
 html, body {
   margin: 0;
+  padding: 0;
   min-height: 100%;
   font-family: var(--font-inter), sans-serif;
-  background: url('/background.jpg') center / cover fixed no-repeat;
-  color: var(--ink);
+  background-color: #0d1412 !important; 
+  background-image: url('/background.jpg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-body::before, body::after {
+/* FIXED: Replaced standard background veil logic with a pure studio vignette scrim.
+   This drops a smooth dark mask specifically behind text regions while keeping images crisp */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
+  background: 
+    linear-gradient(to bottom, rgba(14, 22, 20, 0.85) 0%, rgba(14, 22, 20, 0.3) 25%, rgba(14, 22, 20, 0.4) 75%, rgba(14, 22, 20, 0.85) 100%) !important;
   pointer-events: none;
 }
 
-body::before {
-  z-index: -2;
-  background: 
-    linear-gradient(to bottom, rgba(14, 22, 20, 0.65) 0%, transparent 18%, transparent 80%, rgba(14, 22, 20, 0.75) 100%),
-    linear-gradient(to right, rgba(14, 22, 20, 0.5) 0%, transparent 15%, transparent 85%, rgba(14, 22, 20, 0.5) 100%);
+body::after {
+  display: none !important; /* Erases any hidden light template gradient containers completely */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -68,8 +79,9 @@ button { font: inherit; }
   font-weight: 300; 
   line-height: 1.0; 
   letter-spacing: -0.02em;
-  color: var(--ink); 
+  color: #ffffff !important; /* Set to stark white to perfectly offset against dark background vignette */
   margin: 0; 
+  text-shadow: 0 4px 24px rgba(0,0,0,0.6);
 }
 .hero h1 em { font-style: italic; color: var(--ink-soft); font-weight: 300; }
 
@@ -89,7 +101,7 @@ button { font: inherit; }
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s ease, box-shadow 0.45s ease;
 }
-.tile span { position: absolute; top: 18px; left: 20px; z-index: 4; font-size: 9px; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,0.8); }
+.tile span { position: absolute; top: 18px; left: 20px; z-index: 4; font-size: 9px; font-weight: 600; letter-spacing: 0.15em; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 .tile img { width: 100%; height: 100%; object-fit: cover; opacity: 0.68; filter: saturate(0.85) contrast(0.95) brightness(0.88); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease; }
 .tile::before { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 60%); pointer-events: none; }
 .tile:hover { transform: translateY(-12px) scale(1.01); border-color: rgba(255, 255, 255, 0.45); box-shadow: 0 50px 110px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25); }
@@ -104,7 +116,7 @@ button { font: inherit; }
 .tile-7 { width: 31%; height: 230px; left: 69%; top: 470px; }
 /* THE EMOTIONAL BLUEPRINT FRAMEWORK SECTION */
 .blueprint { margin-top: 160px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; border-top: 1px solid rgba(140, 129, 123, 0.15); padding-top: 90px; }
-.blueprint-left h2 { font-family: var(--font-cormorant), Georgia, serif; font-size: 52px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 60px; }
+.blueprint-left h2 { font-family: var(--font-cormorant), Georgia, serif; font-size: 52px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: #ffffff !important; margin: 0 0 60px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
 /* ISOMETRIC MATRIX GRID */
 .blueprint-diagram { display: grid; grid-template-columns: 140px 1fr; gap: 30px; align-items: center; margin-top: 40px; }
@@ -124,7 +136,7 @@ button { font: inherit; }
 .layer-6 { top: 175px; z-index: 5; }
 
 /* BLUEPRINT TEXT LIST BLOCK */
-.blueprint-right h3 { font-family: var(--font-cormorant), Georgia, serif; font-size: 32px; font-weight: 300; line-height: 1.35; color: var(--ink); margin: 0 0 40px; }
+.blueprint-right h3 { font-family: var(--font-cormorant), Georgia, serif; font-size: 32px; font-weight: 300; line-height: 1.35; color: #ffffff !important; margin: 0 0 40px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 .blueprint-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px; }
 .blueprint-list li { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.24em; color: var(--ink-label) !important; padding-left: 20px; position: relative; }
 .blueprint-list li::before { content: "•"; position: absolute; left: 0; color: var(--ink-soft); font-size: 16px; top: -2px; }
@@ -140,9 +152,9 @@ button { font: inherit; }
 .lightbox-content { color: #fdfaf4; padding-right: 20px; }
 .lightbox-count { font-size: 11px; font-weight: 600; letter-spacing: 0.25em; color: rgba(255, 255, 255, 0.35); margin-bottom: 20px; }
 .lightbox-content h2 { font-family: var(--font-cormorant), Georgia, serif; font-size: 52px; font-weight: 300; margin: 0 0 10px; color: #ffffff; letter-spacing: -0.01em; }
-.lightbox-category { display: block; font-size: 10px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 28px; }
+.lightbox-category { display: block; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 24px; }
 .lightbox-content p { font-family: var(--font-cormorant), Georgia, serif; font-size: 22px; line-height: 1.45; color: rgba(255, 255, 255, 0.78); margin: 0 0 40px; }
-.lightbox-controls { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 28px; }
+.lightbox-controls { display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 24px; }
 .lightbox-controls button { background: transparent; border: 0; color: inherit; cursor: pointer; text-transform: uppercase; letter-spacing: inherit; transition: color 0.3s; }
 .lightbox-controls button:hover { color: #ffffff; }
 
@@ -159,48 +171,32 @@ button { font: inherit; }
 .footer a { transition: opacity 0.3s ease; }
 .footer a:hover { opacity: 0.65; text-decoration: underline; }
 
-/* ==========================================
-   NEW: ELITE MOBILE RESPONSIVENESS OVERRIDES
-   ========================================== */
+/* ELITE MOBILE RESPONSIVENESS OVERRIDES */
 @media (max-width: 768px) {
   .page { padding: 32px 24px; }
-  
-  /* Stack branding name above links cleanly */
   .header { flex-direction: column; align-items: flex-start; gap: 16px; font-size: 13px; }
   .header nav { gap: 24px; width: 100%; justify-content: space-between; }
-  
-  /* Scale headline down safely to fit smaller portrait frames */
   .hero-panel { margin-left: 0; padding-top: 40px; }
   .hero h1 { font-size: 42px; line-height: 1.1; }
   .eyebrow { font-size: 11px; margin-bottom: 20px; }
   .pillars { flex-wrap: wrap; gap: 16px; font-size: 11px; margin-top: 28px; }
-  
-  /* Flatten absolute grid layouts into a luxury editorial column scroll */
   .tiles { display: flex; flex-direction: column; gap: 28px; min-height: auto; }
-  .tile { position: relative !important; width: 100% !important; height: 340px !important; left: auto !important; top: auto !important; border-radius: 16px; }
-  
-  /* Blueprint responsive adaptation */
+  .tile { position: relative; width: 100% !important; height: 340px !important; left: auto !important; top: auto !important; border-radius: 16px; }
   .blueprint { grid-template-columns: 1fr; gap: 48px; margin-top: 80px; padding-top: 48px; }
   .blueprint-left h2 { font-size: 34px; margin-bottom: 40px; }
   .blueprint-diagram { grid-template-columns: 1fr; gap: 24px; }
-  .blueprint-labels { display: none; } /* Hide raw checklist index strings to preserve screen space */
+  .blueprint-labels { display: none; } 
   .blueprint-stack { width: 100%; max-width: 320px; height: 260px; }
   .blueprint-layer { height: 120px; }
-  
-  /* Lightbox adaptive view screen formatting */
   .lightbox-overlay { padding: 16px; }
   .lightbox-card { padding: 20px; max-height: 95vh; overflow-y: auto; border-radius: 16px; }
   .lightbox-grid { grid-template-columns: 1fr; gap: 24px; }
   .lightbox-image-wrapper { height: 35vh; }
   .lightbox-content h2 { font-size: 32px; }
   .lightbox-content p { font-size: 18px; margin-bottom: 24px; }
-  
-  /* About block extension adjustments */
   .about { width: 100%; margin-top: 80px; padding: 28px; border-radius: 16px; }
   .about span { font-size: 11px; }
   .about p { font-size: 20px; }
-  
-  /* Footer responsive matrix adjustments */
   .footer { grid-template-columns: 1fr; gap: 24px; font-size: 12px; margin-top: 80px; padding: 32px 0; }
   .footer em { font-size: 18px; display: block; margin-top: 8px; }
 }
