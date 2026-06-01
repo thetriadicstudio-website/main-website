@@ -22,28 +22,28 @@ const projects = [
     description: 'An architectural view looking out onto a sun-drenched pool area, blending modern arches with lush external landscape styling.',
   },
   {
-    title: 'Verdant Shadows',
-    category: 'Spatial Styling',
+    title: 'Verdant Sanctuary',
+    category: 'Residential',
     image: '/portfolio/4.jpg',
-    description: 'A dramatic interior perspective focusing on high-contrast palm leaves and tropical greenery under soft, misty overhead light.',
+    description: 'A breathtaking wide view of a luxury minimalist pavilion featuring striking traditional rooflines and absolute harmony with an outdoor reflection pool.',
   },
   {
-    title: 'The Portal Room',
+    title: 'Misty Portals',
     category: 'Concept Study',
     image: '/portfolio/5.jpg',
-    description: 'A moody, cinematic interior highlighting a large circular stone window that frames an immersive natural pool.',
-  },
-  {
-    title: 'Material & Stone',
-    category: 'Material Study',
-    image: '/portfolio/6.jpg',
-    description: 'A tactile arrangement of river stones, masonry blocks, and unrefined wood textures highlighting organic materiality.',
+    description: 'A dramatic interior perspective focusing on high-contrast palm leaves and tropical greenery under soft, misty overhead light.',
   },
   {
     title: 'Floral Sanctuary',
     category: 'Residential',
-    image: '/portfolio/7.jpg',
+    image: '/portfolio/6.jpg',
     description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
+  },
+  {
+    title: 'Material Curation',
+    category: 'Material Study',
+    image: '/portfolio/7.jpg',
+    description: 'A beautifully structured presentation of organic materials, showcasing a tactile arrangement of smooth river stones, moss panels, and raw unrefined textures.',
   },
 ];
 
@@ -90,7 +90,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
