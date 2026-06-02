@@ -73,7 +73,7 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* PURE WEB CODE ECLIPSE LIGHT ENGINE - 100% DEPENDENCY FREE */}
+      {/* PURE WEB CODE ECLIPSE LIGHT ENGINE - SEAMLESS BLENDED SYSTEM */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
@@ -87,7 +87,24 @@ export default function Home() {
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
 
-              {/* Advanced Volumetric Fog Multiplier Filter */}
+              {/* Linear fading gradients to smoothly melt the rays out toward the ends */}
+              <linearGradient id="ray-fade-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#0d1412" stopOpacity="0" />
+                <stop offset="35%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="65%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </linearGradient>
+
+              <linearGradient id="ray-fade-vertical" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#0d1412" stopOpacity="0" />
+                <stop offset="30%" stopColor="#e9e0d2" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="70%" stopColor="#e9e0d2" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </linearGradient>
+
+              {/* Advanced Volumetric Fog Multiplier Filter for the Core */}
               <filter id="eclipse-light-leak" x="-200%" y="-200%" width="500%" height="500%">
                 <feGaussianBlur stdDeviation="5" result="blur1" />
                 <feGaussianBlur stdDeviation="2" result="blur2" />
@@ -100,26 +117,25 @@ export default function Home() {
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
+
+              {/* HEAVY DIFFUSION RAY FILTER: Destroys sharp wireframe line lines, bleeding them into organic fog */}
+              <filter id="ray-defuse-bloom" x="-200%" y="-200%" width="500%" height="500%">
+                <feGaussianBlur stdDeviation="14" />
+              </filter>
             </defs>
 
             {/* RADIAL BACKGROUND HAZE: Smooth, fogged golden ambiance centered behind everything */}
             <circle cx="100" cy="55" r="45" fill="#f5ebd6" opacity="0.14" filter="url(#eclipse-light-leak)" />
 
-            {/* CINEMATIC STARBURST ARRAY: Highly dense, fine multi-directional needle rays */}
-            <g filter="url(#eclipse-light-leak)" opacity="0.45">
-              {/* Long Horizontal & Vertical Primary Cross-beams */}
-              <line x1="20" y1="55" x2="180" y2="55" stroke="#ffffff" strokeWidth="0.5" />
-              <line x1="100" y1="-20" x2="100" y2="130" stroke="#ffffff" strokeWidth="0.5" />
+            {/* CINEMATIC FEATHERED LIGHT RAY ARRAY - Completely blended to dissolve naturally */}
+            <g filter="url(#ray-defuse-bloom)" opacity="0.65">
+              {/* Primary Cross-beams running on length-fading gradient strokes */}
+              <line x1="10" y1="55" x2="190" y2="55" stroke="url(#ray-fade-horizontal)" strokeWidth="6" />
+              <line x1="100" y1="-30" x2="100" y2="140" stroke="url(#ray-fade-vertical)" strokeWidth="6" />
               
-              {/* Dense 45-degree Needle Ray Grid Cluster */}
-              <line x1="40" y1="-5" x2="160" y2="115" stroke="#f5ebd6" strokeWidth="0.4" />
-              <line x1="40" y1="115" x2="160" y2="-5" stroke="#f5ebd6" strokeWidth="0.4" />
-              
-              {/* Intermediary Micro-needle Flares for Realistic Optical Texturing */}
-              <line x1="30" y1="20" x2="170" y2="90" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
-              <line x1="30" y1="90" x2="170" y2="20" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
-              <line x1="60" y1="-15" x2="140" y2="125" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
-              <line x1="140" y1="-15" x2="60" y2="125" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
+              {/* Expanded Soft Diagonal Light Glow Sheets */}
+              <line x1="20" y1="-25" x2="180" y2="135" stroke="url(#ray-fade-horizontal)" strokeWidth="5" transform="rotate(15, 100, 55)" />
+              <line x1="20" y1="135" x2="180" y2="-25" stroke="url(#ray-fade-horizontal)" strokeWidth="5" transform="rotate(-15, 100, 55)" />
             </g>
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
@@ -149,8 +165,8 @@ export default function Home() {
             />
 
             {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point */}
-            <circle cx="100" cy="55" r="16" fill="#f5ebd6" opacity="0.2" filter="url(#eclipse-light-leak)" />
-            <circle cx="100" cy="55" r="7" fill="#ffffff" opacity="0.5" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="16" fill="#f5ebd6" opacity="0.25" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="6" fill="#ffffff" opacity="0.6" filter="url(#eclipse-light-leak)" />
             <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
 
             {/* High-End Studio Typography Vectors */}
