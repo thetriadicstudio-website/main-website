@@ -73,62 +73,110 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - VOLUMETRIC GLOW VARIATION */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
-          <svg viewBox="0 0 200 140" className="vector-brand-master">
+          <svg viewBox="0 0 200 150" className="vector-brand-master">
             <defs>
-              {/* Premium Metallic Gradient Shimmer */}
-              <linearGradient id="brand-platinum" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#a3968f" />
-                <stop offset="30%" stopColor="#ffffff" />
-                <stop offset="50%" stopColor="#e9e0d2" />
-                <stop offset="70%" stopColor="#9e8d85" />
-                <stop offset="100%" stopColor="#ffffff" />
+              {/* Multi-stop High-Contrast Champagne Gold Sheen */}
+              <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8c7965" />
+                <stop offset="22%" stopColor="#f5ebd6" />
+                <stop offset="45%" stopColor="#ffffff" />
+                <stop offset="65%" stopColor="#d1be9b" />
+                <stop offset="85%" stopColor="#f5ebd6" />
+                <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
+
+              {/* The Studio Photographic Fog & Blur Filter Engine */}
+              <filter id="cinematic-fog" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="5" result="blur1" />
+                <feGaussianBlur stdDeviation="2" result="blur2" />
+                <feMerge>
+                  <feMergeNode in="blur1" />
+                  <feMergeNode in="blur2" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
             </defs>
 
-            {/* Symmetrical Left Moon Curve */}
+            {/* FOG LAYER: Backing Ambient Golden Mist between the paths */}
+            <circle cx="100" cy="55" r="30" fill="#f5ebd6" opacity="0.08" filter="url(#cinematic-fog)" />
+
+            {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
-              d="M 82 25 C 64 40, 64 70, 82 85 C 70 75, 70 35, 82 25 Z" 
-              fill="url(#brand-platinum)" 
+              d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
+              fill="url(#heavy-gold-metallic)" 
+              opacity="0.25"
             />
 
-            {/* Symmetrical Right Moon Curve */}
+            {/* MAIN INNER LAYER: Bold Left Moon Curve */}
             <path 
-              d="M 118 25 C 136 40, 136 70, 118 85 C 130 75, 130 35, 118 25 Z" 
-              fill="url(#brand-platinum)" 
+              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
+              fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* Central Light-Piercing Threshold Line */}
+            {/* MAIN INNER LAYER: Bold Right Moon Curve */}
+            <path 
+              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
+              fill="url(#heavy-gold-metallic)" 
+            />
+
+            {/* VIBRATING OUTER LAYER: Fine Ghosted Right Crescent */}
+            <path 
+              d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
+              fill="url(#heavy-gold-metallic)" 
+              opacity="0.25"
+            />
+
+            {/* CORE LIGHT LAYER: Wide Volumetric Beam Backing */}
             <line 
-              x1="100" y1="12" x2="100" y2="98" 
-              stroke="url(#brand-platinum)" 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="#f5ebd6" 
+              strokeWidth="4" 
+              strokeLinecap="round"
+              opacity="0.3"
+              filter="url(#cinematic-fog)"
+            />
+
+            {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="url(#heavy-gold-metallic)" 
               strokeWidth="1.2" 
               strokeLinecap="round"
               className="center-beam-glow"
             />
 
+            {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
+            <line 
+              x1="100" y1="8" x2="100" y2="102" 
+              stroke="#ffffff" 
+              strokeWidth="0.5" 
+              strokeLinecap="round"
+              opacity="0.9"
+            />
+
             {/* High-End Studio Typography Vectors */}
             <text 
-              x="100" y="116" 
+              x="100" y="124" 
               textAnchor="middle" 
               fill="#ffffff" 
               fontSize="8" 
-              fontWeight="400" 
-              letterSpacing="0.45em"
+              fontWeight="300" 
+              letterSpacing="0.48em"
               className="typography-brand-title"
             >
               THE TRIADIC STUDIO
             </text>
 
             <text 
-              x="100" y="128" 
+              x="100" y="136" 
               textAnchor="middle" 
-              fill="#a3968f" 
+              fill="#d1be9b" 
               fontSize="4.5" 
               fontWeight="600" 
-              letterSpacing="0.32em"
+              letterSpacing="0.34em"
               className="typography-brand-sub"
             >
               SPATIAL EXPERIENCE DESIGN
