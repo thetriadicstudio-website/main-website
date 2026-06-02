@@ -72,80 +72,120 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-'use client';
 
-import { useState } from 'react';
+      {/* APPROVED EXCLUSIVE EMBEDDED BRAND PORTAL - BULLETPROOF SOLID COLOR INTEGRATION */}
+      <section className="hero-branding-container" style={{ margin: '80px auto 100px' }}>
+        <div className="pure-code-brand-wrapper" style={{ padding: '60px' }}>
+          <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
+            <defs>
+              {/* Premium Metallic Gradient Shimmer for Sharp Ivory/Gold Moon Curves */}
+              <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#c7bdaf" />
+                <stop offset="35%" stopColor="#ffffff" />
+                <stop offset="65%" stopColor="#e9e0d2" />
+                <stop offset="100%" stopColor="#96877e" />
+              </linearGradient>
 
-const projects = [
-  {
-    title: 'Echoes of Memory',
-    category: 'Residential',
-    image: '/portfolio/1.jpg',
-    description: 'A dramatic view of ancient structural design, where stark historical lines, deep reflective pools, and shadow-drenched pathways frame an intense emotional landscape.',
-  },
-  {
-    title: 'Textured Stillness',
-    category: 'Residential',
-    image: '/portfolio/2.jpg',
-    description: 'A tight interior study contrasting the deep tones of a velvet couch with the organic folds of a fringed throw, a classic book, and shimmering ambient bokeh.',
-  },
-  {
-    title: 'Inner Courtyard',
-    category: 'Architecture Study',
-    image: '/portfolio/3.jpg',
-    description: 'An intimate, textured close-up capturing a scholarly writing set arranged on raw concrete framing, offering a split-focus glimpse into a warm, sun-lit historic courtyard.',
-  },
-  {
-    title: 'Golden Pavilions',
-    category: 'Spatial Styling',
-    image: '/portfolio/4.jpg',
-    description: 'A balanced architectural perspective of a luxury minimalist pavilion, highlighting striking traditional rooflines and circular portals perfectly mirrored in a still reflection pool during the golden hour.',
-  },
-  {
-    title: 'Misty Portals',
-    category: 'Concept Study',
-    image: '/portfolio/5.jpg',
-    description: 'An outdoor architectural perspective focusing on raw concrete frames and a misty moongate, contrasted by sharp tropical greenery and fallen golden leaves under a heavy sky.',
-  },
-  {
-    title: 'Water Remembers What Stone Forgets',
-    category: 'Material Study',
-    image: '/portfolio/6.jpg',
-    description: 'An ethereal subterranean portal where raw, moss-covered stone structures encase a deep, sun-drenched aquatic chamber, capturing the silent stillness of light piercing through water.',
-  },
-  {
-    title: 'Floral Sanctuary',
-    category: 'Residential',
-    image: '/portfolio/7.jpg',
-    description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
-  },
-];
+              {/* VERTICAL AXIS FADE: Non-bright ivory at intersection, dissolving smoothly into ambient transparency at the tips */}
+              <linearGradient id="threshold-axis-taper" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0" />
+                <stop offset="25%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.65" /> {/* ~30% Dimmer than bright digital white */}
+                <stop offset="75%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#e9e0d2" stopOpacity="0" />
+              </linearGradient>
 
-export default function Home() {
-  const [active, setActive] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+              {/* APPROVED PORTAL MIST DEPTH: Gentle cinematic golden haze trail restricted within the void space */}
+              <radialGradient id="approved-center-mist" cx="50%" cy="50%" r="40%">
+                <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#d1be9b" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
 
-  const openLightbox = (index: number) => {
-    setActive(index);
-    setIsOpen(true);
-  };
+              {/* Ultra-low contrast feather filter to smoothly bleed background shadows */}
+              <filter id="approved-subtle-feather" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="8" />
+              </filter>
+            </defs>
 
-  const previousProject = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActive(active === 0 ? projects.length - 1 : active - 1);
-  };
+            {/* INTEGRATION SHADOW MATRIX: Whisper-quiet underlying shadow resting below a strict 12% opacity boundary */}
+            <g filter="url(#approved-subtle-feather)" opacity="0.12">
+              <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="#000000" />
+              <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="#000000" />
+              <line x1="100" y1="5" x2="100" y2="105" stroke="#000000" strokeWidth="1.5" />
+            </g>
 
-  const nextProject = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActive(active === projects.length - 1 ? 0 : active + 1);
-  };
+            {/* APPROVED CENTER MIST HAZE: Quiet cinematic portal depth emerging naturally behind the line split */}
+            <circle cx="100" cy="55" r="32" fill="url(#approved-center-mist)" filter="url(#approved-subtle-feather)" />
 
-  return (
-    <main className="page">
-      {/* Pristine Minimalist Empty Header Frame */}
-      <header className="header">
-        <div className="header-spacer" />
-      </header>
+            {/* THE VISUAL FOCUS: Sharp, elegant left ivory moon curve */}
+            <path 
+              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
+              fill="url(#heavy-gold-metallic)" 
+            />
+
+            {/* THE VISUAL FOCUS: Sharp, elegant right ivory moon curve */}
+            <path 
+              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
+              fill="url(#heavy-gold-metallic)" 
+            />
+
+            {/* LINE BLOOM TRACK: Diffuses a subtle aura channel immediately under the core threshold vector */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="#e9e0d2" 
+              strokeWidth="1.2" 
+              opacity="0.15" 
+              filter="url(#approved-subtle-feather)"
+            />
+
+            {/* CENTRAL THRESHOLD LINE: Ultra-thin 0.35px axis running perfectly straight under the gradient taper */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="url(#threshold-axis-taper)" 
+              strokeWidth="0.35" 
+            />
+
+            {/* Premium Studio Typography Layout Coordinates */}
+            <text 
+              x="100" y="124" 
+              textAnchor="middle" 
+              fill="#ffffff" 
+              fontSize="8" 
+              fontWeight="300" 
+              letterSpacing="0.48em"
+              className="typography-brand-title"
+            >
+              THE TRIADIC STUDIO
+            </text>
+
+            {/* APPROVED BRAND SUBTITLE: Firmly locks metallic champagne gold fill onto the word EXPERIENCE */}
+            <text 
+              x="100" y="136" 
+              textAnchor="middle" 
+              fontSize="4.5" 
+              fontWeight="600" 
+              letterSpacing="0.34em"
+              className="typography-brand-sub"
+            >
+              <tspan fill="#ffffff">SPATIAL </tspan>
+              <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
+              <tspan fill="#ffffff">DESIGN</tspan>
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      {/* Studio Mantra Section with Gold Text Bind Hook */}
+      <section className="hero-mantra-section">
+        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
+        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
+        <div className="pillars">
+          <span>Atmosphere</span>
+          <span>Narrative</span>
+          <span>Materiality</span>
+        </div>
+      </section>
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
