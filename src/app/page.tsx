@@ -72,12 +72,12 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* EXCLUSIVE EMBEDDED BRAND PORTAL - PRISTINE INTEGRATION SYSTEM */}
+      {/* EXCLUSIVE EMBEDDED BRAND PORTAL - REFINED TEXT AND AXIS GOLD RESTORATION */}
       <section className="hero-branding-container" style={{ margin: '80px auto 100px' }}>
         <div className="pure-code-brand-wrapper" style={{ padding: '60px' }}>
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
             <defs>
-              {/* Approved Metallic Finish for Sharp Ivory/Gold Moon Curves */}
+              {/* Premium Metallic Gradient Shimmer for Ivory/Gold Moon Curves and Text Accent */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#c7bdaf" />
                 <stop offset="35%" stopColor="#ffffff" />
@@ -85,27 +85,36 @@ export default function Home() {
                 <stop offset="100%" stopColor="#96877e" />
               </linearGradient>
 
-              {/* APPROVED SUBTLE CENTER MIST: A whisper of light that stays cleanly behind the threshold axis */}
+              {/* TAPERED AXIS GRADIENT: Soft ivory at the intersection, dissolving gracefully into dark bronze at the tips */}
+              <linearGradient id="threshold-line-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#96877e" stopOpacity="0" />
+                <stop offset="25%" stopColor="#e9e0d2" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.65" /> {/* ~30% Dimmer than pure incandescent white */}
+                <stop offset="75%" stopColor="#e9e0d2" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#96877e" stopOpacity="0" />
+              </linearGradient>
+
+              {/* CENTER VOID ATMOSPHERE: A highly diffused, ultra-subtle golden fog pocket */}
               <radialGradient id="approved-center-mist" cx="50%" cy="50%" r="40%">
                 <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0.25" />
                 <stop offset="50%" stopColor="#d1be9b" stopOpacity="0.08" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </radialGradient>
 
-              {/* LOW-OPACITY AMBIENT BLUR FILTER: Smoothly feathers shadows with a maximum threshold of 10-15% */}
+              {/* Subtle blurring to create a smooth, clean environment falloff mask */}
               <filter id="approved-subtle-feather" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="8" />
               </filter>
             </defs>
 
-            {/* INTEGRATION SHADOW: A soft ambient breath behind the vector marks sitting at an ultra-low 12% opacity */}
+            {/* INTEGRATION MASK SHADOW: Extremely faint backing shadow sitting at a quiet 12% opacity threshold */}
             <g filter="url(#approved-subtle-feather)" opacity="0.12">
               <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="#000000" />
               <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="#000000" />
               <line x1="100" y1="5" x2="100" y2="105" stroke="#000000" strokeWidth="2" />
             </g>
 
-            {/* APPROVED ATMOSPHERIC GLOW: Extremely quiet cinematic light pocket centered within the void */}
+            {/* APPROVED ATMOSPHERIC MIST: Cinematic light trail centered comfortably within the central void */}
             <circle cx="100" cy="55" r="32" fill="url(#approved-center-mist)" filter="url(#approved-subtle-feather)" />
 
             {/* THE VISUAL FOCUS: Elegant, sharp left ivory moon curve */}
@@ -120,15 +129,23 @@ export default function Home() {
               fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* APPROVED VERTICAL THRESHOLD AXIS: Shrunk to an ultra-thin 0.35px gauge and styled with an elegant, non-bright ivory tint */}
+            {/* FIXED LINE BLOOM: Soft backdrop glow strip to diffuse light through the center line axis */}
             <line 
               x1="100" y1="5" x2="100" y2="105" 
               stroke="#e9e0d2" 
-              strokeWidth="0.35" 
-              opacity="0.65" 
+              strokeWidth="1.2" 
+              opacity="0.15" 
+              filter="url(#approved-subtle-feather)"
             />
 
-            {/* Pristine Studio Typography Coordinates */}
+            {/* CENTRAL THRESHOLD LINE: Ultra-thin 0.35px axis running perfectly straight under the gradient taper */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="url(#threshold-line-glow)" 
+              strokeWidth="0.35" 
+            />
+
+            {/* Premium Studio Typography Layout Coordinates */}
             <text 
               x="100" y="124" 
               textAnchor="middle" 
@@ -141,6 +158,7 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
+            {/* LOCKED TEXT GRADIENT: Restores premium champagne metallic gold sheen to the word EXPERIENCE */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
