@@ -73,16 +73,71 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* Cinematic Logo Image Centerpiece */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE */}
       <section className="hero-branding-container">
-        <img 
-          src="/hero-brand.jpg" 
-          alt="The Triadic Studio Logo" 
-          className="hero-brand-visual"
-        />
+        <div className="pure-code-brand-wrapper">
+          <svg viewBox="0 0 200 140" className="vector-brand-master">
+            <defs>
+              {/* Premium Metallic Gradient Shimmer */}
+              <linearGradient id="brand-platinum" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a3968f" />
+                <stop offset="30%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#e9e0d2" />
+                <stop offset="70%" stopColor="#9e8d85" />
+                <stop offset="100%" stopColor="#ffffff" />
+              </linearGradient>
+            </defs>
+
+            {/* Symmetrical Left Moon Curve */}
+            <path 
+              d="M 82 25 C 64 40, 64 70, 82 85 C 70 75, 70 35, 82 25 Z" 
+              fill="url(#brand-platinum)" 
+            />
+
+            {/* Symmetrical Right Moon Curve */}
+            <path 
+              d="M 118 25 C 136 40, 136 70, 118 85 C 130 75, 130 35, 118 25 Z" 
+              fill="url(#brand-platinum)" 
+            />
+
+            {/* Central Light-Piercing Threshold Line */}
+            <line 
+              x1="100" y1="12" x2="100" y2="98" 
+              stroke="url(#brand-platinum)" 
+              strokeWidth="1.2" 
+              strokeLinecap="round"
+              className="center-beam-glow"
+            />
+
+            {/* High-End Studio Typography Vectors */}
+            <text 
+              x="100" y="116" 
+              textAnchor="middle" 
+              fill="#ffffff" 
+              fontSize="8" 
+              fontWeight="400" 
+              letterSpacing="0.45em"
+              className="typography-brand-title"
+            >
+              THE TRIADIC STUDIO
+            </text>
+
+            <text 
+              x="100" y="128" 
+              textAnchor="middle" 
+              fill="#a3968f" 
+              fontSize="4.5" 
+              fontWeight="600" 
+              letterSpacing="0.32em"
+              className="typography-brand-sub"
+            >
+              SPATIAL EXPERIENCE DESIGN
+            </text>
+          </svg>
+        </div>
       </section>
 
-      {/* Your Core Studio Mantra Section */}
+      {/* Studio Mantra Section */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
         <h1>Spaces remembered<br />before they are<br /><em>understood.</em></h1>
@@ -92,7 +147,6 @@ export default function Home() {
           <span>Materiality</span>
         </div>
       </section>
-
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
