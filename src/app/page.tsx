@@ -190,10 +190,11 @@ export default function Home() {
               opacity="0.98" 
             />
 
-            {/* INTERNAL SVG HOTSPOT: Locked perfectly at center convergence axis (100, 55) */}
-            <circle cx="100" cy="55" r="3.5" fill="#ffffff" filter="blur(0.5px)" opacity="0.9" />
-            <circle cx="100" cy="55" r="7" fill="#f5ebd6" opacity="0.3" filter="blur(2px)" />
-            <circle cx="100" cy="55" r="14" fill="#d1be9b" opacity="0.15" filter="blur(4px)" />
+            {/* PHOTOGRAPHIC CONVERGENCE FLUIDITY: Hard white circle completely deleted. */}
+            {/* Layered custom soft blurs seamlessly step light out across axes. */}
+            <circle cx="100" cy="55" r="4" fill="#ffffff" filter="blur(1.5px)" opacity="0.95" />
+            <circle cx="100" cy="55" r="8" fill="#f5ebd6" opacity="0.4" filter="blur(3px)" />
+            <circle cx="100" cy="55" r="16" fill="#d1be9b" opacity="0.2" filter="blur(5px)" />
 
             {/* High-End Studio Typography Vectors */}
             <text 
