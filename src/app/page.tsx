@@ -72,7 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - KINETIC LIGHT RAY EMBED */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - LIGHT CORE & SOURCE INJECTION */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master">
@@ -113,7 +113,11 @@ export default function Home() {
             {/* FOG LAYER: Multiplied Backing Ambient Golden Mist */}
             <circle cx="100" cy="55" r="32" fill="#f5ebd6" opacity="0.12" filter="url(#web-volumetric-glow)" />
 
-            {/* CINEMATIC OPTICAL LENS FLARE RAYS (Matches your yellow markup exactly) */}
+            {/* INTENSE SOURCE GLOW: Expanding Golden Halo at the exact intersection point */}
+            <circle cx="100" cy="55" r="14" fill="#f5ebd6" opacity="0.3" filter="url(#web-volumetric-glow)" />
+            <circle cx="100" cy="55" r="6" fill="#ffffff" opacity="0.45" filter="url(#web-volumetric-glow)" />
+
+            {/* CINEMATIC OPTICAL LENS FLARE RAYS - Bursting cleanly from the defined source core */}
             {/* Long Top-Right Diagonal Ray */}
             <path d="M 100 55 L 175 10 L 172 8 L 100 55 Z" fill="url(#ray-fade)" opacity="0.35" filter="url(#web-volumetric-glow)" />
             {/* Long Bottom-Left Diagonal Ray */}
@@ -122,6 +126,9 @@ export default function Home() {
             <path d="M 100 55 L 45 15 L 48 13 L 100 55 Z" fill="url(#ray-fade)" opacity="0.25" filter="url(#web-volumetric-glow)" />
             {/* Long Bottom-Right Ray Flare */}
             <path d="M 100 55 L 155 105 L 153 107 L 100 55 Z" fill="url(#ray-fade)" opacity="0.3" filter="url(#web-volumetric-glow)" />
+
+            {/* HIGH-INTENSITY SPARK SOURCE CORE: Pure white point of origin */}
+            <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
@@ -190,7 +197,7 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
-            {/* FIXED: Subtitle track maps custom gold styles straight onto the word EXPERIENCE */}
+            {/* Subtitle track maps custom gold styles straight onto the word EXPERIENCE */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
