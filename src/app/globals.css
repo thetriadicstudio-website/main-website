@@ -29,14 +29,15 @@ html, body {
   overflow-x: hidden;
 }
 
+/* CINEMATIC BACKDROP MASK: Let's the real crystal stone backdrop breathe without geometric artifacts */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -2;
   background: 
-    radial-gradient(circle at 50% 30%, rgba(10, 16, 14, 0.15) 0%, rgba(10, 16, 14, 0.9) 65%),
-    linear-gradient(to bottom, rgba(10, 16, 14, 0.95) 0%, rgba(10, 16, 14, 0.3) 30%, rgba(10, 16, 14, 0.5) 70%, rgba(10, 16, 14, 0.95) 100%) !important;
+    radial-gradient(circle at 50% 30%, rgba(10, 16, 14, 0.12) 0%, rgba(10, 16, 14, 0.88) 70%),
+    linear-gradient(to bottom, rgba(10, 16, 14, 0.95) 0%, rgba(10, 16, 14, 0.25) 30%, rgba(10, 16, 14, 0.4) 70%, rgba(10, 16, 14, 0.95) 100%) !important;
   pointer-events: none;
 }
 
@@ -65,7 +66,7 @@ button { font: inherit; }
   align-items: center;
   width: 100%;
   max-width: 1140px;
-  margin: 40px auto 60px;
+  margin: 80px auto 100px;
 }
 
 .pure-code-brand-wrapper {
@@ -75,53 +76,38 @@ button { font: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* SECURELY ANCHORS UNCLIPPED NATIVE LIGHT ELEMENTS BELOW */
 }
 
 .vector-brand-master {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.98));
-  position: relative;
-  z-index: 3;
 }
 
-/* HARDCODED INFINITE LENS SHINE SOURCE CORE */
-.html-lens-glow-core {
-  position: absolute;
-  left: 50%;
-  top: 55px; /* Locked directly onto the vector cross axis center */
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background: #ffffff;
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 
-    0 0 10px #ffffff,
-    0 0 30px #f5ebd6,
-    0 0 60px #f5ebd6,
-    0 0 100px #d1be9b;
+/* FIXED: SECURE SYSTEM COLOR TARGETS FOR INTERNAL SVG VALUES */
+.vector-brand-master .crescent-path {
+  fill: #e9e0d2;
 }
 
-/* HARDCODED HARDWARE-ACCELERATED FINER LENS NEEDLE RAYS */
-.html-lens-ray {
-  position: absolute;
-  left: 50%;
-  top: 55px;
-  height: 1.2px;
-  background: linear-gradient(90deg, transparent, #ffffff 25%, #f5ebd6 50%, #ffffff 75%, transparent);
-  z-index: 1;
-  transform-origin: left center;
-  opacity: 0.65;
-  filter: blur(0.4px);
+/* FIXED: RE-RESTORED THIN GOLDEN THRESHOLD LINE WITH HARDWARE ACCELERATED LIGHT BLOOM */
+.vector-brand-master .center-threshold-axis {
+  stroke: #ffffff;
+  stroke-width: 0.35;
+  opacity: 0.72;
+  filter: drop-shadow(0 0 3.5px rgba(233, 224, 210, 0.85));
 }
 
-/* Precision vector rotation markers matching your eclipse image */
-.ray-diag-1 { width: 340px; transform: translate(-50%, -50%) rotate(38deg); }
-.ray-diag-2 { width: 340px; transform: translate(-50%, -50%) rotate(142deg); }
-.ray-diag-3 { width: 240px; transform: translate(-50%, -50%) rotate(-45deg); opacity: 0.4; }
-.ray-diag-4 { width: 240px; transform: translate(-50%, -50%) rotate(225deg); opacity: 0.4; }
+/* FIXED: RE-RESTORED SUBTLE CENTER ATMOSPHERIC FOG MIST */
+.vector-brand-master .center-portal-mist {
+  fill: #e9e0d2;
+  opacity: 0.15;
+  filter: blur(8px);
+}
+
+/* FIXED: HARDCODED LUXURY CHAMPAGNE GOLD FINISH EXCLUSIVELY FOR THE WORD EXPERIENCE */
+.vector-brand-master .gold-experience-word {
+  fill: #e9e0d2 !important;
+  font-weight: 600;
+}
 
 .hero-mantra-section { 
   min-height: 40vh; 
