@@ -46,7 +46,6 @@ const projects = [
     description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
   },
 ];
-
 export default function Home() {
   const [active, setActive] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -96,8 +95,34 @@ export default function Home() {
                 <stop offset="80%" stopColor="#ffffff" stopOpacity="0.25" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </linearGradient>
-            </defs>
 
+              {/* PHOTOGRAPHIC BEAM FADE GRADIENT: Mimics real optics feathering towards tips */}
+              <linearGradient id="vertical-beam-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                <stop offset="20%" stopColor="#ffffff" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="80%" stopColor="#ffffff" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+              </linearGradient>
+
+              {/* AMBIENT CHAMBER GRADIENT: For soft background light falloff behind center laser */}
+              <linearGradient id="vertical-ambient-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#f5ebd6" stopOpacity="0" />
+                <stop offset="35%" stopColor="#f5ebd6" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.6" />
+                <stop offset="65%" stopColor="#f5ebd6" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#f5ebd6" stopOpacity="0" />
+              </linearGradient>
+
+              {/* High-Performance Volumetric Soft Filter Blur Engine */}
+              <filter id="soft-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="1.5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
             {/* INTEGRATED BACKEND LENS RAYS: Hardcoded on exact center axis center point (100, 55) */}
             <g transform="rotate(38 100 55)">
               <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
@@ -138,21 +163,31 @@ export default function Home() {
               opacity="0.2"
             />
 
-            {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
-            <line 
-              x1="100" y1="5" x2="100" y2="105" 
-              stroke="url(#heavy-gold-metallic)" 
-              strokeWidth="1.2" 
-              strokeLinecap="round"
+            {/* ========================================================================= */}
+            {/* VOLUMETRIC CENTER PILLAR ENGINE: REPLACES FLAT STROKES WITH PHOTOGRAPHIC GLOW */}
+            {/* ========================================================================= */}
+            
+            {/* Layer 1: Wide Ambient Halo Column */}
+            <rect 
+              x="96.5" y="2" width="7" height="106" 
+              fill="url(#vertical-ambient-glow)" 
+              filter="blur(2.5px)" 
+              opacity="0.45" 
             />
 
-            {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
-            <line 
-              x1="100" y1="8" x2="100" y2="102" 
-              stroke="#ffffff" 
-              strokeWidth="0.6" 
-              strokeLinecap="round"
-              opacity="0.95"
+            {/* Layer 2: Medium Feathered Light Pillar */}
+            <rect 
+              x="98.2" y="2" width="3.6" height="106" 
+              fill="url(#vertical-beam-glow)" 
+              filter="url(#soft-glow-filter)" 
+              opacity="0.65" 
+            />
+
+            {/* Layer 3: Ultra-Sharp Core Laser Inner Blade */}
+            <rect 
+              x="99.4" y="4" width="1.2" height="102" 
+              fill="url(#vertical-beam-glow)" 
+              opacity="0.98" 
             />
 
             {/* INTERNAL SVG HOTSPOT: Locked perfectly at center convergence axis (100, 55) */}
@@ -200,7 +235,6 @@ export default function Home() {
           <span>Materiality</span>
         </div>
       </section>
-
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
@@ -220,6 +254,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="blueprint">
         <div className="blueprint-left">
           <p className="eyebrow">The Emotional Blueprint</p>
