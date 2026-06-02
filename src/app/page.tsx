@@ -72,7 +72,6 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-
       {/* PURE VECTOR EMBEDDED BRAND ENGINE - VOLUMETRIC METALLIC LIGHT ENGINE */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
@@ -173,22 +172,24 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
+            {/* FIXED: Subtitle layout text tracks split into isolated vector segments to safely inject metallic gold sheen on 'EXPERIENCE' */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
-              fill="#ffffff" 
               fontSize="4.5" 
               fontWeight="600" 
               letterSpacing="0.34em"
               className="typography-brand-sub"
             >
-              SPATIAL EXPERIENCE DESIGN
+              <tspan fill="#ffffff">SPATIAL </tspan>
+              <tspan fill="url(#heavy-gold-metallic)" className="gold-text-glow">EXPERIENCE </tspan>
+              <tspan fill="#ffffff">DESIGN</tspan>
             </text>
           </svg>
         </div>
       </section>
 
-      {/* Studio Mantra Section with Gold Text Bind Hook */}
+      {/* Studio Mantra Section with Gold Text Bind Hooks */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
         <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
