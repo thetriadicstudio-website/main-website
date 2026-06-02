@@ -73,60 +73,74 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* PURE EMBEDDED BRAND ENGINE - UNCONSTRAINED OPTICAL LIGHT LAYER */}
+      {/* FIXED BRAND ENGINE - RAYS ARE INSIDE SVG TO PREVENT MISALIGNMENT */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
-          
-          {/* HARDCODED LENS FLARE RAYS: Separated completely from vector limits to bleed infinitely */}
-          <div className="html-lens-glow-core" />
-          <div className="html-lens-ray ray-diag-1" />
-          <div className="html-lens-ray ray-diag-2" />
-          <div className="html-lens-ray ray-diag-3" />
-          <div className="html-lens-ray ray-diag-4" />
-
           <svg viewBox="0 0 200 150" className="vector-brand-master">
             <defs>
-              {/* Multi-stop High-Contrast Champagne Gold Sheen to simulate heavy metallic reflection */}
+              {/* Champagne Gold Metallic Sheen Gradient */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#7a6855" />
-                <stop offset="20%" stopColor="#f7eedb" />
-                <stop offset="40%" stopColor="#ffffff" />
-                <stop offset="48%" stopColor="#eddcc4" />
-                <stop offset="65%" stopColor="#bfae93" />
-                <stop offset="85%" stopColor="#f7eedb" />
-                <stop offset="100%" stopColor="#5c4e3f" />
+                <stop offset="0%" stopColor="#8c7965" />
+                <stop offset="22%" stopColor="#f5ebd6" />
+                <stop offset="45%" stopColor="#ffffff" />
+                <stop offset="65%" stopColor="#d1be9b" />
+                <stop offset="85%" stopColor="#f5ebd6" />
+                <stop offset="100%" stopColor="#6e5d4b" />
+              </linearGradient>
+
+              {/* Central Ray Light Source Gradient */}
+              <linearGradient id="ray-glow-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                <stop offset="20%" stopColor="#ffffff" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.85" />
+                <stop offset="80%" stopColor="#ffffff" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </linearGradient>
             </defs>
 
+            {/* INTEGRATED BACKEND LENS RAYS: Hardcoded on exact center axis center point (100, 55) */}
+            <g transform="rotate(38 100 55)">
+              <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
+            </g>
+            <g transform="rotate(142 100 55)">
+              <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
+            </g>
+            <g transform="rotate(-45 100 55)">
+              <rect x="20" y="54.6" width="160" height="0.8" fill="url(#ray-glow-horizontal)" opacity="0.35" />
+            </g>
+            <g transform="rotate(225 100 55)">
+              <rect x="20" y="54.6" width="160" height="0.8" fill="url(#ray-glow-horizontal)" opacity="0.35" />
+            </g>
+
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
-              d="M 72 20 C 48 38, 48 72, 72 90 C 58 78, 58 32, 72 20 Z" 
+              d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.18"
+              opacity="0.2"
             />
 
             {/* MAIN INNER LAYER: Bold Left Moon Curve */}
             <path 
-              d="M 83 24 C 62 40, 62 70, 83 86 C 70 76, 70 34, 83 24 Z" 
+              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
             {/* MAIN INNER LAYER: Bold Right Moon Curve */}
             <path 
-              d="M 117 24 C 138 40, 138 70, 117 86 C 130 76, 130 34, 117 24 Z" 
+              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Right Crescent */}
             <path 
-              d="M 128 20 C 152 38, 152 72, 128 90 C 142 78, 142 32, 128 20 Z" 
+              d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.18"
+              opacity="0.2"
             />
 
             {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
             <line 
-              x1="100" y1="2" x2="100" y2="108" 
+              x1="100" y1="5" x2="100" y2="105" 
               stroke="url(#heavy-gold-metallic)" 
               strokeWidth="1.2" 
               strokeLinecap="round"
@@ -134,36 +148,43 @@ export default function Home() {
 
             {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
             <line 
-              x1="100" y1="5" x2="100" y2="105" 
+              x1="100" y1="8" x2="100" y2="102" 
               stroke="#ffffff" 
               strokeWidth="0.6" 
               strokeLinecap="round"
               opacity="0.95"
             />
 
-            {/* High-End Studio Typography Vectors with premium tracking */}
+            {/* INTERNAL SVG HOTSPOT: Locked perfectly at center convergence axis (100, 55) */}
+            <circle cx="100" cy="55" r="3.5" fill="#ffffff" filter="blur(0.5px)" opacity="0.9" />
+            <circle cx="100" cy="55" r="7" fill="#f5ebd6" opacity="0.3" filter="blur(2px)" />
+            <circle cx="100" cy="55" r="14" fill="#d1be9b" opacity="0.15" filter="blur(4px)" />
+
+            {/* High-End Studio Typography Vectors */}
             <text 
-              x="100" y="126" 
+              x="100" y="124" 
               textAnchor="middle" 
               fill="#ffffff" 
-              fontSize="7.5" 
+              fontSize="8" 
               fontWeight="300" 
-              letterSpacing="0.52em"
-              opacity="0.95"
+              letterSpacing="0.48em"
+              className="typography-brand-title"
             >
               THE TRIADIC STUDIO
             </text>
 
-            {/* Subtitle track maps gold gradient directly onto typography lines */}
+            {/* Subtitle track maps gold styles onto custom title line layout */}
             <text 
-              x="100" y="138" 
+              x="100" y="136" 
               textAnchor="middle" 
-              fontSize="4.2" 
-              fontWeight="500" 
-              letterSpacing="0.38em"
-              fill="url(#heavy-gold-metallic)"
+              fontSize="4.5" 
+              fontWeight="600" 
+              letterSpacing="0.34em"
+              className="typography-brand-sub"
             >
-              SPATIAL EXPERIENCE DESIGN
+              <tspan fill="#ffffff">SPATIAL </tspan>
+              <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
+              <tspan fill="#ffffff">DESIGN</tspan>
             </text>
           </svg>
         </div>
