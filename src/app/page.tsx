@@ -68,49 +68,28 @@ export default function Home() {
 
   return (
     <main className="page">
+      {/* Pristine Minimalist Empty Header Frame */}
       <header className="header">
-        <a href="/" className="brand">
-          THE TRIADIC STUDIO
-        </a>
-        <div className="logo-container" aria-label="The Triadic Studio Logo">
-          <svg viewBox="0 0 100 100" className="metallic-logo">
-            <defs>
-              <linearGradient id="metal-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#a3968f" />
-                <stop offset="25%" stopColor="#ffffff" />
-                <stop offset="50%" stopColor="#e9e0d2" />
-                <stop offset="75%" stopColor="#9e8d85" />
-                <stop offset="100%" stopColor="#ffffff" />
-              </linearGradient>
-            </defs>
-            <path 
-              d="M 38 20 C 22 35, 22 65, 38 80 C 26 70, 26 30, 38 20 Z" 
-              fill="url(#metal-sheen)" 
-            />
-            <path 
-              d="M 62 20 C 78 35, 78 65, 62 80 C 74 70, 74 30, 62 20 Z" 
-              fill="url(#metal-sheen)" 
-            />
-            <line 
-              x1="50" y1="10" x2="50" y2="90" 
-              stroke="url(#metal-sheen)" 
-              strokeWidth="1.5" 
-              strokeLinecap="round"
-              className="core-beam"
-            />
-          </svg>
-        </div>
+        <div className="header-spacer" />
       </header>
 
-      <section className="hero">
-        <div className="hero-panel">
-          <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
-          <h1>Spaces remembered<br />before they are<br /><em>understood.</em></h1>
-          <div className="pillars">
-            <span>Atmosphere</span>
-            <span>Narrative</span>
-            <span>Materiality</span>
-          </div>
+      {/* Cinematic Logo Image Centerpiece */}
+      <section className="hero-branding-container">
+        <img 
+          src="/hero-brand.jpg" 
+          alt="The Triadic Studio Logo" 
+          className="hero-brand-visual"
+        />
+      </section>
+
+      {/* Your Core Studio Mantra Section */}
+      <section className="hero-mantra-section">
+        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
+        <h1>Spaces remembered<br />before they are<br /><em>understood.</em></h1>
+        <div className="pillars">
+          <span>Atmosphere</span>
+          <span>Narrative</span>
+          <span>Materiality</span>
         </div>
       </section>
 
@@ -200,9 +179,14 @@ export default function Home() {
         </div>
       )}
 
+      {/* Upgraded About Section with your New Custom Paragraphs */}
       <section className="about">
         <span>About</span>
-        <p>The Triadic Studio is a creative practice focused on emotional architecture. Our work explores the dual threshold—a passage between worlds, capturing the moment before crossing. By manipulating the space of transformation, we design the portal between the seen and the unseen.</p>
+        <div className="about-content-wrapper">
+          <p>The Triadic Studio is a creative practice exploring the relationship between space, perception and emotion.</p>
+          <p>Through the Emotional Blueprint, we study the subtle elements that shape human experience—light, materiality, atmosphere, scale and memory—to uncover why certain environments stay with us long after we leave them.</p>
+          <p>Our work is less concerned with decoration and more interested in resonance: the invisible dialogue between people and place.</p>
+        </div>
       </section>
 
       <footer className="footer">
