@@ -4,46 +4,46 @@ import { useState } from 'react';
 
 const projects = [
   {
-    title: 'Coastal Sanctuary',
+    title: 'Echoes of Memory',
     category: 'Residential',
     image: '/portfolio/1.jpg',
-    description: 'A close-up view of a serene living environment, where soft linens, layered textures, and quiet shadows set an intimate mood.',
+    description: 'A dramatic view of ancient structural design, where stark historical lines, deep reflective pools, and shadow-drenched pathways frame an intense emotional landscape.',
   },
   {
-    title: 'Inner Atelier',
+    title: 'Textured Stillness',
     category: 'Residential',
     image: '/portfolio/2.jpg',
-    description: 'A wider perspective of the sanctuary space, framing the minimalist furniture layout against soft ambient lighting.',
+    description: 'A tight interior study contrasting the deep tones of a velvet couch with the organic folds of a fringed throw, a classic book, and shimmering ambient bokeh.',
   },
   {
     title: 'Inner Courtyard',
     category: 'Architecture Study',
     image: '/portfolio/3.jpg',
-    description: 'An architectural view looking out onto a sun-drenched pool area, blending modern arches with lush external landscape styling.',
+    description: 'An intimate, textured close-up capturing a scholarly writing set arranged on raw concrete framing, offering a split-focus glimpse into a warm, sun-lit historic courtyard.',
   },
   {
-    title: 'Verdant Sanctuary',
-    category: 'Residential',
+    title: 'Golden Pavilions',
+    category: 'Spatial Styling',
     image: '/portfolio/4.jpg',
-    description: 'A breathtaking wide view of a luxury minimalist pavilion featuring striking traditional rooflines and absolute harmony with an outdoor reflection pool.',
+    description: 'A balanced architectural perspective of a luxury minimalist pavilion, highlighting striking traditional rooflines and circular portals perfectly mirrored in a still reflection pool during the golden hour.',
   },
   {
     title: 'Misty Portals',
     category: 'Concept Study',
     image: '/portfolio/5.jpg',
-    description: 'A dramatic interior perspective focusing on high-contrast palm leaves and tropical greenery under soft, misty overhead light.',
+    description: 'An outdoor architectural perspective focusing on raw concrete frames and a misty moongate, contrasted by sharp tropical greenery and fallen golden leaves under a heavy sky.',
+  },
+  {
+    title: 'Water Remembers What Stone Forgets',
+    category: 'Material Study',
+    image: '/portfolio/6.jpg',
+    description: 'An ethereal subterranean portal where raw, moss-covered stone structures encase a deep, sun-drenched aquatic chamber, capturing the silent stillness of light piercing through water.',
   },
   {
     title: 'Floral Sanctuary',
     category: 'Residential',
-    image: '/portfolio/6.jpg',
-    description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
-  },
-  {
-    title: 'Material Curation',
-    category: 'Material Study',
     image: '/portfolio/7.jpg',
-    description: 'A beautifully structured presentation of organic materials, showcasing a tactile arrangement of smooth river stones, moss panels, and raw unrefined textures.',
+    description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
   },
 ];
 
@@ -72,11 +72,9 @@ export default function Home() {
         <a href="/" className="brand">
           THE TRIADIC STUDIO
         </a>
-        <nav>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
-          <a href="mailto:thetriadicstudio@gmail.com">Email</a>
-        </nav>
+        <div className="logo-placeholder">
+          {/* Logo element placeholder will reside here */}
+        </div>
       </header>
 
       <section className="hero">
@@ -90,6 +88,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
@@ -182,7 +181,14 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
+        <div className="footer-content">
+          <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
+          <nav className="footer-nav">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
+          </nav>
+        </div>
       </footer>
     </main>
   );
