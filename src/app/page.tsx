@@ -72,189 +72,251 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-
-      {/* FIXED CLASS INTEGRATION PORTAL TRACK */}
-      <section className="hero-branding-container">
-        <div className="pure-code-brand-wrapper">
-          <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
+      {/* EXCLUSIVE UNIFIED BRAND PORTAL - MASTER SHIMMER ALIGNMENT */}
+      <section className="hero-branding-container" style={{ margin: '90px auto 110px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="pure-code-brand-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '620px', position: 'relative' }}>
+          
+          <svg viewBox="0 0 200 115" className="vector-brand-master" style={{ overflow: 'visible', width: '100%', height: 'auto' }}>
             <defs>
-              {/* Soft low-contrast shadow filter mapping to keep the crystal backdrop pristine */}
+              {/* THE MASTER GRADIENT ENGINE: The exact high-contrast champagne gold formula from your signature mantra text */}
+              <linearGradient id="mantra-gold-system" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8c7965" />
+                <stop offset="25%" stopColor="#f5ebd6" />
+                <stop offset="50%" stopColor="#ffffff" />
+                <stop offset="75%" stopColor="#d1be9b" />
+                <stop offset="100%" stopColor="#6e5d4b" />
+              </linearGradient>
+
+              {/* VERTICAL THRESHOLD AXIS SHIMMER: Maps the master gold gradient color path onto the central dividing line, tapering cleanly to zero opacity at the tips */}
+              <linearGradient id="threshold-axis-gold-taper" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#8c7965" stopOpacity="0" />
+                <stop offset="25%" stopColor="#d1be9b" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.8" />
+                <stop offset="75%" stopColor="#d1be9b" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#8c7965" stopOpacity="0" />
+              </linearGradient>
+
+              {/* CENTER PORTAL ATMOSPHERE: A soft golden environmental aura restricted inside the crescent void space */}
+              <radialGradient id="approved-center-mist" cx="50%" cy="50%" r="40%">
+                <stop offset="0%" stopColor="#f5ebd6" stopOpacity="0.26" />
+                <stop offset="50%" stopColor="#d1be9b" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
+
+              {/* Smooth blur filter mapping for the layout depth layers (strictly limited to 10-15% maximum opacity shadow values) */}
               <filter id="approved-subtle-feather" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="8" />
               </filter>
             </defs>
 
-            {/* INTEGRATION SHADOW: Soft background trail sitting at a quiet 12% opacity threshold */}
+            {/* INTEGRATION SHADOW SHROUD: Quiet underlying shadow depth resting under a clean 12% opacity threshold mask */}
             <g filter="url(#approved-subtle-feather)" opacity="0.12">
               <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="#000000" />
               <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="#000000" />
-              <line x1="100" y1="5" x2="100" y2="105" stroke="#000000" strokeWidth="1.5" />
+              <line x1="100" y1="5" x2="100" y2="105" stroke="#000000" strokeWidth="1.5" opacity="0.2" />
             </g>
 
-            {/* FIXED MIST: Direct style class targeting the subtle center light fog pocket */}
-            <circle cx="100" cy="55" r="30" className="center-portal-mist" />
+            {/* Diffused golden environmental fog pocket emerging cleanly inside the central void */}
+            <circle cx="100" cy="55" r="32" fill="url(#approved-center-mist)" filter="url(#approved-subtle-feather)" />
 
-            {/* THE VISUAL FOCUS: Elegant, sharp left ivory moon curve path */}
-            <path 
-              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
-              className="crescent-path" 
-            />
+            {/* THE VISUAL FOCUS: Elegant, sharp left crescent arc wrapped in the master champagne gold gradient */}
+            <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="url(#mantra-gold-system)" />
 
-            {/* THE VISUAL FOCUS: Elegant, sharp right ivory moon curve path */}
-            <path 
-              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
-              className="crescent-path" 
-            />
+            {/* THE VISUAL FOCUS: Elegant, sharp right crescent arc wrapped in the master champagne gold gradient */}
+            <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="url(#mantra-gold-system)" />
 
-            {/* FIXED THRESHOLD: Direct style line class targeting the ultra-thin center axis line */}
-            <line x1="100" y1="5" x2="100" y2="105" className="center-threshold-axis" />
+            {/* LINE BLOOM TRACK: Diffuses a quiet aura trail channel directly behind the center axis vector */}
+            <line x1="100" y1="5" x2="100" y2="105" stroke="#e9e0d2" strokeWidth="1.2" opacity="0.15" filter="url(#approved-subtle-feather)" />
 
-            {/* Premium Studio Typography Layout Coordinates */}
-            <text 
-              x="100" y="124" 
-              textAnchor="middle" 
-              fill="#ffffff" 
-              fontSize="8" 
-              fontWeight="300" 
-              letterSpacing="0.48em"
-              className="typography-brand-title"
-            >
+            {/* CENTRAL THRESHOLD LINE: Ultra-thin 0.35px divider axis line reflecting the exact gold-taper light trail */}
+            <line x1="100" y1="5" x2="100" y2="105" stroke="url(#threshold-axis-gold-taper)" strokeWidth="0.35" />
+
+            {/* Main Studio Typography Core */}
+            <text x="100" y="124" textAnchor="middle" fill="#ffffff" fontSize="8" fontWeight="300" letterSpacing="0.48em" style={{ fontFamily: 'var(--font-cormorant), Georgia, serif' }}>
               THE TRIADIC STUDIO
             </text>
-
-            {/* FIXED TEXT PATH: Assigns the secure style class hook straight to the word EXPERIENCE */}
-            <text 
-              x="100" y="136" 
-              textAnchor="middle" 
-              fontSize="4.5" 
-              fontWeight="600" 
-              letterSpacing="0.34em"
-              className="typography-brand-sub"
-            >
-              <tspan fill="#ffffff">SPATIAL </tspan>
-              <tspan className="gold-experience-word">EXPERIENCE </tspan>
-              <tspan fill="#ffffff">DESIGN</tspan>
-            </text>
           </svg>
+
+          {/* THE GOLD EXPERIENCE TRACK: Enlarged subtitle layer mapped perfectly to your master gold system */}
+          <div style={{
+            marginTop: '14px',
+            fontSize: '11.5px', 
+            fontWeight: 500,
+            letterSpacing: '0.36em',
+            textTransform: 'uppercase',
+            textAlign: 'center',
+            color: '#ffffff',
+            display: 'flex',
+            gap: '0.36em',
+            justifyContent: 'center'
+          }}>
+            <span>SPATIAL</span>
+            <span style={{
+              background: 'linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
+              fontStyle: 'italic', 
+              filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 10px rgba(245, 235, 214, 0.55))',
+            }}>
+              EXPERIENCE
+            </span>
+            <span>DESIGN</span>
+          </div>
+
         </div>
       </section>
 
-      {/* Studio Mantra Section with Gold Text Bind Hook */}
+      {/* Studio Mantra Section with Inline Gold Restored System */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
-        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
+        <h1>
+          Spaces remembered<br />
+          before they are<br />
+          {/* HARDCODED LOCKED IN METALLIC GRADIENT GLASS STYLE - 100% SECURE FROM BROWSERS TRANSFORMS */}
+          <em 
+            style={{
+              fontStyle: 'italic',
+              fontWeight: 300,
+              background: 'linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
+              filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 12px rgba(245, 235, 214, 0.55))',
+            }}
+          >
+            understood.
+          </em>
+        </h1>
         <div className="pillars">
           <span>Atmosphere</span>
           <span>Narrative</span>
           <span>Materiality</span>
         </div>
       </section>
-      <section className="portfolio">
-        <div className="portfolio-title">Portfolio</div>
-        <div className="portfolio-stage">
-          <div className="tiles">
-            {projects.map((project, index) => (
-              <button
-                key={`${project.image}-${index}`}
-                type="button"
-                className={`tile tile-${index + 1}`}
-                onClick={() => openLightbox(index)}
-                aria-label={`Open ${project.title} in Full Screen`}
-              >
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <img src={project.image} alt={project.title} />
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="blueprint">
-        <div className="blueprint-left">
-          <p className="eyebrow">The Emotional Blueprint</p>
-          <h2>Every space leaves<br />an emotional imprint.</h2>
+      {/* EXCLUSIVE UNIFIED BRAND PORTAL - MASTER SHIMMER ALIGNMENT */}
+      <section className="hero-branding-container" style={{ margin: '90px auto 110px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div className="pure-code-brand-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '620px', position: 'relative' }}>
           
-          <div className="blueprint-diagram">
-            <div className="blueprint-labels">
-              <span>Colour</span>
-              <span>Texture</span>
-              <span>Scale</span>
-              <span>Light</span>
-              <span>Material</span>
-              <span>Movement</span>
-            </div>
-            
-            <div className="blueprint-stack">
-              <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
-            </div>
-          </div>
-        </div>
+          <svg viewBox="0 0 200 115" className="vector-brand-master" style={{ overflow: 'visible', width: '100%', height: 'auto' }}>
+            <defs>
+              {/* THE MASTER GRADIENT ENGINE: The exact high-contrast champagne gold formula from your signature mantra text */}
+              <linearGradient id="mantra-gold-system" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8c7965" />
+                <stop offset="25%" stopColor="#f5ebd6" />
+                <stop offset="50%" stopColor="#ffffff" />
+                <stop offset="75%" stopColor="#d1be9b" />
+                <stop offset="100%" stopColor="#6e5d4b" />
+              </linearGradient>
 
-        <div className="blueprint-right">
-          <p className="eyebrow">Our Blueprint Framework</p>
-          <h3>A spatial analysis method exploring how environments influence perception.</h3>
-          <ul className="blueprint-list">
-            <li>Colour sensitivity</li>
-            <li>Material response</li>
-            <li>Emotional atmosphere</li>
-            <li>Spatial stimulation</li>
-            <li>Visual balance</li>
-            <li>Environmental comfort</li>
-          </ul>
+              {/* VERTICAL THRESHOLD AXIS SHIMMER: Maps the master gold gradient color path onto the central dividing line, tapering cleanly to zero opacity at the tips */}
+              <linearGradient id="threshold-axis-gold-taper" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#8c7965" stopOpacity="0" />
+                <stop offset="25%" stopColor="#d1be9b" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.8" />
+                <stop offset="75%" stopColor="#d1be9b" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#8c7965" stopOpacity="0" />
+              </linearGradient>
+
+              {/* CENTER PORTAL ATMOSPHERE: A soft golden environmental aura restricted inside the crescent void space */}
+              <radialGradient id="approved-center-mist" cx="50%" cy="50%" r="40%">
+                <stop offset="0%" stopColor="#f5ebd6" stopOpacity="0.26" />
+                <stop offset="50%" stopColor="#d1be9b" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
+
+              {/* Smooth blur filter mapping for the layout depth layers (strictly limited to 10-15% maximum opacity shadow values) */}
+              <filter id="approved-subtle-feather" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="8" />
+              </filter>
+            </defs>
+
+            {/* INTEGRATION SHADOW SHROUD: Quiet underlying shadow depth resting under a clean 12% opacity threshold mask */}
+            <g filter="url(#approved-subtle-feather)" opacity="0.12">
+              <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="#000000" />
+              <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="#000000" />
+              <line x1="100" y1="5" x2="100" y2="105" stroke="#000000" strokeWidth="1.5" opacity="0.2" />
+            </g>
+
+            {/* Diffused golden environmental fog pocket emerging cleanly inside the central void */}
+            <circle cx="100" cy="55" r="32" fill="url(#approved-center-mist)" filter="url(#approved-subtle-feather)" />
+
+            {/* THE VISUAL FOCUS: Elegant, sharp left crescent arc wrapped in the master champagne gold gradient */}
+            <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="url(#mantra-gold-system)" />
+
+            {/* THE VISUAL FOCUS: Elegant, sharp right crescent arc wrapped in the master champagne gold gradient */}
+            <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="url(#mantra-gold-system)" />
+
+            {/* LINE BLOOM TRACK: Diffuses a quiet aura trail channel directly behind the center axis vector */}
+            <line x1="100" y1="5" x2="100" y2="105" stroke="#e9e0d2" strokeWidth="1.2" opacity="0.15" filter="url(#approved-subtle-feather)" />
+
+            {/* CENTRAL THRESHOLD LINE: Ultra-thin 0.35px divider axis line reflecting the exact gold-taper light trail */}
+            <line x1="100" y1="5" x2="100" y2="105" stroke="url(#threshold-axis-gold-taper)" strokeWidth="0.35" />
+
+            {/* Main Studio Typography Core */}
+            <text x="100" y="124" textAnchor="middle" fill="#ffffff" fontSize="8" fontWeight="300" letterSpacing="0.48em" style={{ fontFamily: 'var(--font-cormorant), Georgia, serif' }}>
+              THE TRIADIC STUDIO
+            </text>
+          </svg>
+
+          {/* THE GOLD EXPERIENCE TRACK: Enlarged subtitle layer mapped perfectly to your master gold system */}
+          <div style={{
+            marginTop: '14px',
+            fontSize: '11.5px', 
+            fontWeight: 500,
+            letterSpacing: '0.36em',
+            textTransform: 'uppercase',
+            textAlign: 'center',
+            color: '#ffffff',
+            display: 'flex',
+            gap: '0.36em',
+            justifyContent: 'center'
+          }}>
+            <span>SPATIAL</span>
+            <span style={{
+              background: 'linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
+              fontStyle: 'italic', 
+              filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 10px rgba(245, 235, 214, 0.55))',
+            }}>
+              EXPERIENCE
+            </span>
+            <span>DESIGN</span>
+          </div>
+
         </div>
       </section>
 
-      {isOpen && (
-        <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
-          <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setIsOpen(false)}>✕</button>
-            <div className="lightbox-grid">
-              <div className="lightbox-image-wrapper">
-                <img src={projects[active].image} alt={projects[active].title} />
-              </div>
-              <div className="lightbox-content">
-                <div className="lightbox-count">
-                  {String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
-                </div>
-                <h2>{projects[active].title}</h2>
-                <span className="lightbox-category">{projects[active].category}</span>
-                <p>{projects[active].description}</p>
-                <div className="lightbox-controls">
-                  <button type="button" onClick={previousProject}>Prev</button>
-                  <span>□</span>
-                  <button type="button" onClick={nextProject}>Next</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Upgraded About Section with your New Custom Paragraphs */}
-      <section className="about">
-        <span>About</span>
-        <div className="about-content-wrapper">
-          <p>The Triadic Studio is a creative practice exploring the relationship between space, perception and emotion.</p>
-          <p>Through the Emotional Blueprint, we study the subtle elements that shape human experience—light, materiality, atmosphere, scale and memory—to uncover why certain environments stay with us long after we leave them.</p>
-          <p>Our work is less concerned with decoration and more interested in resonance: the invisible dialogue between people and place.</p>
+      {/* Studio Mantra Section with Inline Gold Restored System */}
+      <section className="hero-mantra-section">
+        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
+        <h1>
+          Spaces remembered<br />
+          before they are<br />
+          {/* HARDCODED LOCKED IN METALLIC GRADIENT GLASS STYLE - 100% SECURE FROM BROWSERS TRANSFORMS */}
+          <em 
+            style={{
+              fontStyle: 'italic',
+              fontWeight: 300,
+              background: 'linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
+              filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 12px rgba(245, 235, 214, 0.55))',
+            }}
+          >
+            understood.
+          </em>
+        </h1>
+        <div className="pillars">
+          <span>Atmosphere</span>
+          <span>Narrative</span>
+          <span>Materiality</span>
         </div>
       </section>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
-          <nav className="footer-nav">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
-          </nav>
-        </div>
-      </footer>
-    </main>
-  );
-}
