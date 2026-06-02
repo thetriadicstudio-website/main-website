@@ -72,118 +72,97 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - 3D DIAMOND RAZOR SHARD */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - EMBEDDED SMOKY MIST VARIATION */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
             <defs>
-              {/* Premium Metallic Gradient Shimmer for Outer Moon Curves */}
+              {/* Premium Metallic Gradient Shimmer for Sharp Ivory/Gold Moon Curves */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#9e8d85" />
-                <stop offset="25%" stopColor="#ffffff" />
-                <stop offset="50%" stopColor="#e9e0d2" />
-                <stop offset="75%" stopColor="#d1be9b" />
-                <stop offset="100%" stopColor="#6e5d4b" />
+                <stop offset="0%" stopColor="#c7bdaf" />
+                <stop offset="35%" stopColor="#ffffff" />
+                <stop offset="65%" stopColor="#e9e0d2" />
+                <stop offset="100%" stopColor="#96877e" />
               </linearGradient>
 
-              {/* PILLAR SHADOW FACET: Straight, crisp bronze tone falloff */}
-              <linearGradient id="pillar-shadow-side" x1="100%" y1="0%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#2c2420" />
-                <stop offset="60%" stopColor="#3d332d" />
-                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
-              </linearGradient>
-
-              {/* PILLAR HIGHLIGHT FACET: Sharp platinum linear sheen reflection */}
-              <linearGradient id="pillar-highlight-side" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="20%" stopColor="#f5ebd6" />
-                <stop offset="60%" stopColor="#d1be9b" />
-                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
-              </linearGradient>
-
-              {/* Center-Out Fading Gradient for Single Diagonal Lens Ray */}
-              <radialGradient id="needle-ray-fade" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="15%" stopColor="#f5ebd6" stopOpacity="0.8" />
-                <stop offset="45%" stopColor="#e9e0d2" stopOpacity="0.15" />
+              {/* FADING AMBIENT MIST: Diffuses central golden light smoothly with zero hard circle edges */}
+              <radialGradient id="smoky-glow-mist" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0.45" />
+                <stop offset="25%" stopColor="#d1be9b" stopOpacity="0.2" />
+                <stop offset="65%" stopColor="#0d1412" stopOpacity="0" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </radialGradient>
 
-              {/* Soft Backdrop Environmental Light Leak Filter */}
-              <filter id="eclipse-light-leak" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="5" result="blur1" />
-                <feGaussianBlur stdDeviation="1.5" result="blur2" />
-                <feMerge>
-                  <feMergeNode in="blur1" />
-                  <feMergeNode in="blur2" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
+              {/* Advanced Deep Dispersion Blur Filter specifically for your background mist layer */}
+              <filter id="deep-mist-diffusion" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="8" />
               </filter>
 
-              {/* Subtly defuses ray paths to mimic real camera lens attributes */}
-              <filter id="lens-ray-soften" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="0.5" />
+              {/* Subtly softens the side echo arcs to keep them quiet and non-distracting */}
+              <filter id="echo-arc-soften" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.5" />
               </filter>
             </defs>
 
-            {/* RADIAL BACKGROUND HAZE: Smooth, fogged golden ambiance centered behind everything */}
-            <circle cx="100" cy="55" r="35" fill="#f5ebd6" opacity="0.12" filter="url(#eclipse-light-leak)" />
+            {/* DARK SMOKY EMBED MASK: Deepens a dark charcoal shadow layer behind the center void */}
+            <circle cx="100" cy="55" r="48" fill="#060a09" opacity="0.75" filter="url(#deep-mist-diffusion)" />
 
-            {/* ACCURATE ANATOMY LIGHTING RAYS - Bursting cleanly from center point 100, 55 */}
-            <g filter="url(#lens-ray-soften)">
-              {/* Single Diagonal Beam cutting cleanly down from Top-Left across the core */}
-              <line x1="35" y1="-10" x2="165" y2="120" stroke="url(#needle-ray-fade)" strokeWidth="0.8" opacity="0.65" />
-              
-              {/* Subtle Horizontal Accent Light Shimmer anchoring the center axis */}
-              <line x1="25" y1="55" x2="175" y2="55" stroke="url(#needle-ray-fade)" strokeWidth="0.5" opacity="0.45" />
-            </g>
+            {/* RADIAL BACKGROUND HAZE: Fully diffused, blurred soft golden light mist behind the line */}
+            <circle cx="100" cy="55" r="30" fill="url(#smoky-glow-mist)" filter="url(#deep-mist-diffusion)" />
 
-            {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
+            {/* ANATOMY LIGHTING: A single, extremely thin diagonal accent shimmer */}
+            <line 
+              x1="45" y1="11" x2="155" y2="99" 
+              stroke="#e9e0d2" 
+              strokeWidth="0.3" 
+              opacity="0.25" 
+              filter="url(#echo-arc-soften)"
+            />
+
+            {/* VIBRATING OUTSIDE ECHO LAYER: Ultra-faint, low-opacity ghosted left crescent */}
             <path 
               d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.25"
+              opacity="0.08"
+              filter="url(#echo-arc-soften)"
             />
 
-            {/* MAIN INNER LAYER: Bold Left Moon Curve */}
+            {/* MAIN INNER LAYER: Sharp, elegant left ivory moon curve */}
             <path 
               d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* MAIN INNER LAYER: Bold Right Moon Curve */}
+            {/* MAIN INNER LAYER: Sharp, elegant right ivory moon curve */}
             <path 
               d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* VIBRATING OUTER LAYER: Fine Ghosted Right Crescent */}
+            {/* VIBRATING OUTSIDE ECHO LAYER: Ultra-faint, low-opacity ghosted right crescent */}
             <path 
               d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.25"
+              opacity="0.08"
+              filter="url(#echo-arc-soften)"
             />
 
-            {/* ARCHITECTURAL DIAMOND RAZOR SHARD PILLAR: Pure straight line vectors with no rounded curves */}
-            {/* Left Shadow Facet: Straight linear track from point to peak */}
-            <polygon 
-              points="100,5 98.2,55 100,105 100,5" 
-              fill="url(#pillar-shadow-side)" 
-            />
-            
-            {/* Right Highlight Facet: Straight linear track from point to peak */}
-            <polygon 
-              points="100,5 101.8,55 100,105 100,5" 
-              fill="url(#pillar-highlight-side)" 
+            {/* SOFT VERTICAL BEAM PORTAL: Subtly backlights the main threshold center divider line */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="#e9e0d2" 
+              strokeWidth="2.5" 
+              opacity="0.15" 
+              filter="url(#deep-mist-diffusion)"
             />
 
-            {/* CENTRAL BEAM LAYER: Razor-thin white dividing threshold line */}
-            <line x1="100" y1="5" x2="100" y2="105" stroke="#ffffff" strokeWidth="0.4" opacity="0.8" />
-
-            {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point embedded into the fold */}
-            <circle cx="100" cy="55" r="12" fill="#f5ebd6" opacity="0.2" filter="url(#eclipse-light-leak)" />
-            <circle cx="100" cy="55" r="4.5" fill="#ffffff" opacity="0.6" filter="url(#eclipse-light-leak)" />
-            <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
+            {/* CENTRAL THRESHOLD LINE: Razor-thin, clean center dividing line running perfectly straight */}
+            <line 
+              x1="100" y1="5" x2="100" y2="105" 
+              stroke="#ffffff" 
+              strokeWidth="0.4" 
+              opacity="0.75" 
+            />
 
             {/* High-End Studio Typography Vectors */}
             <text 
