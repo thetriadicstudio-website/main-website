@@ -123,6 +123,7 @@ export default function Home() {
                 </feMerge>
               </filter>
             </defs>
+
             {/* INTEGRATED BACKEND LENS RAYS: Hardcoded on exact center axis center point (100, 55) */}
             <g transform="rotate(38 100 55)">
               <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
@@ -163,10 +164,7 @@ export default function Home() {
               opacity="0.2"
             />
 
-            {/* ========================================================================= */}
-            {/* VOLUMETRIC CENTER PILLAR ENGINE: REPLACES FLAT STROKES WITH PHOTOGRAPHIC GLOW */}
-            {/* ========================================================================= */}
-            
+            {/* VOLUMETRIC CENTER PILLAR ENGINE */}
             {/* Layer 1: Wide Ambient Halo Column */}
             <rect 
               x="96.5" y="2" width="7" height="106" 
@@ -190,13 +188,12 @@ export default function Home() {
               opacity="0.98" 
             />
 
-            {/* PHOTOGRAPHIC CONVERGENCE FLUIDITY: Hard white circle completely deleted. */}
-            {/* Layered custom soft blurs seamlessly step light out across axes. */}
+            {/* FLUID LIGHT CONVERGENCE: Soft radial blurs without hard central dot */}
             <circle cx="100" cy="55" r="4" fill="#ffffff" filter="blur(1.5px)" opacity="0.95" />
             <circle cx="100" cy="55" r="8" fill="#f5ebd6" opacity="0.4" filter="blur(3px)" />
             <circle cx="100" cy="55" r="16" fill="#d1be9b" opacity="0.2" filter="blur(5px)" />
 
-            {/* High-End Studio Typography Vectors */}
+            {/* Typography Vectors */}
             <text 
               x="100" y="124" 
               textAnchor="middle" 
@@ -209,7 +206,6 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
-            {/* Subtitle track maps gold styles onto custom title line layout */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
@@ -225,7 +221,6 @@ export default function Home() {
           </svg>
         </div>
       </section>
-
       {/* Studio Mantra Section with Gold Text Bind Hook */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
@@ -236,7 +231,9 @@ export default function Home() {
           <span>Materiality</span>
         </div>
       </section>
-      <section className="portfolio">
+
+      {/* RESTORED PORTFOLIO SECTION: Bringing back the complete masonry tile system */}
+      <section className="portfolio" id="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
           <div className="tiles">
@@ -255,8 +252,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="blueprint">
+      {/* RESTORED BLUEPRINT SECTION: Bringing back the structural isometric layers */}
+      <section className="blueprint" id="blueprint">
         <div className="blueprint-left">
           <p className="eyebrow">The Emotional Blueprint</p>
           <h2>Every space leaves<br />an emotional imprint.</h2>
@@ -294,8 +291,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER TIMELINE FRAME */}
-      <footer className="footer">
+      {/* RESTORED FOOTER LINKS & SOCIAL FRAME */}
+      <footer className="footer" id="contact">
         <span className="eyebrow">© 2026 THE TRIADIC STUDIO</span>
         <nav className="footer-nav">
           <a href="#portfolio">Archive</a>
