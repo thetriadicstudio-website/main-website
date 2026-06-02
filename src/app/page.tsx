@@ -46,6 +46,7 @@ const projects = [
     description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
   },
 ];
+
 export default function Home() {
   const [active, setActive] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -67,17 +68,14 @@ export default function Home() {
 
   return (
     <main className="page">
-      {/* Pristine Minimalist Empty Header Frame */}
       <header className="header">
         <div className="header-spacer" />
       </header>
 
-      {/* FIXED BRAND ENGINE - RAYS ARE INSIDE SVG TO PREVENT MISALIGNMENT */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master">
             <defs>
-              {/* Champagne Gold Metallic Sheen Gradient */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#8c7965" />
                 <stop offset="22%" stopColor="#f5ebd6" />
@@ -86,8 +84,6 @@ export default function Home() {
                 <stop offset="85%" stopColor="#f5ebd6" />
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
-
-              {/* Central Ray Light Source Gradient */}
               <linearGradient id="ray-glow-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
                 <stop offset="20%" stopColor="#ffffff" stopOpacity="0.25" />
@@ -95,8 +91,6 @@ export default function Home() {
                 <stop offset="80%" stopColor="#ffffff" stopOpacity="0.25" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </linearGradient>
-
-              {/* PHOTOGRAPHIC BEAM FADE GRADIENT: Mimics real optics feathering towards tips */}
               <linearGradient id="vertical-beam-glow" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
                 <stop offset="20%" stopColor="#ffffff" stopOpacity="0.4" />
@@ -104,8 +98,6 @@ export default function Home() {
                 <stop offset="80%" stopColor="#ffffff" stopOpacity="0.4" />
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
               </linearGradient>
-
-              {/* AMBIENT CHAMBER GRADIENT: For soft background light falloff behind center laser */}
               <linearGradient id="vertical-ambient-glow" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="#f5ebd6" stopOpacity="0" />
                 <stop offset="35%" stopColor="#f5ebd6" stopOpacity="0.25" />
@@ -113,8 +105,6 @@ export default function Home() {
                 <stop offset="65%" stopColor="#f5ebd6" stopOpacity="0.25" />
                 <stop offset="100%" stopColor="#f5ebd6" stopOpacity="0" />
               </linearGradient>
-
-              {/* High-Performance Volumetric Soft Filter Blur Engine */}
               <filter id="soft-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="1.5" result="blur" />
                 <feMerge>
@@ -124,7 +114,6 @@ export default function Home() {
               </filter>
             </defs>
 
-            {/* INTEGRATED BACKEND LENS RAYS: Hardcoded on exact center axis center point (100, 55) */}
             <g transform="rotate(38 100 55)">
               <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
             </g>
@@ -138,86 +127,21 @@ export default function Home() {
               <rect x="20" y="54.6" width="160" height="0.8" fill="url(#ray-glow-horizontal)" opacity="0.35" />
             </g>
 
-            {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
-            <path 
-              d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
-              fill="url(#heavy-gold-metallic)" 
-              opacity="0.2"
-            />
+            <path d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" fill="url(#heavy-gold-metallic)" opacity="0.2" />
+            <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="url(#heavy-gold-metallic)" />
+            <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="url(#heavy-gold-metallic)" />
+            <path d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" fill="url(#heavy-gold-metallic)" opacity="0.2" />
 
-            {/* MAIN INNER LAYER: Bold Left Moon Curve */}
-            <path 
-              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
-              fill="url(#heavy-gold-metallic)" 
-            />
+            <rect x="96.5" y="2" width="7" height="106" fill="url(#vertical-ambient-glow)" filter="blur(2.5px)" opacity="0.45" />
+            <rect x="98.2" y="2" width="3.6" height="106" fill="url(#vertical-beam-glow)" filter="url(#soft-glow-filter)" opacity="0.65" />
+            <rect x="99.4" y="4" width="1.2" height="102" fill="url(#vertical-beam-glow)" opacity="0.98" />
 
-            {/* MAIN INNER LAYER: Bold Right Moon Curve */}
-            <path 
-              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
-              fill="url(#heavy-gold-metallic)" 
-            />
-
-            {/* VIBRATING OUTER LAYER: Fine Ghosted Right Crescent */}
-            <path 
-              d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
-              fill="url(#heavy-gold-metallic)" 
-              opacity="0.2"
-            />
-
-            {/* ========================================================================= */}
-            {/* VOLUMETRIC CENTER PILLAR ENGINE: REPLACES FLAT STROKES WITH PHOTOGRAPHIC GLOW */}
-            {/* ========================================================================= */}
-            
-            {/* Layer 1: Wide Ambient Halo Column */}
-            <rect 
-              x="96.5" y="2" width="7" height="106" 
-              fill="url(#vertical-ambient-glow)" 
-              filter="blur(2.5px)" 
-              opacity="0.45" 
-            />
-
-            {/* Layer 2: Medium Feathered Light Pillar */}
-            <rect 
-              x="98.2" y="2" width="3.6" height="106" 
-              fill="url(#vertical-beam-glow)" 
-              filter="url(#soft-glow-filter)" 
-              opacity="0.65" 
-            />
-
-            {/* Layer 3: Ultra-Sharp Core Laser Inner Blade */}
-            <rect 
-              x="99.4" y="4" width="1.2" height="102" 
-              fill="url(#vertical-beam-glow)" 
-              opacity="0.98" 
-            />
-
-            {/* PHOTOGRAPHIC CONVERGENCE FLUIDITY: Hard white circle completely deleted. */}
             <circle cx="100" cy="55" r="4" fill="#ffffff" filter="blur(1.5px)" opacity="0.95" />
             <circle cx="100" cy="55" r="8" fill="#f5ebd6" opacity="0.4" filter="blur(3px)" />
             <circle cx="100" cy="55" r="16" fill="#d1be9b" opacity="0.2" filter="blur(5px)" />
 
-            {/* High-End Studio Typography Vectors */}
-            <text 
-              x="100" y="124" 
-              textAnchor="middle" 
-              fill="#ffffff" 
-              fontSize="8" 
-              fontWeight="300" 
-              letterSpacing="0.48em"
-              className="typography-brand-title"
-            >
-              THE TRIADIC STUDIO
-            </text>
-
-            {/* Subtitle track maps gold styles onto custom title line layout */}
-            <text 
-              x="100" y="136" 
-              textAnchor="middle" 
-              fontSize="4.5" 
-              fontWeight="600" 
-              letterSpacing="0.34em"
-              className="typography-brand-sub"
-            >
+            <text x="100" y="124" textAnchor="middle" fill="#ffffff" fontSize="8" fontWeight="300" letterSpacing="0.48em" className="typography-brand-title">THE TRIADIC STUDIO</text>
+            <text x="100" y="136" textAnchor="middle" fontSize="4.5" fontWeight="600" letterSpacing="0.34em" className="typography-brand-sub">
               <tspan fill="#ffffff">SPATIAL </tspan>
               <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
               <tspan fill="#ffffff">DESIGN</tspan>
@@ -225,7 +149,7 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      {/* Studio Mantra Section with Gold Text Bind Hook */}
+
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
         <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
@@ -236,7 +160,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CORE PORTFOLIO SECTION MAPPED DIRECTLY TO MASONRY CSS RULES */}
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
@@ -257,8 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE EMOTIONAL BLUEPRINT FRAMEWORK SECTION */}
-      <section className="blueprint">
+      <section className="blueprint" id="blueprint">
         <div className="blueprint-left">
           <p className="eyebrow">The Emotional Blueprint</p>
           <h2>Every space leaves<br />an emotional imprint.</h2>
@@ -298,6 +220,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EDITORIAL APPLICATIONS METHODOLOGY ROW */}
+      <section className="applications-editorial-container">
+        <div className="applications-header-row">
+          <p className="eyebrow">Applications</p>
+        </div>
+        
+        <div className="applications-triple-matrix">
+          <div className="application-text-column">
+            <h4>Spaces</h4>
+            <h5>Designing environments that shape perception.</h5>
+            <p>Residential interiors, boutique hospitality and property transformation.</p>
+          </div>
+          
+          <div className="application-text-column">
+            <h4>Experiences</h4>
+            <h5>Creating atmospheres that leave a lasting impression.</h5>
+            <p>Event styling, immersive environments and experiential concepts.</p>
+          </div>
+          
+          <div className="application-text-column">
+            <h4>Visual Narratives</h4>
+            <h5>Communicating ideas through visualisation and film.</h5>
+            <p>CGI visualisation, spatial animation and creative direction.</p>
+          </div>
+        </div>
+      </section>
+
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
@@ -324,7 +273,6 @@ export default function Home() {
         </div>
       )}
 
-      {/* Upgraded About Section with your New Custom Paragraphs */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -346,4 +294,102 @@ export default function Home() {
       </footer>
     </main>
   );
+}
+/* ========================================================================= */
+/* MINIMALIST EDITORIAL APPLICATIONS AREA */
+/* ========================================================================= */
+
+.applications-editorial-container {
+  margin-top: 180px;
+  border-top: 1px solid rgba(140, 129, 123, 0.15);
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.applications-header-row {
+  width: 100%;
+}
+
+.applications-triple-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.application-text-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Category Headings */
+.application-text-column h4 {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Core Concept Subtitles */
+.application-text-column h5 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 300;
+  line-height: 1.3;
+  color: #ffffff !important;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Descriptive Capabilites */
+.application-text-column p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: color 0.4s ease;
+}
+
+/* Elegant Text Highlight Link Hook */
+.application-text-column:hover p {
+  color: var(--ivory);
+}
+
+/* ========================================================================= */
+/* RESPONSIVE MEDIA ADAPTATIONS */
+/* ========================================================================= */
+
+@media (max-width: 1024px) {
+  .applications-triple-matrix {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .applications-editorial-container {
+    margin-top: 120px;
+    gap: 48px;
+    padding-top: 60px;
+  }
+  
+  .applications-triple-matrix {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  
+  .application-text-column h4 {
+    margin-bottom: 18px;
+  }
+  
+  .application-text-column h5 {
+    margin-bottom: 12px;
+  }
 }
