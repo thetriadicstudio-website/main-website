@@ -72,9 +72,17 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - FEATHERED OPTICAL LENS RAY SYSTEM */}
+      {/* PURE EMBEDDED BRAND ENGINE - UNCONSTRAINED OPTICAL LIGHT LAYER */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
+          
+          {/* HARDCODED LENS FLARE RAYS: Separated completely from vector limits to bleed infinitely */}
+          <div className="html-lens-glow-core" />
+          <div className="html-lens-ray ray-diag-1" />
+          <div className="html-lens-ray ray-diag-2" />
+          <div className="html-lens-ray ray-diag-3" />
+          <div className="html-lens-ray ray-diag-4" />
+
           <svg viewBox="0 0 200 150" className="vector-brand-master">
             <defs>
               {/* Multi-stop High-Contrast Champagne Gold Sheen */}
@@ -86,55 +94,7 @@ export default function Home() {
                 <stop offset="85%" stopColor="#f5ebd6" />
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
-
-              {/* Absolute Edge Fade: Forces the rays to break down completely to 0% opacity within the container safety zone */}
-              <radialGradient id="ray-fade" cx="50%" cy="38%" r="45%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="12%" stopColor="#f5ebd6" stopOpacity="0.75" />
-                <stop offset="35%" stopColor="#e9e0d2" stopOpacity="0.15" />
-                <stop offset="75%" stopColor="#0d1412" stopOpacity="0" />
-                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
-              </radialGradient>
-
-              {/* Advanced Color Matrix Light Multiplier Engine to Force Glow Stability */}
-              <filter id="web-volumetric-glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="6" result="blur1" />
-                <feGaussianBlur stdDeviation="2" result="blur2" />
-                <feComponentTransfer in="blur1" result="brightBlur">
-                  <feFuncA type="linear" slope="2.5" />
-                </feComponentTransfer>
-                <feMerge>
-                  <feMergeNode in="brightBlur" />
-                  <feMergeNode in="blur2" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-
-              {/* FIXED FEATHER FILTER: Heavy Gaussian focus specifically configured to erase sharp ray edge-lines */}
-              <filter id="ray-soft-feather" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="4.5" />
-              </filter>
             </defs>
-
-            {/* FOG LAYER: Multiplied Backing Ambient Golden Mist */}
-            <circle cx="100" cy="55" r="32" fill="#f5ebd6" opacity="0.12" filter="url(#web-volumetric-glow)" />
-
-            {/* INTENSE SOURCE GLOW: Expanding Golden Halo at the exact intersection point */}
-            <circle cx="100" cy="55" r="14" fill="#f5ebd6" opacity="0.3" filter="url(#web-volumetric-glow)" />
-            <circle cx="100" cy="55" r="6" fill="#ffffff" opacity="0.45" filter="url(#web-volumetric-glow)" />
-
-            {/* CINEMATIC FEATHERED OPTICAL LENS FLARE RAYS - Shortened and heavily blurred to bypass box clamping clipping */}
-            {/* Top-Right Diagonal Ray Track */}
-            <path d="M 100 55 L 158 20 L 156 18 L 100 55 Z" fill="url(#ray-fade)" opacity="0.3" filter="url(#ray-soft-feather)" />
-            {/* Bottom-Left Diagonal Ray Track */}
-            <path d="M 100 55 L 42 90 L 44 92 L 100 55 Z" fill="url(#ray-fade)" opacity="0.35" filter="url(#ray-soft-feather)" />
-            {/* Top-Left Ray Flare Track */}
-            <path d="M 100 55 L 60 25 L 62 23 L 100 55 Z" fill="url(#ray-fade)" opacity="0.22" filter="url(#ray-soft-feather)" />
-            {/* Bottom-Right Ray Flare Track */}
-            <path d="M 100 55 L 140 85 L 138 87 L 100 55 Z" fill="url(#ray-fade)" opacity="0.25" filter="url(#ray-soft-feather)" />
-
-            {/* HIGH-INTENSITY SPARK SOURCE CORE: Pure white point of origin */}
-            <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
@@ -162,23 +122,12 @@ export default function Home() {
               opacity="0.25"
             />
 
-            {/* CORE LIGHT LAYER: Wide Volumetric Beam Backing */}
-            <line 
-              x1="100" y1="5" x2="100" y2="105" 
-              stroke="#f5ebd6" 
-              strokeWidth="5" 
-              strokeLinecap="round"
-              opacity="0.35"
-              filter="url(#web-volumetric-glow)"
-            />
-
             {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
             <line 
               x1="100" y1="5" x2="100" y2="105" 
               stroke="url(#heavy-gold-metallic)" 
               strokeWidth="1.2" 
               strokeLinecap="round"
-              filter="url(#web-volumetric-glow)"
             />
 
             {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
