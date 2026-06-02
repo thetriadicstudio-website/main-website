@@ -72,7 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - 3D FOLDED PILLAR ILLUSION */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - NEEDLE-THIN STRUCTURAL SHIELD ILLUSION */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
@@ -86,20 +86,18 @@ export default function Home() {
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
 
-              {/* PILLAR DEEP SHADOW FACET: Darker bronze-to-slate value gradient */}
+              {/* PILLAR DEEP SHADOW FACET: Narrowed gradient range */}
               <linearGradient id="pillar-shadow-side" x1="100%" y1="0%" x2="0%" y2="0%">
                 <stop offset="0%" stopColor="#2c2420" />
-                <stop offset="30%" stopColor="#403630" />
-                <stop offset="70%" stopColor="#1a1412" />
+                <stop offset="50%" stopColor="#3d332d" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </linearGradient>
 
-              {/* PILLAR BRILLIANT HIGHLIGHT FACET: Stark, high-contrast platinum-to-champagne values */}
+              {/* PILLAR BRILLIANT HIGHLIGHT FACET: Sharp platinum reflection axis */}
               <linearGradient id="pillar-highlight-side" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="15%" stopColor="#f5ebd6" />
-                <stop offset="45%" stopColor="#d1be9b" />
-                <stop offset="80%" stopColor="#54463c" />
+                <stop offset="25%" stopColor="#f5ebd6" />
+                <stop offset="65%" stopColor="#d1be9b" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </linearGradient>
 
@@ -166,21 +164,21 @@ export default function Home() {
               opacity="0.25"
             />
 
-            {/* 3D SCULPTURAL CENTRAL PILLAR ILLUSION - Split right down the center vector line (x=100) */}
-            {/* Left Facet: Curved left side falling into deep architectural shade */}
+            {/* FIXED NEEDLE-THIN CENTRAL PILLAR: Horizontal markers heavily compressed to form an elegant blade */}
+            {/* Left Facet shadow side - pulled in closely to x=98.2 */}
             <path 
-              d="M 100 5 C 96 15, 94 30, 94 55 C 94 80, 96 95, 100 105 Z" 
+              d="M 100 5 C 98.8 15, 98.2 30, 98.2 55 C 98.2 80, 98.8 95, 100 105 Z" 
               fill="url(#pillar-shadow-side)" 
             />
             
-            {/* Right Facet: Curved right side catching brilliant direct highlight reflection */}
+            {/* Right Facet highlight side - pulled in closely to x=101.8 */}
             <path 
-              d="M 100 5 C 104 15, 106 30, 106 55 C 106 80, 104 95, 100 105 Z" 
+              d="M 100 5 C 101.2 15, 101.8 30, 101.8 55 C 101.8 80, 101.2 95, 100 105 Z" 
               fill="url(#pillar-highlight-side)" 
             />
 
             {/* CENTRAL BEAM LAYER: Razor-thin white threshold line dividing the two facets */}
-            <line x1="100" y1="5" x2="100" y2="105" stroke="#ffffff" strokeWidth="0.5" opacity="0.6" />
+            <line x1="100" y1="5" x2="100" y2="105" stroke="#ffffff" strokeWidth="0.4" opacity="0.75" />
 
             {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point embedded into the fold */}
             <circle cx="100" cy="55" r="12" fill="#f5ebd6" opacity="0.2" filter="url(#eclipse-light-leak)" />
