@@ -225,6 +225,47 @@ export default function Home() {
           </svg>
         </div>
       </section>
+      {/* Studio Mantra Section with Gold Text Bind Hook */}
+      <section className="hero-mantra-section">
+        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
+        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
+        <div className="pillars">
+          <span>Atmosphere</span>
+          <span>Narrative</span>
+          <span>Materiality</span>
+        </div>
+      </section>
+
+      {/* CORE PORTFOLIO SECTION MAPPED DIRECTLY TO MASONRY CSS RULES */}
+      <section className="portfolio">
+        <div className="portfolio-title">Portfolio</div>
+        <div className="portfolio-stage">
+          <div className="tiles">
+            {projects.map((project, index) => (
+              <button
+                key={`${project.image}-${index}`}
+                type="button"
+                className={`tile tile-${index + 1}`}
+                onClick={() => openLightbox(index)}
+                aria-label={`Open ${project.title} in Full Screen`}
+              >
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <img src={project.image} alt={project.title} />
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* THE EMOTIONAL BLUEPRINT FRAMEWORK SECTION */}
+      <section className="blueprint">
+        <div className="blueprint-left">
+          <p className="eyebrow">The Emotional Blueprint</p>
+          <h2>Every space leaves<br />an emotional imprint.</h2>
+          
+          <div className="blueprint-diagram">
+            <div className="blueprint-labels">
+              <span>Colour</span>
               <span>Texture</span>
               <span>Scale</span>
               <span>Light</span>
