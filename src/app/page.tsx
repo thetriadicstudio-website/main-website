@@ -72,13 +72,12 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-
-      {/* PURE WEB CODE ECLIPSE LIGHT ENGINE - SEAMLESS BLENDED SYSTEM */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - 3D FOLDED PILLAR ILLUSION */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
             <defs>
-              {/* Premium Metallic Gradient Shimmer for Silver-to-Gold Moons */}
+              {/* Premium Metallic Gradient Shimmer for Outer Moon Curves */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#9e8d85" />
                 <stop offset="25%" stopColor="#ffffff" />
@@ -87,55 +86,58 @@ export default function Home() {
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
 
-              {/* Linear fading gradients to smoothly melt the rays out toward the ends */}
-              <linearGradient id="ray-fade-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#0d1412" stopOpacity="0" />
-                <stop offset="35%" stopColor="#e9e0d2" stopOpacity="0.25" />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="65%" stopColor="#e9e0d2" stopOpacity="0.25" />
+              {/* PILLAR DEEP SHADOW FACET: Darker bronze-to-slate value gradient */}
+              <linearGradient id="pillar-shadow-side" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#2c2420" />
+                <stop offset="30%" stopColor="#403630" />
+                <stop offset="70%" stopColor="#1a1412" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </linearGradient>
 
-              <linearGradient id="ray-fade-vertical" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#0d1412" stopOpacity="0" />
-                <stop offset="30%" stopColor="#e9e0d2" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="70%" stopColor="#e9e0d2" stopOpacity="0.2" />
+              {/* PILLAR BRILLIANT HIGHLIGHT FACET: Stark, high-contrast platinum-to-champagne values */}
+              <linearGradient id="pillar-highlight-side" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="15%" stopColor="#f5ebd6" />
+                <stop offset="45%" stopColor="#d1be9b" />
+                <stop offset="80%" stopColor="#54463c" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </linearGradient>
 
-              {/* Advanced Volumetric Fog Multiplier Filter for the Core */}
-              <filter id="eclipse-light-leak" x="-200%" y="-200%" width="500%" height="500%">
+              {/* Center-Out Fading Gradient for Single Diagonal Lens Ray */}
+              <radialGradient id="needle-ray-fade" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="15%" stopColor="#f5ebd6" stopOpacity="0.8" />
+                <stop offset="45%" stopColor="#e9e0d2" stopOpacity="0.15" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
+
+              {/* Soft Backdrop Environmental Light Leak Filter */}
+              <filter id="eclipse-light-leak" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="5" result="blur1" />
-                <feGaussianBlur stdDeviation="2" result="blur2" />
-                <feComponentTransfer in="blur1" result="brightGlow">
-                  <feFuncA type="linear" slope="3" />
-                </feComponentTransfer>
+                <feGaussianBlur stdDeviation="1.5" result="blur2" />
                 <feMerge>
-                  <feMergeNode in="brightGlow" />
+                  <feMergeNode in="blur1" />
                   <feMergeNode in="blur2" />
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
 
-              {/* HEAVY DIFFUSION RAY FILTER: Destroys sharp wireframe line lines, bleeding them into organic fog */}
-              <filter id="ray-defuse-bloom" x="-200%" y="-200%" width="500%" height="500%">
-                <feGaussianBlur stdDeviation="14" />
+              {/* Subtly defuses ray paths to mimic real camera lens attributes */}
+              <filter id="lens-ray-soften" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="0.5" />
               </filter>
             </defs>
 
             {/* RADIAL BACKGROUND HAZE: Smooth, fogged golden ambiance centered behind everything */}
-            <circle cx="100" cy="55" r="45" fill="#f5ebd6" opacity="0.14" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="35" fill="#f5ebd6" opacity="0.12" filter="url(#eclipse-light-leak)" />
 
-            {/* CINEMATIC FEATHERED LIGHT RAY ARRAY - Completely blended to dissolve naturally */}
-            <g filter="url(#ray-defuse-bloom)" opacity="0.65">
-              {/* Primary Cross-beams running on length-fading gradient strokes */}
-              <line x1="10" y1="55" x2="190" y2="55" stroke="url(#ray-fade-horizontal)" strokeWidth="6" />
-              <line x1="100" y1="-30" x2="100" y2="140" stroke="url(#ray-fade-vertical)" strokeWidth="6" />
+            {/* ACCURATE ANATOMY LIGHTING RAYS - Bursting cleanly from center point 100, 55 */}
+            <g filter="url(#lens-ray-soften)">
+              {/* Single Diagonal Beam cutting cleanly down from Top-Left across the core */}
+              <line x1="35" y1="-10" x2="165" y2="120" stroke="url(#needle-ray-fade)" strokeWidth="0.8" opacity="0.65" />
               
-              {/* Expanded Soft Diagonal Light Glow Sheets */}
-              <line x1="20" y1="-25" x2="180" y2="135" stroke="url(#ray-fade-horizontal)" strokeWidth="5" transform="rotate(15, 100, 55)" />
-              <line x1="20" y1="135" x2="180" y2="-25" stroke="url(#ray-fade-horizontal)" strokeWidth="5" transform="rotate(-15, 100, 55)" />
+              {/* Subtle Horizontal Accent Light Shimmer anchoring the center axis */}
+              <line x1="25" y1="55" x2="175" y2="55" stroke="url(#needle-ray-fade)" strokeWidth="0.5" opacity="0.45" />
             </g>
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
@@ -164,9 +166,25 @@ export default function Home() {
               opacity="0.25"
             />
 
-            {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point */}
-            <circle cx="100" cy="55" r="16" fill="#f5ebd6" opacity="0.25" filter="url(#eclipse-light-leak)" />
-            <circle cx="100" cy="55" r="6" fill="#ffffff" opacity="0.6" filter="url(#eclipse-light-leak)" />
+            {/* 3D SCULPTURAL CENTRAL PILLAR ILLUSION - Split right down the center vector line (x=100) */}
+            {/* Left Facet: Curved left side falling into deep architectural shade */}
+            <path 
+              d="M 100 5 C 96 15, 94 30, 94 55 C 94 80, 96 95, 100 105 Z" 
+              fill="url(#pillar-shadow-side)" 
+            />
+            
+            {/* Right Facet: Curved right side catching brilliant direct highlight reflection */}
+            <path 
+              d="M 100 5 C 104 15, 106 30, 106 55 C 106 80, 104 95, 100 105 Z" 
+              fill="url(#pillar-highlight-side)" 
+            />
+
+            {/* CENTRAL BEAM LAYER: Razor-thin white threshold line dividing the two facets */}
+            <line x1="100" y1="5" x2="100" y2="105" stroke="#ffffff" strokeWidth="0.5" opacity="0.6" />
+
+            {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point embedded into the fold */}
+            <circle cx="100" cy="55" r="12" fill="#f5ebd6" opacity="0.2" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="4.5" fill="#ffffff" opacity="0.6" filter="url(#eclipse-light-leak)" />
             <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
 
             {/* High-End Studio Typography Vectors */}
