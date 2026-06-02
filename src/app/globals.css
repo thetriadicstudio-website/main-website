@@ -29,7 +29,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* CINEMATIC SCRIM MASK: Drops a heavy, dark vignette backdrop to force the logo light to pop */
 body::before {
   content: "";
   position: fixed;
@@ -37,7 +36,7 @@ body::before {
   z-index: -2;
   background: 
     radial-gradient(circle at 50% 30%, rgba(10, 16, 14, 0.15) 0%, rgba(10, 16, 14, 0.9) 65%),
-    linear-gradient(to bottom, rgba(10, 16, 14, 0.95) 0%, rgba(10, 16, 14, 0.4) 30%, rgba(10, 16, 14, 0.5) 70%, rgba(10, 10, 14, 0.95) 100%) !important;
+    linear-gradient(to bottom, rgba(10, 16, 14, 0.95) 0%, rgba(10, 16, 14, 0.3) 30%, rgba(10, 16, 14, 0.5) 70%, rgba(10, 16, 14, 0.95) 100%) !important;
   pointer-events: none;
 }
 
@@ -49,13 +48,10 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 .page { min-height: 100vh; padding: 40px 80px 120px; }
 
-.eyebrow, .portfolio-title, .blueprint-right .eyebrow, .blueprint-list li, .footer-nav a, .hero-mantra-section h1 {
-  text-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.95),
-    0 4px 20px rgba(0, 0, 0, 0.8);
+.eyebrow, .portfolio-title, .blueprint-right .eyebrow, .blueprint-list li, .footer-nav a {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
-/* MINIMAL NAVIGATION HEADER TRACK */
 .header {
   position: relative;
   width: 100%;
@@ -63,7 +59,6 @@ button { font: inherit; }
   z-index: 10;
 }
 
-/* PURE WEB CODE CENTERPIECE CONTAINER */
 .hero-branding-container {
   display: flex;
   justify-content: center;
@@ -82,33 +77,12 @@ button { font: inherit; }
   align-items: center;
 }
 
-/* THE GLOW ENGINE: Forces the browser to project an intense, smoky light bloom 
-   over your vector lines, perfectly mimicking your original branding graphic */
 .vector-brand-master {
   width: 100%;
   height: auto;
-  filter: 
-    drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.98))
-    drop-shadow(0px 0px 12px rgba(245, 235, 214, 0.85))
-    drop-shadow(0px 0px 32px rgba(233, 224, 210, 0.5));
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.98));
 }
 
-/* HIGH-INTENSITY CORE LIGHT BEAM */
-.vector-brand-master .center-beam-glow {
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
-}
-
-.vector-brand-master .typography-brand-title {
-  font-family: var(--font-cormorant), Georgia, serif;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
-}
-
-.vector-brand-master .typography-brand-sub {
-  font-family: var(--font-inter), sans-serif;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.98);
-}
-
-/* HERO MANTRA CONTAINER */
 .hero-mantra-section { 
   min-height: 40vh; 
   display: flex; 
@@ -120,8 +94,6 @@ button { font: inherit; }
   margin-bottom: 80px;
 }
 
-.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 28px; opacity: 0.8; }
-
 .hero-mantra-section h1 { 
   font-family: var(--font-cormorant), Georgia, serif; 
   font-size: clamp(54px, 5.2vw, 84px); 
@@ -130,11 +102,27 @@ button { font: inherit; }
   letter-spacing: -0.01em;
   color: #ffffff !important; 
   margin: 0;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
-.hero-mantra-section h1 em { font-style: italic; color: var(--ivory) !important; font-weight: 300; }
 
+/* FIXED: Heavy Champagne Metallic Finish Applied Directly to the Typography Word */
+.hero-mantra-section h1 em.gold-text-glow {
+  font-style: italic;
+  font-weight: 300;
+  background: linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  
+  /* Hardcoded text light-bloom aura */
+  filter: 
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 10px rgba(245, 235, 214, 0.5));
+}
+
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 28px; opacity: 0.8; }
 .pillars { margin-top: 36px; display: flex; gap: 32px; font-size: 11px; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; color: var(--ink-label) !important; opacity: 0.8; }
-
 .portfolio { margin-top: 40px; }
 .portfolio-title { font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 40px; }
 .portfolio-stage { display: block; }
