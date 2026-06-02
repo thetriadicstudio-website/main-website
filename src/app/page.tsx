@@ -72,7 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - LIGHT CORE & SOURCE INJECTION */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - FEATHERED OPTICAL LENS RAY SYSTEM */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master">
@@ -87,11 +87,12 @@ export default function Home() {
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
 
-              {/* Fading Ray Gradient: Disperses core light seamlessly into the background scenery */}
-              <radialGradient id="ray-fade" cx="50%" cy="40%" r="50%">
+              {/* Absolute Edge Fade: Forces the rays to break down completely to 0% opacity within the container safety zone */}
+              <radialGradient id="ray-fade" cx="50%" cy="38%" r="45%">
                 <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="15%" stopColor="#f5ebd6" stopOpacity="0.8" />
-                <stop offset="45%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="12%" stopColor="#f5ebd6" stopOpacity="0.75" />
+                <stop offset="35%" stopColor="#e9e0d2" stopOpacity="0.15" />
+                <stop offset="75%" stopColor="#0d1412" stopOpacity="0" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </radialGradient>
 
@@ -108,6 +109,11 @@ export default function Home() {
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
+
+              {/* FIXED FEATHER FILTER: Heavy Gaussian focus specifically configured to erase sharp ray edge-lines */}
+              <filter id="ray-soft-feather" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="4.5" />
+              </filter>
             </defs>
 
             {/* FOG LAYER: Multiplied Backing Ambient Golden Mist */}
@@ -117,15 +123,15 @@ export default function Home() {
             <circle cx="100" cy="55" r="14" fill="#f5ebd6" opacity="0.3" filter="url(#web-volumetric-glow)" />
             <circle cx="100" cy="55" r="6" fill="#ffffff" opacity="0.45" filter="url(#web-volumetric-glow)" />
 
-            {/* CINEMATIC OPTICAL LENS FLARE RAYS - Bursting cleanly from the defined source core */}
-            {/* Long Top-Right Diagonal Ray */}
-            <path d="M 100 55 L 175 10 L 172 8 L 100 55 Z" fill="url(#ray-fade)" opacity="0.35" filter="url(#web-volumetric-glow)" />
-            {/* Long Bottom-Left Diagonal Ray */}
-            <path d="M 100 55 L 20 120 L 22 122 L 100 55 Z" fill="url(#ray-fade)" opacity="0.4" filter="url(#web-volumetric-glow)" />
-            {/* Long Top-Left Ray Flare */}
-            <path d="M 100 55 L 45 15 L 48 13 L 100 55 Z" fill="url(#ray-fade)" opacity="0.25" filter="url(#web-volumetric-glow)" />
-            {/* Long Bottom-Right Ray Flare */}
-            <path d="M 100 55 L 155 105 L 153 107 L 100 55 Z" fill="url(#ray-fade)" opacity="0.3" filter="url(#web-volumetric-glow)" />
+            {/* CINEMATIC FEATHERED OPTICAL LENS FLARE RAYS - Shortened and heavily blurred to bypass box clamping clipping */}
+            {/* Top-Right Diagonal Ray Track */}
+            <path d="M 100 55 L 158 20 L 156 18 L 100 55 Z" fill="url(#ray-fade)" opacity="0.3" filter="url(#ray-soft-feather)" />
+            {/* Bottom-Left Diagonal Ray Track */}
+            <path d="M 100 55 L 42 90 L 44 92 L 100 55 Z" fill="url(#ray-fade)" opacity="0.35" filter="url(#ray-soft-feather)" />
+            {/* Top-Left Ray Flare Track */}
+            <path d="M 100 55 L 60 25 L 62 23 L 100 55 Z" fill="url(#ray-fade)" opacity="0.22" filter="url(#ray-soft-feather)" />
+            {/* Bottom-Right Ray Flare Track */}
+            <path d="M 100 55 L 140 85 L 138 87 L 100 55 Z" fill="url(#ray-fade)" opacity="0.25" filter="url(#ray-soft-feather)" />
 
             {/* HIGH-INTENSITY SPARK SOURCE CORE: Pure white point of origin */}
             <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
