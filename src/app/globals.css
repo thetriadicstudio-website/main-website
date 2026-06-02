@@ -58,7 +58,6 @@ button { font: inherit; }
   height: 20px;
   z-index: 10;
 }
-
 .hero-branding-container {
   display: flex;
   justify-content: center;
@@ -81,47 +80,11 @@ button { font: inherit; }
 .vector-brand-master {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0px 8px 32px rgba(0, 0, 0, 0.85));
+  filter: drop-shadow(0px 8px 32px rgba(0, 0, 0, 0.9));
   position: relative;
   z-index: 3;
 }
 
-/* HARDCODED INFINITE LENS SHINE SOURCE CORE */
-.html-lens-glow-core {
-  position: absolute;
-  left: 50%;
-  top: 55px; /* Aligns precisely onto the vector cross axis center */
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  border-radius: 50%;
-  z-index: 4;
-  box-shadow: 
-    0 0 12px #ffffff,
-    0 0 25px #f5ebd6,
-    0 0 50px #f5ebd6,
-    0 0 90px #d1be9b;
-}
-
-/* HARDCODED HARDWARE-ACCELERATED FINER LENS NEEDLE RAYS */
-.html-lens-ray {
-  position: absolute;
-  left: 50%;
-  top: 55px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #ffffff 20%, #f5ebd6 50%, #ffffff 80%, transparent);
-  z-index: 4;
-  transform-origin: left center;
-  opacity: 0.55;
-  mix-blend-mode: screen;
-}
-
-/* Precision vector rotation markers matching your eclipse image rays */
-.ray-diag-1 { width: 400px; transform: translate(-50%, -50%) rotate(42deg); }
-.ray-diag-2 { width: 400px; transform: translate(-50%, -50%) rotate(138deg); }
-.ray-diag-3 { width: 280px; transform: translate(-50%, -50%) rotate(-45deg); opacity: 0.3; }
-.ray-diag-4 { width: 280px; transform: translate(-50%, -50%) rotate(225deg); opacity: 0.3; }
 .hero-mantra-section { 
   min-height: 40vh; 
   display: flex; 
@@ -162,7 +125,6 @@ button { font: inherit; }
 .portfolio { margin-top: 40px; }
 .portfolio-title { font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 40px; }
 .portfolio-stage { display: block; }
-
 /* PORTFOLIO GRID */
 .tiles { position: relative; min-height: 760px; width: 100%; }
 .tile {
@@ -209,7 +171,6 @@ button { font: inherit; }
 .layer-1 { top: 0; z-index: 3; }
 .layer-2 { top: 60px; z-index: 2; opacity: 0.75; }
 .layer-3 { top: 120px; z-index: 1; opacity: 0.5; }
-
 .blueprint-right .eyebrow { margin-bottom: 20px; }
 .blueprint-list { list-style: none; padding: 0; margin: 0; }
 .blueprint-list li { font-size: 14px; line-height: 1.8; color: var(--ivory); margin-bottom: 16px; opacity: 0.85; }
