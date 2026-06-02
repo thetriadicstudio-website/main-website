@@ -72,8 +72,33 @@ export default function Home() {
         <a href="/" className="brand">
           THE TRIADIC STUDIO
         </a>
-        <div className="logo-placeholder">
-          {/* Logo element placeholder will reside here */}
+        <div className="logo-container" aria-label="The Triadic Studio Logo">
+          <svg viewBox="0 0 100 100" className="metallic-logo">
+            <defs>
+              <linearGradient id="metal-sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a3968f" />
+                <stop offset="25%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#e9e0d2" />
+                <stop offset="75%" stopColor="#9e8d85" />
+                <stop offset="100%" stopColor="#ffffff" />
+              </linearGradient>
+            </defs>
+            <path 
+              d="M 38 20 C 22 35, 22 65, 38 80 C 26 70, 26 30, 38 20 Z" 
+              fill="url(#metal-sheen)" 
+            />
+            <path 
+              d="M 62 20 C 78 35, 78 65, 62 80 C 74 70, 74 30, 62 20 Z" 
+              fill="url(#metal-sheen)" 
+            />
+            <line 
+              x1="50" y1="10" x2="50" y2="90" 
+              stroke="url(#metal-sheen)" 
+              strokeWidth="1.5" 
+              strokeLinecap="round"
+              className="core-beam"
+            />
+          </svg>
         </div>
       </header>
 
@@ -111,7 +136,7 @@ export default function Home() {
 
       <section className="blueprint">
         <div className="blueprint-left">
-          <p className="eyebrow">The Emotional Blueprint KT</p>
+          <p className="eyebrow">The Emotional Blueprint</p>
           <h2>Every space leaves<br />an emotional imprint.</h2>
           
           <div className="blueprint-diagram">
@@ -136,7 +161,7 @@ export default function Home() {
         </div>
 
         <div className="blueprint-right">
-          <p className="eyebrow">Our Blueprint Framework KT</p>
+          <p className="eyebrow">Our Blueprint Framework</p>
           <h3>A spatial analysis method exploring how environments influence perception.</h3>
           <ul className="blueprint-list">
             <li>Colour sensitivity</li>
@@ -177,7 +202,7 @@ export default function Home() {
 
       <section className="about">
         <span>About</span>
-        <p>The Triadic Studio is a creative practice focused on emotional architecture...</p>
+        <p>The Triadic Studio is a creative practice focused on emotional architecture. Our work explores the dual threshold—a passage between worlds, capturing the moment before crossing. By manipulating the space of transformation, we design the portal between the seen and the unseen.</p>
       </section>
 
       <footer className="footer">
