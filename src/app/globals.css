@@ -14,8 +14,6 @@
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-/* FIXED: Completely killed the default Next.js white gradient layout template. 
-   Forced a solid dark luxury backdrop foundation with your background image */
 html, body {
   margin: 0;
   padding: 0;
@@ -31,8 +29,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* FIXED: Replaced standard background veil logic with a pure studio vignette scrim.
-   This drops a smooth dark mask specifically behind text regions while keeping images crisp */
 body::before {
   content: "";
   position: fixed;
@@ -44,14 +40,13 @@ body::before {
 }
 
 body::after {
-  display: none !important; /* Erases any hidden light template gradient containers completely */
+  display: none !important;
 }
 
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 .page { min-height: 100vh; padding: 60px 80px 120px; }
 
-/* REUSABLE ANTI-GLARE CONTRAST TEXT SHADOW OUTLINE */
 .header, .eyebrow, .pillars, .portfolio-title, .blueprint-right .eyebrow, .blueprint-list li, .footer-nav a {
   text-shadow: 
     0 2px 8px rgba(0, 0, 0, 0.95),
@@ -59,7 +54,7 @@ button { font: inherit; }
     0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-/* TOP NAVIGATION */
+/* TOP NAVIGATION & LOGO EFFECTS */
 .header {
   position: relative; display: flex; justify-content: space-between; align-items: center;
   font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important;
@@ -67,12 +62,34 @@ button { font: inherit; }
 .header .brand { color: var(--ink-label) !important; transition: opacity 0.3s ease, color 0.3s ease; }
 .header .brand:hover { opacity: 1; color: #ffffff; }
 
-/* Placeholder reservation block for your upcoming corporate logo asset */
-.logo-placeholder {
-  min-width: 120px;
-  height: auto;
+.logo-container {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  width: 46px;
+  height: 46px;
+}
+.metallic-logo {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.95));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.metallic-logo .core-beam {
+  filter: 
+    drop-shadow(0 0 3px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 10px rgba(233, 224, 210, 0.8))
+    drop-shadow(0 0 20px rgba(233, 224, 210, 0.4));
+  transition: filter 0.4s ease;
+}
+.logo-container:hover .metallic-logo {
+  transform: scale(1.06);
+}
+.logo-container:hover .core-beam {
+  filter: 
+    drop-shadow(0 0 4px rgba(255, 255, 255, 1))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 28px rgba(233, 224, 210, 0.6));
 }
 
 .hero { min-height: 55vh; display: flex; align-items: center; }
@@ -151,9 +168,9 @@ button { font: inherit; }
 /* ABOUT SECTION */
 .about { margin-top: 120px; display: flex; flex-direction: column; gap: 24px; border-top: 1px solid rgba(140, 129, 123, 0.15); padding-top: 60px; }
 .about span { font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; }
-.about p { max-width: 600px; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+.about p { max-width: 680px; font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
 
-/* FOOTER SECTION (UPDATED LAYOUT WITH INLINE SOCIALS) */
+/* FOOTER SECTION */
 .footer { 
   margin-top: 120px; 
   border-top: 1px solid rgba(140, 129, 123, 0.15); 
