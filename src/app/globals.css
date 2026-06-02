@@ -29,7 +29,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* CINEMATIC BACKDROP MASK: Let's the real crystal stone backdrop breathe without geometric artifacts */
+/* CINEMATIC BACKDROP MASK: Connects the raw mineral background without separate graphic boxes */
 body::before {
   content: "";
   position: fixed;
@@ -66,7 +66,7 @@ button { font: inherit; }
   align-items: center;
   width: 100%;
   max-width: 1140px;
-  margin: 80px auto 100px;
+  margin: 90px auto 110px;
 }
 
 .pure-code-brand-wrapper {
@@ -76,37 +76,12 @@ button { font: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .vector-brand-master {
   width: 100%;
   height: auto;
-}
-
-/* FIXED: SECURE SYSTEM COLOR TARGETS FOR INTERNAL SVG VALUES */
-.vector-brand-master .crescent-path {
-  fill: #e9e0d2;
-}
-
-/* FIXED: RE-RESTORED THIN GOLDEN THRESHOLD LINE WITH HARDWARE ACCELERATED LIGHT BLOOM */
-.vector-brand-master .center-threshold-axis {
-  stroke: #ffffff;
-  stroke-width: 0.35;
-  opacity: 0.72;
-  filter: drop-shadow(0 0 3.5px rgba(233, 224, 210, 0.85));
-}
-
-/* FIXED: RE-RESTORED SUBTLE CENTER ATMOSPHERIC FOG MIST */
-.vector-brand-master .center-portal-mist {
-  fill: #e9e0d2;
-  opacity: 0.15;
-  filter: blur(8px);
-}
-
-/* FIXED: HARDCODED LUXURY CHAMPAGNE GOLD FINISH EXCLUSIVELY FOR THE WORD EXPERIENCE */
-.vector-brand-master .gold-experience-word {
-  fill: #e9e0d2 !important;
-  font-weight: 600;
 }
 
 .hero-mantra-section { 
@@ -131,25 +106,12 @@ button { font: inherit; }
   text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
 
-.hero-mantra-section h1 em.gold-text-glow {
-  font-style: italic;
-  font-weight: 300;
-  background: linear-gradient(135deg, #8c7965 0%, #f5ebd6 25%, #ffffff 50%, #d1be9b 75%, #6e5d4b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  filter: 
-    drop-shadow(0 0 2px rgba(255, 255, 255, 0.75))
-    drop-shadow(0 0 12px rgba(245, 235, 214, 0.55));
-}
-
 .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 28px; opacity: 0.8; }
 .pillars { margin-top: 36px; display: flex; gap: 32px; font-size: 11px; font-weight: 600; letter-spacing: 0.35em; text-transform: uppercase; color: var(--ink-label) !important; opacity: 0.8; }
 .portfolio { margin-top: 40px; }
 .portfolio-title { font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 40px; }
 .portfolio-stage { display: block; }
-/* PORTFOLIO GRID */
+/* PORTFOLIO GRID HOVER TRACKERS */
 .tiles { position: relative; min-height: 760px; width: 100%; }
 .tile {
   position: absolute; padding: 0; overflow: hidden; border-radius: 20px; cursor: pointer; 
