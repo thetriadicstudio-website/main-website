@@ -72,7 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - EMBEDDED SMOKY MIST VARIATION */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - INFINITE SCATTER AMBIENT PORTAL */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
@@ -85,83 +85,90 @@ export default function Home() {
                 <stop offset="100%" stopColor="#96877e" />
               </linearGradient>
 
-              {/* FADING AMBIENT MIST: Diffuses central golden light smoothly with zero hard circle edges */}
-              <radialGradient id="smoky-glow-mist" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0.45" />
-                <stop offset="25%" stopColor="#d1be9b" stopOpacity="0.2" />
-                <stop offset="65%" stopColor="#0d1412" stopOpacity="0" />
+              {/* INFINITE SHADOW FALLOFF: Dissolves velvety darkness across an expansive radius with zero edge borders */}
+              <radialGradient id="infinite-shadow-shroud" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="#080c0b" stopOpacity="0.85" />
+                <stop offset="25%" stopColor="#080c0b" stopOpacity="0.65" />
+                <stop offset="55%" stopColor="#0a100f" stopOpacity="0.25" />
+                <stop offset="85%" stopColor="#0d1412" stopOpacity="0" />
                 <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
               </radialGradient>
 
-              {/* Advanced Deep Dispersion Blur Filter specifically for your background mist layer */}
-              <filter id="deep-mist-diffusion" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="8" />
+              {/* PORTAL MIST DEPTH: Whisper-quiet golden aura providing depth between the crescents without creating a ring */}
+              <radialGradient id="whisper-portal-mist" cx="50%" cy="50%" r="35%">
+                <stop offset="0%" stopColor="#e9e0d2" stopOpacity="0.22" />
+                <stop offset="40%" stopColor="#d1be9b" stopOpacity="0.08" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
+
+              {/* VERTICAL GRADIENT THRESHOLD FADE: Taper-locks line opacity so it dissolves naturally at the tips */}
+              <linearGradient id="line-axis-taper" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+                <stop offset="25%" stopColor="#ffffff" stopOpacity="0.25" />
+                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.52" /> {/* Reduced overall raw volume by ~30% */}
+                <stop offset="75%" stopColor="#ffffff" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+              </linearGradient>
+
+              {/* Advanced Volumetric Diffusion Filter for Background Scattering */}
+              <filter id="portal-atmosphere-blur" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="12" />
               </filter>
 
-              {/* Subtly softens the side echo arcs to keep them quiet and non-distracting */}
-              <filter id="echo-arc-soften" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="1.5" />
+              {/* Subtly defuses echo textures to anchor a sense of hidden movement */}
+              <filter id="echo-shimmer-soften" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2" />
               </filter>
             </defs>
 
-            {/* DARK SMOKY EMBED MASK: Deepens a dark charcoal shadow layer behind the center void */}
-            <circle cx="100" cy="55" r="48" fill="#060a09" opacity="0.75" filter="url(#deep-mist-diffusion)" />
+            {/* EXPENSIVE ATMOSPHERIC BACKDROP: Seamless shadow shroud expanding smoothly across the stone matrix */}
+            <rect x="-100" y="-50" width="400" height="250" fill="url(#infinite-shadow-shroud)" filter="url(#portal-atmosphere-blur)" />
 
-            {/* RADIAL BACKGROUND HAZE: Fully diffused, blurred soft golden light mist behind the line */}
-            <circle cx="100" cy="55" r="30" fill="url(#smoky-glow-mist)" filter="url(#deep-mist-diffusion)" />
+            {/* PORTAL DEPTH EFFECT: Highly diffused mist pocket hinting at a portal hidden behind the crescents */}
+            <circle cx="100" cy="55" r="50" fill="url(#whisper-portal-mist)" filter="url(#portal-atmosphere-blur)" />
 
-            {/* ANATOMY LIGHTING: A single, extremely thin diagonal accent shimmer */}
-            <line 
-              x1="45" y1="11" x2="155" y2="99" 
-              stroke="#e9e0d2" 
-              strokeWidth="0.3" 
-              opacity="0.25" 
-              filter="url(#echo-arc-soften)"
-            />
-
-            {/* VIBRATING OUTSIDE ECHO LAYER: Ultra-faint, low-opacity ghosted left crescent */}
+            {/* GHOSTED ECHO SYSTEM: Ultra-low opacity vibrating left crescent layer */}
             <path 
               d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.08"
-              filter="url(#echo-arc-soften)"
+              opacity="0.04"
+              filter="url(#echo-shimmer-soften)"
             />
 
-            {/* MAIN INNER LAYER: Sharp, elegant left ivory moon curve */}
+            {/* THE VISUAL FOCUS: Sharp, elegant left ivory moon curve */}
             <path 
               d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* MAIN INNER LAYER: Sharp, elegant right ivory moon curve */}
+            {/* THE VISUAL FOCUS: Sharp, elegant right ivory moon curve */}
             <path 
               d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
-            {/* VIBRATING OUTSIDE ECHO LAYER: Ultra-faint, low-opacity ghosted right crescent */}
+            {/* GHOSTED ECHO SYSTEM: Ultra-low opacity vibrating right crescent layer */}
             <path 
               d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.08"
-              filter="url(#echo-arc-soften)"
+              opacity="0.04"
+              filter="url(#echo-shimmer-soften)"
             />
 
-            {/* SOFT VERTICAL BEAM PORTAL: Subtly backlights the main threshold center divider line */}
+            {/* THRESHOLD PORTAL AXIS REINFORCEMENT: Soft backdrop bloom trail */}
             <line 
               x1="100" y1="5" x2="100" y2="105" 
               stroke="#e9e0d2" 
-              strokeWidth="2.5" 
-              opacity="0.15" 
-              filter="url(#deep-mist-diffusion)"
+              strokeWidth="1.5" 
+              opacity="0.1" 
+              filter="url(#portal-atmosphere-blur)"
             />
 
-            {/* CENTRAL THRESHOLD LINE: Razor-thin, clean center dividing line running perfectly straight */}
+            {/* THRESHOLD CENTER LINE: Ultra-thin, straight needle line utilizing the vertical taper mask */}
             <line 
               x1="100" y1="5" x2="100" y2="105" 
-              stroke="#ffffff" 
-              strokeWidth="0.4" 
-              opacity="0.75" 
+              stroke="url(#line-axis-taper)" 
+              strokeWidth="0.32" 
             />
 
             {/* High-End Studio Typography Vectors */}
