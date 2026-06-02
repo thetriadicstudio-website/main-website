@@ -72,29 +72,55 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE EMBEDDED BRAND ENGINE - UNCONSTRAINED OPTICAL LIGHT LAYER */}
+
+      {/* PURE WEB CODE ECLIPSE LIGHT ENGINE - 100% DEPENDENCY FREE */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
-          
-          {/* HARDCODED LENS FLARE RAYS: Separated completely from vector limits to bleed infinitely */}
-          <div className="html-lens-glow-core" />
-          <div className="html-lens-ray ray-diag-1" />
-          <div className="html-lens-ray ray-diag-2" />
-          <div className="html-lens-ray ray-diag-3" />
-          <div className="html-lens-ray ray-diag-4" />
-
-          <svg viewBox="0 0 200 150" className="vector-brand-master">
+          <svg viewBox="0 0 200 150" className="vector-brand-master" style={{ overflow: 'visible' }}>
             <defs>
-              {/* Multi-stop High-Contrast Champagne Gold Sheen */}
+              {/* Premium Metallic Gradient Shimmer for Silver-to-Gold Moons */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#8c7965" />
-                <stop offset="22%" stopColor="#f5ebd6" />
-                <stop offset="45%" stopColor="#ffffff" />
-                <stop offset="65%" stopColor="#d1be9b" />
-                <stop offset="85%" stopColor="#f5ebd6" />
+                <stop offset="0%" stopColor="#9e8d85" />
+                <stop offset="25%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#e9e0d2" />
+                <stop offset="75%" stopColor="#d1be9b" />
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
+
+              {/* Advanced Volumetric Fog Multiplier Filter */}
+              <filter id="eclipse-light-leak" x="-200%" y="-200%" width="500%" height="500%">
+                <feGaussianBlur stdDeviation="5" result="blur1" />
+                <feGaussianBlur stdDeviation="2" result="blur2" />
+                <feComponentTransfer in="blur1" result="brightGlow">
+                  <feFuncA type="linear" slope="3" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode in="brightGlow" />
+                  <feMergeNode in="blur2" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
             </defs>
+
+            {/* RADIAL BACKGROUND HAZE: Smooth, fogged golden ambiance centered behind everything */}
+            <circle cx="100" cy="55" r="45" fill="#f5ebd6" opacity="0.14" filter="url(#eclipse-light-leak)" />
+
+            {/* CINEMATIC STARBURST ARRAY: Highly dense, fine multi-directional needle rays */}
+            <g filter="url(#eclipse-light-leak)" opacity="0.45">
+              {/* Long Horizontal & Vertical Primary Cross-beams */}
+              <line x1="20" y1="55" x2="180" y2="55" stroke="#ffffff" strokeWidth="0.5" />
+              <line x1="100" y1="-20" x2="100" y2="130" stroke="#ffffff" strokeWidth="0.5" />
+              
+              {/* Dense 45-degree Needle Ray Grid Cluster */}
+              <line x1="40" y1="-5" x2="160" y2="115" stroke="#f5ebd6" strokeWidth="0.4" />
+              <line x1="40" y1="115" x2="160" y2="-5" stroke="#f5ebd6" strokeWidth="0.4" />
+              
+              {/* Intermediary Micro-needle Flares for Realistic Optical Texturing */}
+              <line x1="30" y1="20" x2="170" y2="90" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
+              <line x1="30" y1="90" x2="170" y2="20" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
+              <line x1="60" y1="-15" x2="140" y2="125" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
+              <line x1="140" y1="-15" x2="60" y2="125" stroke="#e9e0d2" strokeWidth="0.3" opacity="0.6" />
+            </g>
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
@@ -122,22 +148,10 @@ export default function Home() {
               opacity="0.25"
             />
 
-            {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
-            <line 
-              x1="100" y1="5" x2="100" y2="105" 
-              stroke="url(#heavy-gold-metallic)" 
-              strokeWidth="1.2" 
-              strokeLinecap="round"
-            />
-
-            {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
-            <line 
-              x1="100" y1="8" x2="100" y2="102" 
-              stroke="#ffffff" 
-              strokeWidth="0.6" 
-              strokeLinecap="round"
-              opacity="0.95"
-            />
+            {/* CENTRAL CORE LIGHT SOURCE: Radiant architectural flash point */}
+            <circle cx="100" cy="55" r="16" fill="#f5ebd6" opacity="0.2" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="7" fill="#ffffff" opacity="0.5" filter="url(#eclipse-light-leak)" />
+            <circle cx="100" cy="55" r="1.5" fill="#ffffff" opacity="0.95" />
 
             {/* High-End Studio Typography Vectors */}
             <text 
