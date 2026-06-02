@@ -72,7 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - VOLUMETRIC METALLIC LIGHT ENGINE */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - KINETIC LIGHT RAY EMBED */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master">
@@ -86,6 +86,14 @@ export default function Home() {
                 <stop offset="85%" stopColor="#f5ebd6" />
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
+
+              {/* Fading Ray Gradient: Disperses core light seamlessly into the background scenery */}
+              <radialGradient id="ray-fade" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+                <stop offset="15%" stopColor="#f5ebd6" stopOpacity="0.8" />
+                <stop offset="45%" stopColor="#e9e0d2" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#0d1412" stopOpacity="0" />
+              </radialGradient>
 
               {/* Advanced Color Matrix Light Multiplier Engine to Force Glow Stability */}
               <filter id="web-volumetric-glow" x="-50%" y="-50%" width="200%" height="200%">
@@ -104,6 +112,16 @@ export default function Home() {
 
             {/* FOG LAYER: Multiplied Backing Ambient Golden Mist */}
             <circle cx="100" cy="55" r="32" fill="#f5ebd6" opacity="0.12" filter="url(#web-volumetric-glow)" />
+
+            {/* CINEMATIC OPTICAL LENS FLARE RAYS (Matches your yellow markup exactly) */}
+            {/* Long Top-Right Diagonal Ray */}
+            <path d="M 100 55 L 175 10 L 172 8 L 100 55 Z" fill="url(#ray-fade)" opacity="0.35" filter="url(#web-volumetric-glow)" />
+            {/* Long Bottom-Left Diagonal Ray */}
+            <path d="M 100 55 L 20 120 L 22 122 L 100 55 Z" fill="url(#ray-fade)" opacity="0.4" filter="url(#web-volumetric-glow)" />
+            {/* Long Top-Left Ray Flare */}
+            <path d="M 100 55 L 45 15 L 48 13 L 100 55 Z" fill="url(#ray-fade)" opacity="0.25" filter="url(#web-volumetric-glow)" />
+            {/* Long Bottom-Right Ray Flare */}
+            <path d="M 100 55 L 155 105 L 153 107 L 100 55 Z" fill="url(#ray-fade)" opacity="0.3" filter="url(#web-volumetric-glow)" />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
@@ -172,7 +190,7 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
-            {/* FIXED: Subtitle layout text tracks split into isolated vector segments to safely inject metallic gold sheen on 'EXPERIENCE' */}
+            {/* FIXED: Subtitle track maps custom gold styles straight onto the word EXPERIENCE */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
@@ -182,14 +200,14 @@ export default function Home() {
               className="typography-brand-sub"
             >
               <tspan fill="#ffffff">SPATIAL </tspan>
-              <tspan fill="url(#heavy-gold-metallic)" className="gold-text-glow">EXPERIENCE </tspan>
+              <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
               <tspan fill="#ffffff">DESIGN</tspan>
             </text>
           </svg>
         </div>
       </section>
 
-      {/* Studio Mantra Section with Gold Text Bind Hooks */}
+      {/* Studio Mantra Section with Gold Text Bind Hook */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
         <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
