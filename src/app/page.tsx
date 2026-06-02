@@ -164,7 +164,10 @@ export default function Home() {
               opacity="0.2"
             />
 
-            {/* VOLUMETRIC CENTER PILLAR ENGINE */}
+            {/* ========================================================================= */}
+            {/* VOLUMETRIC CENTER PILLAR ENGINE: REPLACES FLAT STROKES WITH PHOTOGRAPHIC GLOW */}
+            {/* ========================================================================= */}
+            
             {/* Layer 1: Wide Ambient Halo Column */}
             <rect 
               x="96.5" y="2" width="7" height="106" 
@@ -188,12 +191,12 @@ export default function Home() {
               opacity="0.98" 
             />
 
-            {/* FLUID LIGHT CONVERGENCE: Soft radial blurs without hard central dot */}
+            {/* PHOTOGRAPHIC CONVERGENCE FLUIDITY: Hard white circle completely deleted. */}
             <circle cx="100" cy="55" r="4" fill="#ffffff" filter="blur(1.5px)" opacity="0.95" />
             <circle cx="100" cy="55" r="8" fill="#f5ebd6" opacity="0.4" filter="blur(3px)" />
             <circle cx="100" cy="55" r="16" fill="#d1be9b" opacity="0.2" filter="blur(5px)" />
 
-            {/* Typography Vectors */}
+            {/* High-End Studio Typography Vectors */}
             <text 
               x="100" y="124" 
               textAnchor="middle" 
@@ -206,6 +209,7 @@ export default function Home() {
               THE TRIADIC STUDIO
             </text>
 
+            {/* Subtitle track maps gold styles onto custom title line layout */}
             <text 
               x="100" y="136" 
               textAnchor="middle" 
@@ -221,140 +225,84 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      {/* Studio Mantra Section with Gold Text Bind Hook */}
-      <section className="hero-mantra-section">
-        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
-        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
-        <div className="pillars">
-          <span>Atmosphere</span>
-          <span>Narrative</span>
-          <span>Materiality</span>
-        </div>
-      </section>
-
-      {/* RESTORED PORTFOLIO SECTION: Bringing back the complete masonry tile system */}
-      <section className="portfolio" id="portfolio">
-        <div className="portfolio-title">Portfolio</div>
-        <div className="portfolio-stage">
-          <div className="tiles">
-            {projects.map((project, index) => (
-              <button
-                key={`${project.image}-${index}`}
-                type="button"
-                className={`tile tile-${index + 1}`}
-                onClick={() => openLightbox(index)}
-                aria-label={`Open ${project.title} in Full Screen`}
-              >
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <img src={project.image} alt={project.title} />
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* RESTORED BLUEPRINT SECTION: Bringing back the structural isometric layers */}
-      <section className="blueprint" id="blueprint">
-        <div className="blueprint-left">
-          <p className="eyebrow">The Emotional Blueprint</p>
-          <h2>Every space leaves<br />an emotional imprint.</h2>
-          
-          <div className="blueprint-diagram">
-            <div className="blueprint-labels">
-              <span>Colour</span>
               <span>Texture</span>
               <span>Scale</span>
               <span>Light</span>
+              <span>Material</span>
+              <span>Movement</span>
             </div>
-
+            
             <div className="blueprint-stack">
-              <div className="blueprint-layer layer-1">
-                <img src="/portfolio/1.jpg" alt="Atmospheric Overlay" />
-              </div>
-              <div className="blueprint-layer layer-2">
-                <img src="/portfolio/2.jpg" alt="Textural Overlay" />
-              </div>
-              <div className="blueprint-layer layer-3">
-                <img src="/portfolio/3.jpg" alt="Structural Overlay" />
-              </div>
+              <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
             </div>
           </div>
         </div>
 
         <div className="blueprint-right">
-          <p className="eyebrow">The Studio Framework</p>
+          <p className="eyebrow">Our Blueprint Framework</p>
+          <h3>A spatial analysis method exploring how environments influence perception.</h3>
           <ul className="blueprint-list">
-            <li>01 / Structural Memory Formulation</li>
-            <li>02 / Tactile Subconscious Curations</li>
-            <li>03 / High-Stated Chromatic Depths</li>
-            <li>04 / Infinite Light Mirror Paths</li>
+            <li>Colour sensitivity</li>
+            <li>Material response</li>
+            <li>Emotional atmosphere</li>
+            <li>Spatial stimulation</li>
+            <li>Visual balance</li>
+            <li>Environmental comfort</li>
           </ul>
         </div>
       </section>
 
-      {/* RESTORED FOOTER LINKS & SOCIAL FRAME */}
-      <footer className="footer" id="contact">
-        <span className="eyebrow">© 2026 THE TRIADIC STUDIO</span>
-        <nav className="footer-nav">
-          <a href="#portfolio">Archive</a>
-          <a href="#blueprint">Framework</a>
-          <a href="#contact">Inquire</a>
-        </nav>
-      </footer>
-
-      {/* PORTFOLIO LIGHTBOX COMPONENT ENGINE */}
       {isOpen && (
-        <div 
-          className="lightbox-overlay" 
-          onClick={() => setIsOpen(false)}
-          role="dialog"
-          aria-modal="true"
-        >
-          <button 
-            type="button" 
-            className="lightbox-close" 
-            onClick={() => setIsOpen(false)}
-            aria-label="Close Lightbox"
-          >
-            ✕
-          </button>
-          
-          <div className="lightbox-content-frame" onClick={(e) => e.stopPropagation()}>
-            <button 
-              type="button" 
-              className="lightbox-nav nav-prev" 
-              onClick={previousProject}
-              aria-label="Previous Project"
-            >
-              ←
-            </button>
-
-            <div className="lightbox-display-core">
+        <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
+          <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={() => setIsOpen(false)}>✕</button>
+            <div className="lightbox-grid">
               <div className="lightbox-image-wrapper">
-                <img 
-                  src={projects[active].image} 
-                  alt={projects[active].title} 
-                  className="lightbox-main-img" 
-                />
+                <img src={projects[active].image} alt={projects[active].title} />
               </div>
-              <div className="lightbox-meta-panel">
-                <span className="lightbox-index">{String(active + 1).padStart(2, '0')}</span>
+              <div className="lightbox-content">
+                <div className="lightbox-count">
+                  {String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+                </div>
+                <h2>{projects[active].title}</h2>
                 <span className="lightbox-category">{projects[active].category}</span>
-                <h3 className="lightbox-title">{projects[active].title}</h3>
-                <p className="lightbox-desc">{projects[active].description}</p>
+                <p>{projects[active].description}</p>
+                <div className="lightbox-controls">
+                  <button type="button" onClick={previousProject}>Prev</button>
+                  <span>□</span>
+                  <button type="button" onClick={nextProject}>Next</button>
+                </div>
               </div>
             </div>
-
-            <button 
-              type="button" 
-              className="lightbox-nav nav-next" 
-              onClick={nextProject}
-              aria-label="Next Project"
-            >
-              →
-            </button>
           </div>
         </div>
       )}
+
+      {/* Upgraded About Section with your New Custom Paragraphs */}
+      <section className="about">
+        <span>About</span>
+        <div className="about-content-wrapper">
+          <p>The Triadic Studio is a creative practice exploring the relationship between space, perception and emotion.</p>
+          <p>Through the Emotional Blueprint, we study the subtle elements that shape human experience—light, materiality, atmosphere, scale and memory—to uncover why certain environments stay with us long after we leave them.</p>
+          <p>Our work is less concerned with decoration and more interested in resonance: the invisible dialogue between people and place.</p>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="footer-content">
+          <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
+          <nav className="footer-nav">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
+          </nav>
+        </div>
+      </footer>
     </main>
   );
 }
