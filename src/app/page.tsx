@@ -73,7 +73,7 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* PURE VECTOR EMBEDDED BRAND ENGINE - VOLUMETRIC GLOW VARIATION */}
+      {/* PURE VECTOR EMBEDDED BRAND ENGINE - VOLUMETRIC METALLIC LIGHT ENGINE */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
           <svg viewBox="0 0 200 150" className="vector-brand-master">
@@ -88,20 +88,23 @@ export default function Home() {
                 <stop offset="100%" stopColor="#6e5d4b" />
               </linearGradient>
 
-              {/* The Studio Photographic Fog & Blur Filter Engine */}
-              <filter id="cinematic-fog" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="5" result="blur1" />
+              {/* Advanced Color Matrix Light Multiplier Engine to Force Glow Stability */}
+              <filter id="web-volumetric-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="6" result="blur1" />
                 <feGaussianBlur stdDeviation="2" result="blur2" />
+                <feComponentTransfer in="blur1" result="brightBlur">
+                  <feFuncA type="linear" slope="2.5" />
+                </feComponentTransfer>
                 <feMerge>
-                  <feMergeNode in="blur1" />
+                  <feMergeNode in="brightBlur" />
                   <feMergeNode in="blur2" />
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
             </defs>
 
-            {/* FOG LAYER: Backing Ambient Golden Mist between the paths */}
-            <circle cx="100" cy="55" r="30" fill="#f5ebd6" opacity="0.08" filter="url(#cinematic-fog)" />
+            {/* FOG LAYER: Multiplied Backing Ambient Golden Mist */}
+            <circle cx="100" cy="55" r="32" fill="#f5ebd6" opacity="0.12" filter="url(#web-volumetric-glow)" />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
@@ -133,10 +136,10 @@ export default function Home() {
             <line 
               x1="100" y1="5" x2="100" y2="105" 
               stroke="#f5ebd6" 
-              strokeWidth="4" 
+              strokeWidth="5" 
               strokeLinecap="round"
-              opacity="0.3"
-              filter="url(#cinematic-fog)"
+              opacity="0.35"
+              filter="url(#web-volumetric-glow)"
             />
 
             {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
@@ -145,16 +148,16 @@ export default function Home() {
               stroke="url(#heavy-gold-metallic)" 
               strokeWidth="1.2" 
               strokeLinecap="round"
-              className="center-beam-glow"
+              filter="url(#web-volumetric-glow)"
             />
 
             {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
             <line 
               x1="100" y1="8" x2="100" y2="102" 
               stroke="#ffffff" 
-              strokeWidth="0.5" 
+              strokeWidth="0.6" 
               strokeLinecap="round"
-              opacity="0.9"
+              opacity="0.95"
             />
 
             {/* High-End Studio Typography Vectors */}
@@ -173,7 +176,7 @@ export default function Home() {
             <text 
               x="100" y="136" 
               textAnchor="middle" 
-              fill="#d1be9b" 
+              fill="#ffffff" 
               fontSize="4.5" 
               fontWeight="600" 
               letterSpacing="0.34em"
@@ -185,10 +188,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Studio Mantra Section */}
+      {/* Studio Mantra Section with Gold Text Bind Hook */}
       <section className="hero-mantra-section">
         <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
-        <h1>Spaces remembered<br />before they are<br /><em>understood.</em></h1>
+        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
         <div className="pillars">
           <span>Atmosphere</span>
           <span>Narrative</span>
