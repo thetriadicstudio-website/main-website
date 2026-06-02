@@ -72,6 +72,7 @@ export default function Home() {
       <header className="header">
         <div className="header-spacer" />
       </header>
+
       {/* PURE EMBEDDED BRAND ENGINE - UNCONSTRAINED OPTICAL LIGHT LAYER */}
       <section className="hero-branding-container">
         <div className="pure-code-brand-wrapper">
@@ -85,46 +86,47 @@ export default function Home() {
 
           <svg viewBox="0 0 200 150" className="vector-brand-master">
             <defs>
-              {/* Multi-stop High-Contrast Champagne Gold Sheen */}
+              {/* Multi-stop High-Contrast Champagne Gold Sheen to simulate heavy metallic reflection */}
               <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#8c7965" />
-                <stop offset="22%" stopColor="#f5ebd6" />
-                <stop offset="45%" stopColor="#ffffff" />
-                <stop offset="65%" stopColor="#d1be9b" />
-                <stop offset="85%" stopColor="#f5ebd6" />
-                <stop offset="100%" stopColor="#6e5d4b" />
+                <stop offset="0%" stopColor="#7a6855" />
+                <stop offset="20%" stopColor="#f7eedb" />
+                <stop offset="40%" stopColor="#ffffff" />
+                <stop offset="48%" stopColor="#eddcc4" />
+                <stop offset="65%" stopColor="#bfae93" />
+                <stop offset="85%" stopColor="#f7eedb" />
+                <stop offset="100%" stopColor="#5c4e3f" />
               </linearGradient>
             </defs>
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Left Crescent */}
             <path 
-              d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" 
+              d="M 72 20 C 48 38, 48 72, 72 90 C 58 78, 58 32, 72 20 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.25"
+              opacity="0.18"
             />
 
             {/* MAIN INNER LAYER: Bold Left Moon Curve */}
             <path 
-              d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" 
+              d="M 83 24 C 62 40, 62 70, 83 86 C 70 76, 70 34, 83 24 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
             {/* MAIN INNER LAYER: Bold Right Moon Curve */}
             <path 
-              d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" 
+              d="M 117 24 C 138 40, 138 70, 117 86 C 130 76, 130 34, 117 24 Z" 
               fill="url(#heavy-gold-metallic)" 
             />
 
             {/* VIBRATING OUTER LAYER: Fine Ghosted Right Crescent */}
             <path 
-              d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" 
+              d="M 128 20 C 152 38, 152 72, 128 90 C 142 78, 142 32, 128 20 Z" 
               fill="url(#heavy-gold-metallic)" 
-              opacity="0.25"
+              opacity="0.18"
             />
 
             {/* CENTRAL BEAM LAYER: Sharp Light-Piercing Golden Threshold Line */}
             <line 
-              x1="100" y1="5" x2="100" y2="105" 
+              x1="100" y1="2" x2="100" y2="108" 
               stroke="url(#heavy-gold-metallic)" 
               strokeWidth="1.2" 
               strokeLinecap="round"
@@ -132,38 +134,36 @@ export default function Home() {
 
             {/* HIGH-INTENSITY CORE LIGHT LAYER: Pure White Incandescent Center Laser */}
             <line 
-              x1="100" y1="8" x2="100" y2="102" 
+              x1="100" y1="5" x2="100" y2="105" 
               stroke="#ffffff" 
               strokeWidth="0.6" 
               strokeLinecap="round"
               opacity="0.95"
             />
 
-            {/* High-End Studio Typography Vectors */}
+            {/* High-End Studio Typography Vectors with premium tracking */}
             <text 
-              x="100" y="124" 
+              x="100" y="126" 
               textAnchor="middle" 
               fill="#ffffff" 
-              fontSize="8" 
+              fontSize="7.5" 
               fontWeight="300" 
-              letterSpacing="0.48em"
-              className="typography-brand-title"
+              letterSpacing="0.52em"
+              opacity="0.95"
             >
               THE TRIADIC STUDIO
             </text>
 
-            {/* Subtitle track maps custom gold styles straight onto the word EXPERIENCE */}
+            {/* Subtitle track maps gold gradient directly onto typography lines */}
             <text 
-              x="100" y="136" 
+              x="100" y="138" 
               textAnchor="middle" 
-              fontSize="4.5" 
-              fontWeight="600" 
-              letterSpacing="0.34em"
-              className="typography-brand-sub"
+              fontSize="4.2" 
+              fontWeight="500" 
+              letterSpacing="0.38em"
+              fill="url(#heavy-gold-metallic)"
             >
-              <tspan fill="#ffffff">SPATIAL </tspan>
-              <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
-              <tspan fill="#ffffff">DESIGN</tspan>
+              SPATIAL EXPERIENCE DESIGN
             </text>
           </svg>
         </div>
@@ -179,6 +179,7 @@ export default function Home() {
           <span>Materiality</span>
         </div>
       </section>
+
       <section className="portfolio">
         <div className="portfolio-title">Portfolio</div>
         <div className="portfolio-stage">
@@ -198,7 +199,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="blueprint">
         <div className="blueprint-left">
           <p className="eyebrow">The Emotional Blueprint</p>
@@ -210,81 +210,97 @@ export default function Home() {
               <span>Texture</span>
               <span>Scale</span>
               <span>Light</span>
-              <span>Material</span>
-              <span>Movement</span>
             </div>
-            
+
             <div className="blueprint-stack">
-              <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-1">
+                <img src="/portfolio/1.jpg" alt="Atmospheric Overlay" />
+              </div>
+              <div className="blueprint-layer layer-2">
+                <img src="/portfolio/2.jpg" alt="Textural Overlay" />
+              </div>
+              <div className="blueprint-layer layer-3">
+                <img src="/portfolio/3.jpg" alt="Structural Overlay" />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="blueprint-right">
-          <p className="eyebrow">Our Blueprint Framework</p>
-          <h3>A spatial analysis method exploring how environments influence perception.</h3>
+          <p className="eyebrow">The Studio Framework</p>
           <ul className="blueprint-list">
-            <li>Colour sensitivity</li>
-            <li>Material response</li>
-            <li>Emotional atmosphere</li>
-            <li>Spatial stimulation</li>
-            <li>Visual balance</li>
-            <li>Environmental comfort</li>
+            <li>01 / Structural Memory Formulation</li>
+            <li>02 / Tactile Subconscious Curations</li>
+            <li>03 / High-Stated Chromatic Depths</li>
+            <li>04 / Infinite Light Mirror Paths</li>
           </ul>
         </div>
       </section>
 
+      {/* FOOTER TIMELINE FRAME */}
+      <footer className="footer">
+        <span className="eyebrow">© 2026 THE TRIADIC STUDIO</span>
+        <nav className="footer-nav">
+          <a href="#portfolio">Archive</a>
+          <a href="#blueprint">Framework</a>
+          <a href="#contact">Inquire</a>
+        </nav>
+      </footer>
+
+      {/* PORTFOLIO LIGHTBOX COMPONENT ENGINE */}
       {isOpen && (
-        <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
-          <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setIsOpen(false)}>✕</button>
-            <div className="lightbox-grid">
+        <div 
+          className="lightbox-overlay" 
+          onClick={() => setIsOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button 
+            type="button" 
+            className="lightbox-close" 
+            onClick={() => setIsOpen(false)}
+            aria-label="Close Lightbox"
+          >
+            ✕
+          </button>
+          
+          <div className="lightbox-content-frame" onClick={(e) => e.stopPropagation()}>
+            <button 
+              type="button" 
+              className="lightbox-nav nav-prev" 
+              onClick={previousProject}
+              aria-label="Previous Project"
+            >
+              ←
+            </button>
+
+            <div className="lightbox-display-core">
               <div className="lightbox-image-wrapper">
-                <img src={projects[active].image} alt={projects[active].title} />
+                <img 
+                  src={projects[active].image} 
+                  alt={projects[active].title} 
+                  className="lightbox-main-img" 
+                />
               </div>
-              <div className="lightbox-content">
-                <div className="lightbox-count">
-                  {String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
-                </div>
-                <h2>{projects[active].title}</h2>
+              <div className="lightbox-meta-panel">
+                <span className="lightbox-index">{String(active + 1).padStart(2, '0')}</span>
                 <span className="lightbox-category">{projects[active].category}</span>
-                <p>{projects[active].description}</p>
-                <div className="lightbox-controls">
-                  <button type="button" onClick={previousProject}>Prev</button>
-                  <span>□</span>
-                  <button type="button" onClick={nextProject}>Next</button>
-                </div>
+                <h3 className="lightbox-title">{projects[active].title}</h3>
+                <p className="lightbox-desc">{projects[active].description}</p>
               </div>
             </div>
+
+            <button 
+              type="button" 
+              className="lightbox-nav nav-next" 
+              onClick={nextProject}
+              aria-label="Next Project"
+            >
+              →
+            </button>
           </div>
         </div>
       )}
-
-      {/* Upgraded About Section with your New Custom Paragraphs */}
-      <section className="about">
-        <span>About</span>
-        <div className="about-content-wrapper">
-          <p>The Triadic Studio is a creative practice exploring the relationship between space, perception and emotion.</p>
-          <p>Through the Emotional Blueprint, we study the subtle elements that shape human experience—light, materiality, atmosphere, scale and memory—to uncover why certain environments stay with us long after we leave them.</p>
-          <p>Our work is less concerned with decoration and more interested in resonance: the invisible dialogue between people and place.</p>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
-          <nav className="footer-nav">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
-          </nav>
-        </div>
-      </footer>
     </main>
   );
 }
