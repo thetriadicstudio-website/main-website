@@ -113,10 +113,10 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* ================= SECTION 1: HEADER SPLIT ROW ================= */}
+      {/* ================= SECTION 1: HEADER SECTION ================= */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', maxWidth: '1140px', margin: '40px auto 80px auto' }}>
         
-        {/* Mantra Statement Header Left Column */}
+        {/* Left Side: Statement Aligned perfectly to Top Left */}
         <section className="hero-mantra-section" style={{ margin: 0, padding: 0, minHeight: 'auto', maxWidth: '680px' }}>
           <span className="eyebrow" style={{ marginBottom: '16px' }}>Spatial Styling & Visual Experience Design</span>
           <h1>
@@ -131,38 +131,35 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Studio Branding text Header Right Column */}
+        {/* Right Side: Brand Heading Aligned perfectly to Top Right */}
         <div className="brand-header-right-side">
           <h2 className="brand-title-text">The Triadic Studio</h2>
           <p className="brand-subtitle-text">Spatial Experience Design</p>
         </div>
       </div>
 
-      {/* ================= SECTION 2: PORTFOLIO GRID WINDOW MATRIX ================= */}
+      {/* ================= SECTION 2: PORTFOLIO EXPANSION MATRIX ================= */}
       <section className="portfolio" style={{ maxWidth: '1140px', margin: '0 auto 120px auto' }}>
         <h3 className="portfolio-title">Portfolio</h3>
         <div className="tiles">
-          {projects.map((project, idx) => {
-            const tileClassName = `tile tile-${idx + 1}`;
-
-            return (
-              <div
-                key={idx}
-                className={tileClassName}
-                onClick={() => openLightbox(idx)}
-              >
-                <span>{(idx + 1).toString().padStart(2, '0')}</span>
-                <img src={project.image} alt={project.title} />
-              </div>
-            );
-          })}
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={`tile tile-${idx + 1}`}
+              onClick={() => openLightbox(idx)}
+            >
+              <span>{(idx + 1).toString().padStart(2, '0')}</span>
+              <img src={project.image} alt={project.title} />
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ================= SECTION 3: BLUEPRINT LAYOUT SYSTEM ================= */}
+      {/* ================= SECTION 3: SPATIAL BLUEPRINT ================= */}
       <section className="blueprint">
         <div className="blueprint-realigned-row">
           
+          {/* Vertical Menu Column 1 */}
           <div className="blueprint-labels-column">
             <ul className="blueprint-list-menu">
               <li>Colour</li>
@@ -174,6 +171,7 @@ export default function Home() {
             </ul>
           </div>
 
+          {/* Isometric Blueprint Graphic Column 2 Shifted Left */}
           <div className="blueprint-diagram">
             <div className="blueprint-stack">
               <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
@@ -185,6 +183,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Spatial Blueprint text list Column 3 Following Left */}
           <div className="blueprint-right">
             <span className="eyebrow">The Emotional Blueprint</span>
             <h3>A spatial analysis method exploring how environments influence perception.</h3>
@@ -201,7 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Description block container setup */}
+      {/* About Section Layout Block Component */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -211,7 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Full Working Footer links nav system container */}
+      {/* FOOTER NAV SECTION WITH SECURED LINKS */}
       <footer className="footer">
         <div className="footer-content">
           <div>
@@ -225,7 +224,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Lightbox pop up slider module overlay container */}
+      {/* Interactive Overlay Lightbox Modal presentation */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
