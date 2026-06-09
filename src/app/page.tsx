@@ -109,28 +109,33 @@ export default function Home() {
 
   return (
     <main className="page">
-      <header className="header">
-        <div className="header-spacer" />
-      </header>
+      {/* ================= SECTION 1: HERO HEADER UPDATES ================= */}
+      <div className="hero-header-top-row">
+        {/* Main Statement Top Left */}
+        <section className="hero-mantra-section">
+          <span className="eyebrow">Spatial Styling & Visual Experience Design</span>
+          <h1>
+            Spaces remembered long after they are left, because they were <em className="gold-text-glow">understood.</em>
+          </h1>
+          <div className="pillars">
+            <span>Atmosphere</span>
+            <span>•</span>
+            <span>Narrative</span>
+            <span>•</span>
+            <span>Materiality</span>
+          </div>
+        </section>
 
-      {/* Hero Layout */}
-      <section className="hero-mantra-section">
-        <span className="eyebrow">The Triadic Studio</span>
-        <h1>
-          Spaces remembered long after they are left, because they were <em className="gold-text-glow">understood.</em>
-        </h1>
-        <div className="pillars">
-          <span>Atmosphere</span>
-          <span>•</span>
-          <span>Narrative</span>
-          <span>•</span>
-          <span>Materiality</span>
+        {/* Brand Heading Top Right (Logo removed) */}
+        <div className="brand-header-right-side">
+          <h2 className="brand-title-text">The Triadic Studio</h2>
+          <p className="brand-subtitle-text">Spatial Experience Design</p>
         </div>
-      </section>
+      </div>
 
-      {/* 14 Portfolio Tiles Block Layout */}
+      {/* ================= SECTION 2: PORTFOLIO EXPANSION (14 TILES) ================= */}
       <section className="portfolio">
-        <h2 className="portfolio-title">Portfolio</h2>
+        <h3 className="portfolio-title">Portfolio</h3>
         <div className="tiles">
           {projects.map((project, idx) => (
             <div
@@ -145,47 +150,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Realignment Left Side Shift Column */}
+      {/* ================= SECTION 3: REALIGNED BLUEPRINT & ABOUT ================= */}
       <section className="blueprint">
-        <div className="blueprint-diagram">
+        <div className="blueprint-realigned-row">
           
-          {/* Vertical Text Matrix List */}
-          <div className="blueprint-labels">
-            <span>Colour</span>
-            <span>Texture</span>
-            <span>Scale</span>
-            <span>Light</span>
-            <span>Material</span>
-            <span>Movement</span>
+          {/* Vertical Menu Column 1 */}
+          <div className="blueprint-labels-column">
+            <ul className="blueprint-list-menu">
+              <li>Colour</li>
+              <li>Texture</li>
+              <li>Scale</li>
+              <li>Light</li>
+              <li>Material</li>
+              <li>Movement</li>
+            </ul>
           </div>
 
-          {/* 3D Stack Graphic Container */}
-          <div className="blueprint-stack">
-            <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
-            <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
-            <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
-            <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
-            <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
-            <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
+          {/* Isometric Blueprint Graphic Column 2 Shifted Left */}
+          <div className="blueprint-diagram">
+            <div className="blueprint-stack">
+              <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
+              <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
+            </div>
           </div>
-        </div>
 
-        {/* Spatial Description Blocks */}
-        <div className="blueprint-right">
-          <span className="eyebrow">The Emotional Blueprint</span>
-          <h3>A spatial analysis method exploring how environments influence perception.</h3>
-          <ul className="blueprint-list">
-            <li>Colour Sensitivity</li>
-            <li>Sensory Responses</li>
-            <li>Emotional Atmosphere</li>
-            <li>Spatial Simulation</li>
-            <li>Volume Balance</li>
-            <li>Environmental Comfort</li>
-          </ul>
+          {/* Spatial Blueprint Text Column 3 Following Left */}
+          <div className="blueprint-right">
+            <span className="eyebrow">The Emotional Blueprint</span>
+            <h3>A spatial analysis method exploring how environments influence perception.</h3>
+            <ul className="blueprint-list">
+              <li>Colour Sensitivity</li>
+              <li>Sensory Responses</li>
+              <li>Emotional Atmosphere</li>
+              <li>Spatial Simulation</li>
+              <li>Volume Balance</li>
+              <li>Environmental Comfort</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
-      {/* About Description Blocks */}
+      {/* About Description Block Section */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -195,21 +205,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Global Bottom Footer Container */}
+      {/* ================= FULLY WORKING SOCIAL LINKS FOOTER ================= */}
       <footer className="footer">
         <div className="footer-content">
           <div>
             <p>Feel deeply. <em>Choose differently.</em></p>
           </div>
           <div className="footer-nav">
-            <a href="#">Instagram</a>
-            <a href="#">Behance</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
             <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
           </div>
         </div>
       </footer>
 
-      {/* Overlay Modal Box Slider Engine Controllers */}
+      {/* Overlay Modal Box Presentation Slider */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
