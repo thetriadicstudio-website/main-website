@@ -52,12 +52,41 @@ button { font: inherit; }
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
-.header {
-  position: relative;
+/* BRAND HEADER SPLIT ROW REALIGNMENTS */
+.hero-header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  height: 20px;
-  z-index: 10;
+  max-width: 1140px;
+  margin: 40px auto 0px;
 }
+
+.brand-header-right-side {
+  text-align: right;
+  padding-top: 10px;
+}
+
+.brand-title-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.brand-subtitle-text {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--ink-label) !important;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
 .hero-mantra-section { 
   min-height: auto; 
   display: flex; 
@@ -98,8 +127,8 @@ button { font: inherit; }
 .portfolio-title { font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink-label) !important; margin-bottom: 40px; }
 .portfolio-stage { display: block; }
 
-/* PORTFOLIO GRID */
-.tiles { position: relative; min-height: 1500px; width: 100%; }
+/* PORTFOLIO ABSOLUTE BENTO GRID FRAMEWORK */
+.tiles { position: relative; min-height: 1480px; width: 100%; }
 .tile {
   position: absolute; padding: 0; overflow: hidden; border-radius: 20px; cursor: pointer; 
   border: 1px solid rgba(255, 255, 255, 0.22); 
@@ -114,7 +143,7 @@ button { font: inherit; }
 .tile:hover { transform: translateY(-12px) scale(1.01); border-color: rgba(255, 255, 255, 0.45); box-shadow: 0 50px 110px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25); }
 .tile:hover img { transform: scale(1.04); opacity: 0.85; }
 
-/* Original Absolute Coordinates (Tiles 1-7) */
+/* Row 1 Coordinates (Tiles 1-7) */
 .tile-1 { width: 48%; height: 440px; left: 0; top: 0; }
 .tile-2 { width: 24%; height: 210px; left: 51%; top: 0; }
 .tile-3 { width: 22%; height: 210px; left: 78%; top: 0; }
@@ -122,8 +151,7 @@ button { font: inherit; }
 .tile-5 { width: 31%; height: 230px; left: 0; top: 470px; }
 .tile-6 { width: 32%; height: 230px; left: 34%; top: 470px; }
 .tile-7 { width: 31%; height: 230px; left: 69%; top: 470px; }
-
-/* New Corrected Absolute Coordinates (Tiles 8-14 Shifted Seamlessly Down Across Y-Axis) */
+/* Row 2 Coordinates (Tiles 8-14 Fixed Names & Shifted Seamlessly Down) */
 .tile-8  { width: 48%; height: 440px; left: 0%;   top: 740px;  }
 .tile-9  { width: 24%; height: 210px; left: 51%;  top: 740px;  }
 .tile-10 { width: 22%; height: 210px; left: 78%;  top: 740px;  }
@@ -131,15 +159,44 @@ button { font: inherit; }
 .tile-12 { width: 31%; height: 230px; left: 0%;   top: 1210px; }
 .tile-13 { width: 32%; height: 230px; left: 34%;  top: 1210px; }
 .tile-14 { width: 31%; height: 230px; left: 69%;  top: 1210px; }
-/* THE EMOTIONAL BLUEPRINT FRAMEWORK SECTION */
-.blueprint { margin-top: 160px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: center; border-top: 1px solid rgba(140, 129, 123, 0.15); padding-top: 90px; }
-.blueprint-left h2 { font-family: var(--font-cormorant), Georgia, serif; font-size: 52px; font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; color: #ffffff !important; margin: 0 0 60px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
-/* ISOMETRIC MATRIX GRID */
-.blueprint-diagram { display: grid; grid-template-columns: 140px 1fr; gap: 30px; align-items: center; margin-top: 40px; }
-.blueprint-labels { display: flex; flex-direction: column; justify-content: space-between; height: 320px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.28em; color: var(--ink-label); text-align: right; padding-right: 20px; border-right: 1px solid rgba(140, 129, 123, 0.15); }
-.blueprint-labels span { line-height: 1; height: 20px; }
-.blueprint-stack { position: relative; height: 360px; width: 100%; max-width: 440px; margin: 0 auto; perspective: 1200px; }
+/* ================= SECTION 3: SPATIAL BLUEPRINT REALIGNED SYSTEM ================= */
+.blueprint { margin-top: 160px; border-top: 1px solid rgba(140, 129, 123, 0.15); padding-top: 90px; }
+
+.blueprint-realigned-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.blueprint-labels-column {
+  width: 140px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(140, 129, 123, 0.15);
+}
+
+.blueprint-list-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--ink-label);
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.blueprint-diagram {
+  width: 440px;
+}
+
+.blueprint-stack { position: relative; height: 360px; width: 100%; perspective: 1200px; }
 .blueprint-layer { position: absolute; width: 100%; height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 45px rgba(0,0,0,0.35); transform: rotateX(55deg) rotateZ(-35deg); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 .blueprint-layer img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; filter: grayscale(0.4) brightness(0.9); transition: opacity 0.4s ease; }
 .blueprint-layer:hover { transform: rotateX(55deg) rotateZ(-35deg) translateZ(25px); border-color: rgba(255,255,255,0.4); }
@@ -152,7 +209,10 @@ button { font: inherit; }
 .layer-5 { top: 140px; z-index: 6; }
 .layer-6 { top: 175px; z-index: 5; }
 
-/* BLUEPRINT TEXT LIST BLOCK */
+.blueprint-right {
+  max-width: 440px;
+  padding-left: 20px;
+}
 .blueprint-right h3 { font-family: var(--font-cormorant), Georgia, serif; font-size: 32px; font-weight: 300; line-height: 1.35; color: #ffffff !important; margin: 0 0 40px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 .blueprint-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px; }
 .blueprint-list li { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.24em; color: var(--ink-label) !important; padding-left: 20px; position: relative; }
@@ -164,114 +224,46 @@ button { font: inherit; }
 .about-content-wrapper { display: flex; flex-direction: column; gap: 22px; max-width: 720px; }
 .about-content-wrapper p { font-size: 15px; line-height: 1.75; color: var(--ink-soft); text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
 
-/* FOOTER SECTION */
-.footer { 
-  margin-top: 120px; 
-  border-top: 1px solid rgba(140, 129, 123, 0.15); 
-  padding-top: 48px;
-  position: relative;
-  z-index: 10;
-}
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.footer p { 
-  font-family: var(--font-cormorant), Georgia, serif; 
-  font-size: 22px; 
-  font-weight: 300; 
-  line-height: 1.4; 
-  color: var(--ink-soft); 
-}
+/* FOOTER SECTION INTERACTIVE PROTOCOLS */
+.footer { margin-top: 120px; border-top: 1px solid rgba(140, 129, 123, 0.15); padding-top: 48px; position: relative; z-index: 10; }
+.footer-content { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+.footer p { font-family: var(--font-cormorant), Georgia, serif; font-size: 22px; font-weight: 300; line-height: 1.4; color: var(--ink-soft); }
 .footer p em { font-style: italic; color: #ffffff; }
 
-.footer-nav { 
-  display: flex; 
-  gap: 40px; 
-  font-size: 12px; 
-  font-weight: 600; 
-  letter-spacing: 0.38em; 
-  text-transform: uppercase; 
-}
-.footer-nav a { 
-  color: var(--ink-label) !important; 
-  transition: opacity 0.3s ease, color 0.3s ease; 
-  position: relative;
-  z-index: 20;
-  cursor: pointer;
-}
-.footer-nav a:hover { 
-  opacity: 1; 
-  color: #ffffff !important; 
-}
+.footer-nav { display: flex; gap: 40px; font-size: 12px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; }
+.footer-nav a { color: var(--ink-label) !important; transition: opacity 0.3s ease, color 0.3s ease; position: relative; z-index: 20; cursor: pointer; }
+.footer-nav a:hover { opacity: 1; color: #ffffff !important; }
 
-/* MODAL OVERLAY LIGHTBOX WINDOW */
-.lightbox-overlay { 
-  position: fixed; 
-  inset: 0; 
-  z-index: 100; 
-  background: rgba(8, 12, 11, 0.82); 
-  backdrop-filter: blur(32px); 
-  -webkit-backdrop-filter: blur(32px); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 40px; 
-}
-.lightbox-card { 
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)); 
-  border: 1px solid rgba(255, 255, 255, 0.15); 
-  border-radius: 24px; 
-  width: 100%; 
-  max-width: 1100px; 
-  position: relative; 
-  overflow: hidden; 
-  box-shadow: 0 50px 100px rgba(0,0,0,0.6); 
-}
-.lightbox-close { 
-  position: absolute; 
-  top: 24px; 
-  right: 24px; 
-  background: none; 
-  border: none; 
-  color: var(--ink-label); 
-  font-size: 18px; 
-  cursor: pointer; 
-  z-index: 10; 
-  transition: color 0.3s; 
-}
+/* LIGHTBOX MODALS OVERLAYS RULES */
+.lightbox-overlay { position: fixed; inset: 0; z-index: 100; background: rgba(8, 12, 11, 0.82); backdrop-filter: blur(32px); -webkit-backdrop-filter: blur(32px); display: flex; align-items: center; justify-content: center; padding: 40px; }
+.lightbox-card { background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; width: 100%; max-width: 1100px; position: relative; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.6); }
+.lightbox-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--ink-label); font-size: 18px; cursor: pointer; z-index: 10; transition: color 0.3s; }
 .lightbox-close:hover { color: #ffffff; }
 .lightbox-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 560px; }
 .lightbox-image-wrapper { width: 100%; height: 100%; overflow: hidden; background: rgba(0,0,0,0.2); }
 .lightbox-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-
-.lightbox-content { 
-  padding: 60px; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  background: rgba(14, 22, 20, 0.4); 
-}
+.lightbox-content { padding: 60px; display: flex; flex-direction: column; justify-content: center; background: rgba(14, 22, 20, 0.4); }
 .lightbox-count { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: var(--ink-label); margin-bottom: 24px; }
 .lightbox-content h2 { font-family: var(--font-cormorant), Georgia, serif; font-size: 38px; font-weight: 300; line-height: 1.2; margin-bottom: 8px; color: #ffffff; }
 .lightbox-category { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 24px; display: block; }
 .lightbox-content p { font-size: 14px; line-height: 1.6; color: var(--ink-label); margin-bottom: 40px; max-width: 400px; }
-
 .lightbox-controls { display: flex; align-items: center; gap: 24px; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-label); }
 .lightbox-controls button { background: none; border: none; color: inherit; cursor: pointer; text-transform: uppercase; letter-spacing: inherit; padding: 4px 8px; transition: color 0.3s; }
 .lightbox-controls button:hover { color: #ffffff; }
 .lightbox-controls span { font-size: 10px; color: rgba(255,255,255,0.15); }
 
-/* SYSTEM MEDIA OVERRIDES FOR RESPONSIVE COMPATIBILITY */
+/* FIXED GLOBAL RESPONSIVE MEDIA BREAKPOINTS */
 @media (max-width: 900px) {
   .page { padding: 40px 24px; }
+  .hero-header-top-row { flex-direction: column; gap: 32px; width: 100%; }
+  .brand-header-right-side { text-align: left !important; width: 100%; padding: 0; }
+  .brand-title-text { font-size: 14px; color: #ffffff !important; display: block; visibility: visible; opacity: 1; }
+  .brand-subtitle-text { font-size: 10px; color: var(--ink-label) !important; opacity: 0.7; }
   .tiles { min-height: auto !important; display: flex; flex-direction: column; gap: 24px; }
   .tile { position: relative !important; width: 100% !important; height: 280px !important; top: 0 !important; left: 0 !important; }
-  .blueprint { grid-template-columns: 1fr; gap: 40px; }
-  .blueprint-labels { display: none; }
+  .blueprint-realigned-row { flex-direction: column; gap: 40px; }
+  .blueprint-labels-column { display: none; }
+  .blueprint-diagram { width: 100%; }
   .lightbox-grid { grid-template-columns: 1fr; }
   .lightbox-content { padding: 32px; }
 }
