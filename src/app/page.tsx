@@ -113,7 +113,7 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* ================= SECTION 1: HEADER SPLIT AREA ================= */}
+      {/* ================= SECTION 1: HEADER SPLIT ROW ================= */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', maxWidth: '1140px', margin: '40px auto 80px auto' }}>
         
         {/* Mantra Statement Header Left Column */}
@@ -131,19 +131,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Company Title Header Right Column */}
+        {/* Studio Branding text Header Right Column */}
         <div className="brand-header-right-side">
           <h2 className="brand-title-text">The Triadic Studio</h2>
           <p className="brand-subtitle-text">Spatial Experience Design</p>
         </div>
       </div>
 
-      {/* ================= SECTION 2: PORTFOLIO EXPANSION MATRIX ================= */}
+      {/* ================= SECTION 2: PORTFOLIO GRID WINDOW MATRIX ================= */}
       <section className="portfolio" style={{ maxWidth: '1140px', margin: '0 auto 120px auto' }}>
         <h3 className="portfolio-title">Portfolio</h3>
         <div className="tiles">
           {projects.map((project, idx) => {
-            // FIXED STRINGS GENERATOR AXIS: Maps numbers to your direct CSS coordinates selector classes
             const tileClassName = `tile tile-${idx + 1}`;
 
             return (
@@ -160,7 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 3: SPATIAL BLUEPRINT ================= */}
+      {/* ================= SECTION 3: BLUEPRINT LAYOUT SYSTEM ================= */}
       <section className="blueprint">
         <div className="blueprint-realigned-row">
           
@@ -202,7 +201,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Paragraph Layouts Block Container */}
+      {/* About Description block container setup */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -212,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer link trackers */}
+      {/* Full Working Footer links nav system container */}
       <footer className="footer">
         <div className="footer-content">
           <div>
@@ -226,7 +225,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Overlay presentation overlay lightbox boxes */}
+      {/* Lightbox pop up slider module overlay container */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
