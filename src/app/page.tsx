@@ -45,8 +45,49 @@ const projects = [
     image: '/portfolio/7.jpg',
     description: 'An ethereal internal window setting defined by cascading pink blossoms contrasting against high, industrial concrete walls.',
   },
+  {
+    title: 'Obsidian Sanctuary',
+    category: 'Spatial Styling',
+    image: '/portfolio/8.jpg',
+    description: 'A moody luxury lounge balancing dark raw textures and living nature. Features a textured stone accent wall with integrated biophilic plantings, a monolithic black marble fireplace structure, and organic seating overlooking a misty forest panorama.',
+  },
+  {
+    title: 'Monolithic Horizon',
+    category: 'Architectural Atmosphere',
+    image: '/portfolio/9.jpg',
+    description: 'An elevated perspective highlighting structural geometry and panoramic scale. A floating ceiling pavilion with integrated warm LED light channels defines the central lounge, framed by full-height glass walls that merge the interior seating with a vast, misty pine forest.',
+  },
+  {
+    title: 'Golden Threshold',
+    category: 'Light & Narrative',
+    image: '/portfolio/10.jpg',
+    description: 'A dramatic study of cinematic natural illumination. Piercing golden hour sunbeams intersect the dark architectural planes, casting high-contrast silhouettes and highlighting the interplay between the glowing geometric ceiling installation and warm organic timber.',
+  },
+  {
+    title: 'Tactile Contours',
+    category: 'Material Exploration',
+    image: '/portfolio/11.jpg',
+    description: 'A macro perspective emphasizing organic textures and depth of field. The weathered, twisting branches of a sculptural driftwood element dominate the foreground, contrasting raw natural fibers against the softly blurred glow of the modern lounge and fireplace behind it.',
+  },
+  {
+    title: 'Dual Coexistence',
+    category: 'Spatial Narrative',
+    image: '/portfolio/12.jpg',
+    description: 'A profile view capturing the balance between internal warmth and external atmosphere. The deep texture of the stone installation and the linear fireplace create a protective, grounding anchor against the expansive, cool-toned woodland visible through the glass panels.',
+  },
+  {
+    title: 'Atmospheric Convergence',
+    category: 'Spatial Experience',
+    image: '/portfolio/13.jpg',
+    description: 'A wide, grounding corner perspective facing the expansive perimeter glazing. Curved obsidian seating assemblies encircle a low-profile glass table, balancing the stark verticality of the surrounding forest with a fluid, continuous social landscape.',
+  },
+  {
+    title: 'Twilight Boundaries',
+    category: 'Architectural Atmosphere',
+    image: '/portfolio/14.jpg',
+    description: 'A concluding study of spatial transition into nightfall. As daylight fades into deep twilight shadows, the interior boundaries dissolve entirely into the dark forest panorama, leaving the glowing geometric light sculpture to anchor the room\'s warm, contemplative soul.',
+  },
 ];
-
 export default function Home() {
   const [active, setActive] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -67,228 +108,225 @@ export default function Home() {
   };
 
   return (
-    <main className="page">
-      <header className="header">
-        <div className="header-spacer" />
-      </header>
-
-      <section className="hero-branding-container">
-        <div className="pure-code-brand-wrapper">
-          <svg viewBox="0 0 200 150" className="vector-brand-master">
-            <defs>
-              <linearGradient id="heavy-gold-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#8c7965" />
-                <stop offset="22%" stopColor="#f5ebd6" />
-                <stop offset="45%" stopColor="#ffffff" />
-                <stop offset="65%" stopColor="#d1be9b" />
-                <stop offset="85%" stopColor="#f5ebd6" />
-                <stop offset="100%" stopColor="#6e5d4b" />
-              </linearGradient>
-              <linearGradient id="ray-glow-horizontal" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                <stop offset="20%" stopColor="#ffffff" stopOpacity="0.25" />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.85" />
-                <stop offset="80%" stopColor="#ffffff" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="vertical-beam-glow" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                <stop offset="20%" stopColor="#ffffff" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
-                <stop offset="80%" stopColor="#ffffff" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="vertical-ambient-glow" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#f5ebd6" stopOpacity="0" />
-                <stop offset="35%" stopColor="#f5ebd6" stopOpacity="0.25" />
-                <stop offset="50%" stopColor="#ffffff" stopOpacity="0.6" />
-                <stop offset="65%" stopColor="#f5ebd6" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#f5ebd6" stopOpacity="0" />
-              </linearGradient>
-              <filter id="soft-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="1.5" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-
-            <g transform="rotate(38 100 55)">
-              <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
-            </g>
-            <g transform="rotate(142 100 55)">
-              <rect x="0" y="54.5" width="200" height="1" fill="url(#ray-glow-horizontal)" opacity="0.65" />
-            </g>
-            <g transform="rotate(-45 100 55)">
-              <rect x="20" y="54.6" width="160" height="0.8" fill="url(#ray-glow-horizontal)" opacity="0.35" />
-            </g>
-            <g transform="rotate(225 100 55)">
-              <rect x="20" y="54.6" width="160" height="0.8" fill="url(#ray-glow-horizontal)" opacity="0.35" />
-            </g>
-
-            <path d="M 75 22 C 54 38, 54 72, 75 88 C 61 77, 61 33, 75 22 Z" fill="url(#heavy-gold-metallic)" opacity="0.2" />
-            <path d="M 84 25 C 66 40, 66 70, 84 85 C 72 75, 72 35, 84 25 Z" fill="url(#heavy-gold-metallic)" />
-            <path d="M 116 25 C 134 40, 134 70, 116 85 C 128 75, 128 35, 116 25 Z" fill="url(#heavy-gold-metallic)" />
-            <path d="M 125 22 C 146 38, 146 72, 125 88 C 139 77, 139 33, 125 22 Z" fill="url(#heavy-gold-metallic)" opacity="0.2" />
-
-            <rect x="96.5" y="2" width="7" height="106" fill="url(#vertical-ambient-glow)" filter="blur(2.5px)" opacity="0.45" />
-            <rect x="98.2" y="2" width="3.6" height="106" fill="url(#vertical-beam-glow)" filter="url(#soft-glow-filter)" opacity="0.65" />
-            <rect x="99.4" y="4" width="1.2" height="102" fill="url(#vertical-beam-glow)" opacity="0.98" />
-
-            <circle cx="100" cy="55" r="4" fill="#ffffff" filter="blur(1.5px)" opacity="0.95" />
-            <circle cx="100" cy="55" r="8" fill="#f5ebd6" opacity="0.4" filter="blur(3px)" />
-            <circle cx="100" cy="55" r="16" fill="#d1be9b" opacity="0.2" filter="blur(5px)" />
-
-            <text x="100" y="124" textAnchor="middle" fill="#ffffff" fontSize="8" fontWeight="300" letterSpacing="0.48em" className="typography-brand-title">THE TRIADIC STUDIO</text>
-            <text x="100" y="136" textAnchor="middle" fontSize="4.5" fontWeight="600" letterSpacing="0.34em" className="typography-brand-sub">
-              <tspan fill="#ffffff">SPATIAL </tspan>
-              <tspan fill="url(#heavy-gold-metallic)">EXPERIENCE </tspan>
-              <tspan fill="#ffffff">DESIGN</tspan>
-            </text>
-          </svg>
-        </div>
-      </section>
-      <section className="hero-mantra-section">
-        <p className="eyebrow">Spatial Styling & Visual Experience Design</p>
-        <h1>Spaces remembered<br />before they are<br /><em className="gold-text-glow">understood.</em></h1>
-        <div className="pillars">
-          <span>Atmosphere</span>
-          <span>Narrative</span>
-          <span>Materiality</span>
-        </div>
-      </section>
-
-      <section className="portfolio">
-        <div className="portfolio-title">Portfolio</div>
-        <div className="portfolio-stage">
-          <div className="tiles">
-            {projects.map((project, index) => (
-              <button
-                key={`${project.image}-${index}`}
-                type="button"
-                className={`tile tile-${index + 1}`}
-                onClick={() => openLightbox(index)}
-                aria-label={`Open ${project.title} in Full Screen`}
-              >
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <img src={project.image} alt={project.title} />
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="blueprint" id="blueprint">
-        <div className="blueprint-left">
-          <p className="eyebrow">The Emotional Blueprint</p>
-          <h2>Every space leaves<br />an emotional imprint.</h2>
+    <main className="w-full min-h-screen px-6 md:px-16 py-12 flex flex-col gap-24 md:gap-32 bg-black/10 backdrop-blur-[1px] text-white selection:bg-white/20">
+      
+      {/* ================= SECTION 1: HERO HEADER ================= */}
+      <section className="min-h-[80vh] flex flex-col justify-between pt-4">
+        <div className="w-full flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
           
-          <div className="blueprint-diagram">
-            <div className="blueprint-labels">
-              <span>Colour</span>
-              <span>Texture</span>
-              <span>Scale</span>
-              <span>Light</span>
-              <span>Material</span>
-              <span>Movement</span>
+          {/* Main Statement Top Left */}
+          <div className="max-w-2xl">
+            <p className="text-[10px] tracking-[0.25em] uppercase opacity-40 mb-4 font-mono">
+              Spatial Styling & Visual Experience Design
+            </p>
+            <h1 className="text-3xl md:text-5xl font-light tracking-tight leading-tight">
+              Spaces remembered <br />
+              long after they are left, <br />
+              because they were <br />
+              <span className="italic font-normal border-b border-white/20 pb-1">understood.</span>
+            </h1>
+            <div className="flex gap-4 text-[9px] tracking-widest uppercase opacity-30 mt-6 font-mono">
+              <span>Atmosphere</span>
+              <span>Narrative</span>
+              <span>Materiality</span>
             </div>
+          </div>
+
+          {/* Brand Heading Top Right */}
+          <div className="text-left md:text-right tracking-[0.25em] uppercase md:pt-1">
+            <h2 className="text-sm font-medium tracking-[0.3em]">The Triadic Studio</h2>
+            <p className="text-[9px] opacity-50 mt-1 font-mono">Spatial Experience Design</p>
+          </div>
+
+        </div>
+
+        <div className="text-[10px] tracking-widest uppercase opacity-40 pt-12 md:pt-0 font-mono">
+          Portfolio
+        </div>
+      </section>
+
+      {/* ================= SECTION 2: PORTFOLIO BENTO GRID ================= */}
+      <section className="w-full flex flex-col gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 auto-rows-[220px]">
+          {projects.map((project, idx) => {
+            const layoutClasses = [
+              'md:col-span-6 md:row-span-2', // 01
+              'md:col-span-3 md:row-span-1', // 02
+              'md:col-span-3 md:row-span-1', // 03
+              'md:col-span-6 md:row-span-2', // 04
+              'md:col-span-3 md:row-span-1', // 05
+              'md:col-span-3 md:row-span-1', // 06
+              'md:col-span-6 md:row-span-1', // 07
+              'md:col-span-6 md:row-span-2', // 08
+              'md:col-span-3 md:row-span-1', // 09
+              'md:col-span-3 md:row-span-1', // 10
+              'md:col-span-6 md:row-span-2', // 11
+              'md:col-span-3 md:row-span-1', // 12
+              'md:col-span-3 md:row-span-1', // 13
+              'md:col-span-6 md:row-span-1', // 14
+            ];
             
-            <div className="blueprint-stack">
-              <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-3"><img src="/portfolio/3.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-4"><img src="/portfolio/4.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-5"><img src="/portfolio/5.jpg" alt="" /></div>
-              <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
-            </div>
+            const layoutClass = layoutClasses[idx] || 'md:col-span-4 md:row-span-1';
+
+            return (
+              <div
+                key={idx}
+                onClick={() => openLightbox(idx)}
+                className={`${layoutClass} col-span-1 group relative bg-white/[0.03] border border-white/10 rounded-2xl md:rounded-[1.8rem] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/30 hover:bg-white/[0.06] backdrop-blur-sm shadow-xl`}
+              >
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover opacity-75 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-700" 
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 p-5 flex flex-col justify-between">
+                  <span className="text-[10px] tracking-wider opacity-40 font-mono">
+                    {(idx + 1).toString().padStart(2, '0')}
+                  </span>
+                  <div className="opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <p className="text-[9px] tracking-widest uppercase opacity-60 font-mono mb-1">{project.category}</p>
+                    <h3 className="text-sm font-light tracking-wide text-white">{project.title}</h3>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="max-w-md mt-6">
+          <h2 className="text-2xl md:text-3xl font-light tracking-tight leading-snug">
+            Every space leaves an emotional imprint.
+          </h2>
+        </div>
+      </section>
+      {/* ================= SECTION 3: REALIGNED SPATIAL BLUEPRINT ================= */}
+      <section className="w-full flex flex-col gap-24 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          
+          {/* Vertical Menu */}
+          <div className="md:col-span-2 flex flex-col gap-4 text-[10px] tracking-[0.25em] uppercase opacity-40 font-mono">
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Colour</span>
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Texture</span>
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Scale</span>
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Light</span>
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Material</span>
+            <span className="hover:opacity-100 cursor-pointer transition-opacity">Movement</span>
+          </div>
+
+          {/* Blueprint Graphic shifted over next to the menu */}
+          <div className="md:col-span-4 w-full h-44 bg-white/[0.03] border border-white/5 rounded-2xl flex items-center justify-center text-[10px] tracking-wider text-white/30 italic backdrop-blur-sm overflow-hidden">
+            <div className="px-6 text-center opacity-60">[ 3D Stacked Model Blueprint Graphic ]</div>
+          </div>
+
+          {/* Spatial Text Paragraph shifted leftward right after graphic */}
+          <div className="md:col-span-5 md:col-start-7 flex flex-col gap-4">
+            <p className="text-xs tracking-[0.2em] uppercase opacity-30 font-mono">The Emotional Blueprint</p>
+            <p className="text-sm md:text-base font-light opacity-80 leading-relaxed max-w-xl">
+              A spatial analysis method exploring how environments influence perception.
+            </p>
+            <ul className="text-[10px] tracking-widest uppercase opacity-40 space-y-2 font-mono pt-2">
+              <li>• Colour Sensitivity</li>
+              <li>• Sensory Responses</li>
+              <li>• Emotional Atmosphere</li>
+              <li>• Spatial Simulation</li>
+              <li>• Volume Balance</li>
+              <li>• Environmental Comfort</li>
+            </ul>
           </div>
         </div>
 
-        <div className="blueprint-right">
-          <p className="eyebrow">Our Blueprint Framework</p>
-          <h3>A spatial analysis method exploring how environments influence perception.</h3>
-          <ul className="blueprint-list">
-            <li>Colour sensitivity</li>
-            <li>Material response</li>
-            <li>Emotional atmosphere</li>
-            <li>Spatial stimulation</li>
-            <li>Visual balance</li>
-            <li>Environmental comfort</li>
-          </ul>
+        {/* About Section Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pt-8 border-t border-white/10">
+          <div className="md:col-span-3">
+            <h3 className="text-[10px] tracking-[0.25em] uppercase opacity-40 font-mono">About</h3>
+          </div>
+          <div className="md:col-span-9 flex flex-col gap-6 text-sm md:text-base font-light opacity-75 max-w-3xl leading-relaxed">
+            <p>
+              The Triadic Studio is a creative practice exploring the relationship between space, perception, and emotion.
+            </p>
+            <p>
+              Through professional blueprint layout, we study the sensory elements that design atmospheric identities—materiality, atmosphere, scale and context—creating environments that stay with clients long after they leave them.
+            </p>
+            <p>
+              Our work is focused on architectural design alternatives that elevate spatial experience, generating a clear dialogue between people and place.
+            </p>
+          </div>
         </div>
+
+        {/* Footer Area */}
+        <footer className="w-full pt-12 mt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+          <div className="flex flex-col gap-2">
+            <p className="text-[10px] opacity-40 italic tracking-wider font-mono">Not for the ordinary.</p>
+            <p className="text-base font-light tracking-wide">Feel deeply. Choose differently.</p>
+          </div>
+          
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-[10px] tracking-widest uppercase opacity-50 font-mono">
+            <a href="#" className="hover:opacity-100 transition-opacity">Instagram</a>
+            <a href="#" className="hover:opacity-100 transition-opacity">Behance</a>
+            <a href="mailto:thetriadicstudio@gmail.com" className="hover:opacity-100 transition-opacity">thetriadicstudio@gmail.com</a>
+          </div>
+        </footer>
       </section>
 
-      <section className="applications-editorial-container">
-        <div className="applications-header-row">
-          <p className="eyebrow">Applications</p>
-        </div>
-        
-        <div className="applications-triple-matrix">
-          <div className="application-text-column">
-            <h4>Spaces</h4>
-            <h5>Designing environments that shape perception.</h5>
-            <p>Residential interiors, boutique hospitality and property transformation.</p>
-          </div>
-          
-          <div className="application-text-column">
-            <h4>Experiences</h4>
-            <h5>Creating atmospheres that leave a lasting impression.</h5>
-            <p>Event styling, immersive environments and experiential concepts.</p>
-          </div>
-          
-          <div className="application-text-column">
-            <h4>Visual Narratives</h4>
-            <h5>Communicating ideas through visualisation and film.</h5>
-            <p>CGI visualisation, spatial animation and creative direction.</p>
-          </div>
-        </div>
-      </section>
+      {/* ================= LIGHTBOX / INTERACTIVE MODAL COMPONENT ================= */}
       {isOpen && (
-        <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
-          <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setIsOpen(false)}>✕</button>
-            <div className="lightbox-grid">
-              <div className="lightbox-image-wrapper">
-                <img src={projects[active].image} alt={projects[active].title} />
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 md:p-12"
+          onClick={() => setIsOpen(false)}
+        >
+          <div 
+            className="relative w-full max-w-5xl bg-[#0a0f0f]/95 border border-white/10 rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row h-[85vh] md:h-[70vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="absolute top-6 right-6 z-10 text-white opacity-40 hover:opacity-100 transition-opacity p-2 text-xl font-light"
+              onClick={() => setIsOpen(false)}
+            >
+              ✕
+            </button>
+
+            {/* Left Box Image presentation */}
+            <div className="w-full md:w-3/5 h-1/2 md:h-full bg-black/40 relative overflow-hidden">
+              <img 
+                src={projects[active].image} 
+                alt={projects[active].title} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right Box Metadata Stack */}
+            <div className="w-full md:w-2/5 h-1/2 md:h-full p-8 md:p-12 flex flex-col justify-between bg-gradient-to-br from-transparent to-black/30">
+              <div className="space-y-4">
+                <span className="text-[10px] tracking-[0.3em] text-white/40 block font-mono">
+                  {(active + 1).toString().padStart(2, '0')} / {projects.length.toString().padStart(2, '0')}
+                </span>
+                <h2 className="text-xl md:text-2xl font-light tracking-wide text-white">
+                  {projects[active].title}
+                </h2>
+                <span className="inline-block text-[9px] tracking-[0.2em] uppercase border border-white/20 px-2 py-0.5 rounded text-white/60 font-mono">
+                  {projects[active].category}
+                </span>
+                <p className="text-xs md:text-sm font-light text-white/70 leading-relaxed pt-2">
+                  {projects[active].description}
+                </p>
               </div>
-              <div className="lightbox-content">
-                <div className="lightbox-count">
-                  {String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
-                </div>
-                <h2>{projects[active].title}</h2>
-                <span className="lightbox-category">{projects[active].category}</span>
-                <p>{projects[active].description}</p>
-                <div className="lightbox-controls">
-                  <button type="button" onClick={previousProject}>Prev</button>
-                  <span>□</span>
-                  <button type="button" onClick={nextProject}>Next</button>
-                </div>
+
+              {/* Slider Interface controls */}
+              <div className="flex items-center gap-12 text-[10px] tracking-[0.25em] uppercase font-mono text-white/40 pt-6">
+                <button onClick={previousProject} className="hover:text-white transition-colors py-2 flex items-center gap-2">
+                  ← Prev
+                </button>
+                <button onClick={nextProject} className="hover:text-white transition-colors py-2 flex items-center gap-2">
+                  Next →
+                </button>
               </div>
+
             </div>
           </div>
         </div>
       )}
 
-      <section className="about">
-        <span>About</span>
-        <div className="about-content-wrapper">
-          <p>The Triadic Studio is a creative practice exploring the relationship between space, perception and emotion.</p>
-          <p>Through the Emotional Blueprint, we study the subtle elements that shape human experience—light, materiality, atmosphere, scale and memory—to uncover why certain environments stay with us long after we leave them.</p>
-          <p>Our work is less concerned with decoration and more interested in resonance: the invisible dialogue between people and place.</p>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <p>Not for the ordinary.<br /><em>Feel deeply. Choose differently.</em></p>
-          <nav className="footer-nav">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>
-            <a href="mailto:thetriadicstudio@gmail.com">thetriadicstudio@gmail.com</a>
-          </nav>
-        </div>
-      </footer>
     </main>
   );
 }
