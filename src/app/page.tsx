@@ -113,15 +113,16 @@ export default function Home() {
         <div className="header-spacer" />
       </header>
 
-      {/* ================= SECTION 1: HEADER SYSTEM CONTAINER ================= */}
-      <div className="hero-header-top-row">
-        {/* Main Phrasing: Left Column layout wrapper */}
-        <section className="hero-mantra-section">
-          <span className="eyebrow">Spatial Styling & Visual Experience Design</span>
+      {/* ================= SECTION 1: HEADER SPLIT AREA ================= */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', maxWidth: '1140px', margin: '40px auto 80px auto' }}>
+        
+        {/* Mantra Statement Header Left Column */}
+        <section className="hero-mantra-section" style={{ margin: 0, padding: 0, minHeight: 'auto', maxWidth: '680px' }}>
+          <span className="eyebrow" style={{ marginBottom: '16px' }}>Spatial Styling & Visual Experience Design</span>
           <h1>
             Spaces remembered before they are <em className="gold-text-glow">understood.</em>
           </h1>
-          <div className="pillars">
+          <div className="pillars" style={{ marginTop: '24px' }}>
             <span>Atmosphere</span>
             <span>•</span>
             <span>Narrative</span>
@@ -130,35 +131,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Studio Branding text: Right Column layout wrapper (Logo fully removed) */}
+        {/* Company Title Header Right Column */}
         <div className="brand-header-right-side">
           <h2 className="brand-title-text">The Triadic Studio</h2>
           <p className="brand-subtitle-text">Spatial Experience Design</p>
         </div>
       </div>
 
-      {/* ================= SECTION 2: PORTFOLIO GRID MATRIX (14 ITEMS) ================= */}
-      <section className="portfolio">
+      {/* ================= SECTION 2: PORTFOLIO EXPANSION MATRIX ================= */}
+      <section className="portfolio" style={{ maxWidth: '1140px', margin: '0 auto 120px auto' }}>
         <h3 className="portfolio-title">Portfolio</h3>
         <div className="tiles">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className={`tile tile-${idx + 1}`}
-              onClick={() => openLightbox(idx)}
-            >
-              <span>{(idx + 1).toString().padStart(2, '0')}</span>
-              <img src={project.image} alt={project.title} />
-            </div>
-          ))}
+          {projects.map((project, idx) => {
+            // FIXED STRINGS GENERATOR AXIS: Maps numbers to your direct CSS coordinates selector classes
+            const tileClassName = `tile tile-${idx + 1}`;
+
+            return (
+              <div
+                key={idx}
+                className={tileClassName}
+                onClick={() => openLightbox(idx)}
+              >
+                <span>{(idx + 1).toString().padStart(2, '0')}</span>
+                <img src={project.image} alt={project.title} />
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* ================= SECTION 3: SPATIAL ANALYSIS BLUEPRINT ================= */}
+      {/* ================= SECTION 3: SPATIAL BLUEPRINT ================= */}
       <section className="blueprint">
         <div className="blueprint-realigned-row">
           
-          {/* Vertical Navigation Column 1 */}
           <div className="blueprint-labels-column">
             <ul className="blueprint-list-menu">
               <li>Colour</li>
@@ -170,7 +175,6 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* 3D Stack model: Isometric Column 2 shifted left */}
           <div className="blueprint-diagram">
             <div className="blueprint-stack">
               <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
@@ -182,7 +186,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Spatial Blueprint text block: Column 3 following left */}
           <div className="blueprint-right">
             <span className="eyebrow">The Emotional Blueprint</span>
             <h3>A spatial analysis method exploring how environments influence perception.</h3>
@@ -199,7 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Description component blocks layout */}
+      {/* About Paragraph Layouts Block Container */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -209,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Global bottom footer component containing responsive social link trackers */}
+      {/* Footer link trackers */}
       <footer className="footer">
         <div className="footer-content">
           <div>
@@ -223,7 +226,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Dynamic Overlay Box Lightbox Sliders */}
+      {/* Overlay presentation overlay lightbox boxes */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
