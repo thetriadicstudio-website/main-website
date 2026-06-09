@@ -109,21 +109,19 @@ export default function Home() {
 
   return (
     <main className="page">
-      {/* Pristine Minimalist Empty Header Frame */}
       <header className="header">
         <div className="header-spacer" />
       </header>
 
-      {/* ================= SECTION 1: HEADER SECTION REALIGNMENT ================= */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', maxWidth: '1140px', margin: '40px auto 80px auto' }}>
-        
-        {/* Left Side: Original Statement locked to Top Left */}
-        <section className="hero-mantra-section" style={{ margin: 0, padding: 0, minHeight: 'auto', maxWidth: '680px' }}>
-          <span className="eyebrow" style={{ marginBottom: '16px' }}>Spatial Styling & Visual Experience Design</span>
+      {/* ================= SECTION 1: HEADER SYSTEM CONTAINER ================= */}
+      <div className="hero-header-top-row">
+        {/* Main Phrasing: Left Column layout wrapper */}
+        <section className="hero-mantra-section">
+          <span className="eyebrow">Spatial Styling & Visual Experience Design</span>
           <h1>
             Spaces remembered before they are <em className="gold-text-glow">understood.</em>
           </h1>
-          <div className="pillars" style={{ marginTop: '24px' }}>
+          <div className="pillars">
             <span>Atmosphere</span>
             <span>•</span>
             <span>Narrative</span>
@@ -132,20 +130,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Right Side: Brand heading locked to Top Right (Logo fully deleted) */}
-        <div style={{ textAlign: 'right', paddingTop: '8px' }}>
-          <h2 style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.38em', textTransform: 'uppercase', color: 'var(--ink-label)', margin: 0 }}>
-            The Triadic Studio
-          </h2>
-          <p style={{ fontSize: '9px', fontWeight: 600, letterSpacing: '0.35em', textTransform: 'uppercase', color: 'var(--ink-label)', opacity: 0.5, marginTop: '6px' }}>
-            Spatial Experience Design
-          </p>
+        {/* Studio Branding text: Right Column layout wrapper (Logo fully removed) */}
+        <div className="brand-header-right-side">
+          <h2 className="brand-title-text">The Triadic Studio</h2>
+          <p className="brand-subtitle-text">Spatial Experience Design</p>
         </div>
-
       </div>
 
-      {/* ================= SECTION 2: EXPANDED 14-TILE GRID LAYOUT ================= */}
-      <section className="portfolio" style={{ maxWidth: '1140px', margin: '0 auto 120px auto' }}>
+      {/* ================= SECTION 2: PORTFOLIO GRID MATRIX (14 ITEMS) ================= */}
+      <section className="portfolio">
         <h3 className="portfolio-title">Portfolio</h3>
         <div className="tiles">
           {projects.map((project, idx) => (
@@ -161,19 +154,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= SECTION 3: SPATIAL BLUEPRINT ================= */}
+      {/* ================= SECTION 3: SPATIAL ANALYSIS BLUEPRINT ================= */}
       <section className="blueprint">
-        <div className="blueprint-left">
-          <h2>The Emotional Blueprint</h2>
+        <div className="blueprint-realigned-row">
+          
+          {/* Vertical Navigation Column 1 */}
+          <div className="blueprint-labels-column">
+            <ul className="blueprint-list-menu">
+              <li>Colour</li>
+              <li>Texture</li>
+              <li>Scale</li>
+              <li>Light</li>
+              <li>Material</li>
+              <li>Movement</li>
+            </ul>
+          </div>
+
+          {/* 3D Stack model: Isometric Column 2 shifted left */}
           <div className="blueprint-diagram">
-            <div className="blueprint-labels">
-              <span>Colour</span>
-              <span>Texture</span>
-              <span>Scale</span>
-              <span>Light</span>
-              <span>Material</span>
-              <span>Movement</span>
-            </div>
             <div className="blueprint-stack">
               <div className="blueprint-layer layer-1"><img src="/portfolio/1.jpg" alt="" /></div>
               <div className="blueprint-layer layer-2"><img src="/portfolio/2.jpg" alt="" /></div>
@@ -183,22 +181,25 @@ export default function Home() {
               <div className="blueprint-layer layer-6"><img src="/portfolio/6.jpg" alt="" /></div>
             </div>
           </div>
-        </div>
 
-        <div className="blueprint-right">
-          <h3>A spatial analysis method exploring how environments influence perception.</h3>
-          <ul className="blueprint-list">
-            <li>Colour Sensitivity</li>
-            <li>Sensory Responses</li>
-            <li>Emotional Atmosphere</li>
-            <li>Spatial Simulation</li>
-            <li>Volume Balance</li>
-            <li>Environmental Comfort</li>
-          </ul>
+          {/* Spatial Blueprint text block: Column 3 following left */}
+          <div className="blueprint-right">
+            <span className="eyebrow">The Emotional Blueprint</span>
+            <h3>A spatial analysis method exploring how environments influence perception.</h3>
+            <ul className="blueprint-list">
+              <li>Colour Sensitivity</li>
+              <li>Sensory Responses</li>
+              <li>Emotional Atmosphere</li>
+              <li>Spatial Simulation</li>
+              <li>Volume Balance</li>
+              <li>Environmental Comfort</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
-      {/* About Section Layout Block Component */}
+      {/* About Description component blocks layout */}
       <section className="about">
         <span>About</span>
         <div className="about-content-wrapper">
@@ -208,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER NAV SECTION WITH RESPONSIVE TOUCH LINK PROTOCOLS */}
+      {/* Global bottom footer component containing responsive social link trackers */}
       <footer className="footer">
         <div className="footer-content">
           <div>
@@ -222,7 +223,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Interactive Overlay Lightbox Modal Presentation Sliders */}
+      {/* Dynamic Overlay Box Lightbox Sliders */}
       {isOpen && (
         <div className="lightbox-overlay" onClick={() => setIsOpen(false)}>
           <div className="lightbox-card" onClick={(e) => e.stopPropagation()}>
